@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Worksy</string>
+    
+    <!-- Auth Strings -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_phone">Continue with Phone</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="verify_phone">Verify Phone Number</string>
+    <string name="enter_code">Enter verification code</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="or">OR</string>
+    <string name="dont_have_account">Don\'t have an account? Sign up</string>
+    <string name="already_have_account">Already have an account? Sign in</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="verification_failed">Verification failed</string>
+    <string name="code_sent">Verification code sent</string>
+    
+    <!-- Registration Strings -->
+    <string name="create_account">Create Account</string>
+    <string name="user_type">User Type</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="employer">Employer</string>
+    <string name="register">Register</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="messages">Messages</string>
+    <string name="profile">Profile</string>
+    
+    <!-- Job Seeker Specific -->
+    <string name="my_applications">My Applications</string>
+    <string name="saved_jobs">Saved Jobs</string>
+    <string name="resume">Resume</string>
+    <string name="skills">Skills</string>
+    
+    <!-- Employer Specific -->
+    <string name="post_job">Post Job</string>
+    <string name="manage_posts">Manage Posts</string>
+    <string name="applicants">Applicants</string>
+    <string name="company_profile">Company Profile</string>
+    
+    <!-- Job Seeker Home -->
+    <string name="good_morning">Good morning</string>
+    <string name="search_jobs">Search jobs, companies, or keywords</string>
+    <string name="no_jobs_found">No Jobs Found</string>
+    <string name="no_jobs_found_message">We couldn\'t find any jobs matching your criteria. Try adjusting your search or filters.</string>
+    <string name="filter_jobs">Filter Jobs</string>
+    <string name="sort_by">Sort by</string>
+    
+    <!-- Job Details -->
+    <string name="job_details">Job Details</string>
+    <string name="apply_now">Apply Now</string>
+    <string name="save_job">Save Job</string>
+    <string name="job_saved">Job saved successfully</string>
+    <string name="job_requirements">Requirements</string>
+    <string name="job_description">Description</string>
+    <string name="about_company">About Company</string>
+    <string name="similar_jobs">Similar Jobs</string>
+    
+    <!-- Job Filters -->
+    <string name="employment_type">Employment Type</string>
+    <string name="full_time">Full-time</string>
+    <string name="part_time">Part-time</string>
+    <string name="contract">Contract</string>
+    <string name="internship">Internship</string>
+    <string name="experience_level">Experience Level</string>
+    <string name="entry_level">Entry Level</string>
+    <string name="mid_level">Mid Level</string>
+    <string name="senior_level">Senior Level</string>
+    <string name="salary_range">Salary Range</string>
+    <string name="location">Location</string>
+    <string name="reset">Reset</string>
+    <string name="apply_filters">Apply Filters</string>
+    
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="loading">Loading…</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="try_again">Try Again</string>
+    
+    <!-- Social Auth -->
+    <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
+    <string name="google_client_token">https://oauth2.googleapis.com/token</string>
+</resources>

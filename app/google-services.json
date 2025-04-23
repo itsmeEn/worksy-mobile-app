@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399000476267",
+    "project_id": "worksy-mobile-app-job-portal",
+    "storage_bucket": "worksy-mobile-app-job-portal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399000476267:android:78d5779a899bd619edef2e",
+        "android_client_info": {
+          "package_name": "com.worksy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNqlpaGvCdSa08YwBHoVaKtQgON3J1V-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

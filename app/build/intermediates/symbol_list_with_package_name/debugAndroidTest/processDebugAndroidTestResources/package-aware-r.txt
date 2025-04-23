@@ -1,0 +1,3 @@
+com.worksy.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
