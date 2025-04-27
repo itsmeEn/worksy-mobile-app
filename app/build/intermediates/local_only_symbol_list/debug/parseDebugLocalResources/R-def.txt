@@ -29,6 +29,8 @@ color warning
 color white
 drawable button_with_border
 drawable front_log_in
+drawable home
+drawable home_1
 drawable homepage
 drawable ic_add
 drawable ic_applications

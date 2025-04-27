@@ -3094,6 +3094,8 @@ drawable fingerprint_dialog_fp_icon
 drawable front_log_in
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable home
+drawable home_1
 drawable homepage
 drawable ic_add
 drawable ic_applications

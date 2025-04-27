@@ -23,11 +23,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.worksy.R;
 import com.worksy.databinding.FragmentLoginBinding;
 import com.worksy.ui.employer.EmployerMainActivity;
 import com.worksy.ui.jobseeker.JobSeekerMainActivity;
-import com.worksy.data.model.User;
 
 public class LoginFragment extends Fragment {
 
@@ -56,7 +56,7 @@ public class LoginFragment extends Fragment {
 
     private void setupGoogleSignIn() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("399000476267-f3ljrn2c5tukp95vsv13fs73i7vknkmi.apps.googleusercontent.com") //  web client ID
+                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
@@ -88,7 +88,7 @@ public class LoginFragment extends Fragment {
                     try {
                         GoogleSignInAccount account = task.getResult(Exception.class);
                         if (account != null) {
-                            firebaseAuthWithGoogle(account);
+                            handleGoogleSignIn(account);
                         }
                     } catch (Exception e) {
                         Log.e("Google Sign-In", "Google sign-in failed", e);
@@ -143,7 +143,7 @@ public class LoginFragment extends Fragment {
             if (task.isSuccessful()) {
                 FirebaseUser user = fAuth.getCurrentUser();
                 if (user != null) {
-                    checkAndSetUserRole(user.getUid(), user.getEmail());
+                    redirectToDashboard(user.getUid());
                 }
             } else {
                 String errorMessage = task.getException() != null ? task.getException().getMessage() : "Login failed";
@@ -152,13 +152,13 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
+    private void handleGoogleSignIn(GoogleSignInAccount account) {
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         fAuth.signInWithCredential(credential).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 FirebaseUser user = fAuth.getCurrentUser();
                 if (user != null) {
-                    checkAndSetUserRole(user.getUid(), user.getEmail());
+                    redirectToDashboard(user.getUid());
                 }
             } else {
                 Toast.makeText(requireContext(), "Google sign-in failed", Toast.LENGTH_SHORT).show();
@@ -166,32 +166,21 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    private void checkAndSetUserRole(String userId, String email) {
+    private void redirectToDashboard(String userId) {
         fStore.collection("users").document(userId).get().addOnSuccessListener(documentSnapshot -> {
             if (documentSnapshot.exists()) {
-                String role = documentSnapshot.getString("role");
-                if (role != null) handleUserRole(role); else promptUserForRole(userId, email);
-            } else promptUserForRole(userId, email);
+                String userType = documentSnapshot.getString("userType");
+                if ("jobSeeker".equalsIgnoreCase(userType)) {
+                    redirectToJobSeekerHome();
+                } else if ("recruiter".equalsIgnoreCase(userType)) {
+                    redirectToRecruiterHome();
+                } else {
+                    Toast.makeText(requireContext(), "Unknown user type. Contact support.", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(requireContext(), "User data not found. Contact support.", Toast.LENGTH_SHORT).show();
+            }
         }).addOnFailureListener(e -> Toast.makeText(requireContext(), "Error fetching user data", Toast.LENGTH_SHORT).show());
-    }
-
-    private void promptUserForRole(String userId, String email) {
-        RoleSelectionDialog roleDialog = new RoleSelectionDialog(requireContext(), selectedRole -> {
-            fStore.collection("users").document(userId).set(new User(Integer.parseInt(userId), email, selectedRole, ""))
-                    .addOnSuccessListener(unused -> handleUserRole(selectedRole))
-                    .addOnFailureListener(e -> Toast.makeText(requireContext(), "Failed to save user role", Toast.LENGTH_SHORT).show());
-        });
-        roleDialog.show();
-    }
-
-    private void handleUserRole(String role) {
-        if ("JobSeeker".equalsIgnoreCase(role)) {
-            redirectToJobSeekerHome();
-        } else if ("Recruiter".equalsIgnoreCase(role)) {
-            redirectToRecruiterHome();
-        } else {
-            Toast.makeText(requireContext(), "Unknown user role", Toast.LENGTH_SHORT).show();
-        }
     }
 
     private void redirectToJobSeekerHome() {

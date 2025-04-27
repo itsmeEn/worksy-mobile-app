@@ -3093,6 +3093,8 @@ int drawable fingerprint_dialog_fp_icon 0x7f08009b
 int drawable front_log_in 0x7f08009c
 int drawable googleg_disabled_color_18 0x7f08009d
 int drawable googleg_standard_color_18 0x7f08009e
+int drawable home 0x7f080119
+int drawable home_1 0x7f08011a
 int drawable homepage 0x7f08009f
 int drawable ic_add 0x7f0800a0
 int drawable ic_applications 0x7f0800a1
