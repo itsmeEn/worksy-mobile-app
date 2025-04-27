@@ -1,142 +1,210 @@
 [
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_empty_jobs.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_empty_jobs.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/anim_slide_out_left.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/anim/slide_out_left.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/anim_slide_in_right.xml.flat",
-        "source": "com.worksy.app-main-46:/anim/slide_in_right.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_home.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_home.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_playfair_display_semibold.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/playfair_display_semibold.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_phone.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_phone.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_search.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_search.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_search.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_search.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_google.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_google.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_back.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_back.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_poppins_medium.ttf.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/poppins_medium.ttf"
     },
     {
-        "merged": "com.worksy.app-debug-44:/menu_menu_job_seeker_bottom_nav.xml.flat",
-        "source": "com.worksy.app-main-46:/menu/menu_job_seeker_bottom_nav.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_dashboard.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_dashboard.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/anim_slide_out_right.xml.flat",
-        "source": "com.worksy.app-main-46:/anim/slide_out_right.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_playfair_display_bold.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/playfair_display_bold.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/menu_menu_employer_bottom_nav.xml.flat",
-        "source": "com.worksy.app-main-46:/menu/menu_employer_bottom_nav.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-mdpi_seeker_temp.png.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-mdpi/seeker_temp.png"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_fragment_job_seeker_home.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/fragment_job_seeker_home.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_fragment_registration.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/fragment_registration.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/anim_slide_in_right.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/anim/slide_in_right.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_bookmark_border.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_bookmark_border.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_applications.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_applications.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable-nodpi_logo.png.flat",
-        "source": "com.worksy.app-main-46:/drawable-nodpi/logo.png"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_filter.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_filter.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_applications.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_applications.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-nodpi_homepage.png.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-nodpi/homepage.png"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_fragment_login.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/fragment_login.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_phone.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_phone.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/anim_slide_in_left.xml.flat",
-        "source": "com.worksy.app-main-46:/anim/slide_in_left.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_home.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_home.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_activity_employer_main.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/activity_employer_main.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/anim_slide_in_left.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/anim/slide_in_left.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_activity_job_seeker_main.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/activity_job_seeker_main.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_activity_job_seeker_main.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_job_seeker_main.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_filter.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_filter.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_bookmark_border.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_bookmark_border.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_fragment_phone_auth.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/fragment_phone_auth.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_back.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_back.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_add.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_add.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/menu_menu_employer_bottom_nav.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/menu/menu_employer_bottom_nav.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_item_job.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/item_job.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_empty_jobs.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_empty_jobs.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.worksy.app-main-46:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-nodpi_logo.png.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-nodpi/logo.png"
     },
     {
-        "merged": "com.worksy.app-debug-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.worksy.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_fragment_registration.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_registration.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_location.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_location.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_activity_employer_main.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_employer_main.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_people.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_people.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_rounded_edit_text.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/rounded_edit_text.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_activity_auth.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/activity_auth.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_fragment_login.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_login.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_money.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_money.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_button_with_border.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/button_with_border.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_dashboard.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_dashboard.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-nodpi_front_log_in.png.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-nodpi/front_log_in.png"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_profile.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_profile.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/menu_menu_job_seeker_bottom_nav.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/menu/menu_job_seeker_bottom_nav.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/layout_bottom_sheet_job_filter.xml.flat",
-        "source": "com.worksy.app-main-46:/layout/bottom_sheet_job_filter.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_font.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/font.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_launcher_foreground.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/anim_slide_out_left.xml.flat",
-        "source": "com.worksy.app-main-46:/anim/slide_out_left.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-mdpi_screenpage.jpg.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-mdpi/screenpage.jpg"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_google.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_google.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/anim_slide_out_right.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/anim/slide_out_right.xml"
     },
     {
-        "merged": "com.worksy.app-debug-44:/drawable_ic_business.xml.flat",
-        "source": "com.worksy.app-main-46:/drawable/ic_business.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_fragment_recruiter_registration.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_recruiter_registration.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-nodpi_reg_design.png.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-nodpi/reg_design.png"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_poppins_semibold.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/poppins_semibold.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable-mdpi_logo.png.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable-mdpi/logo.png"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_add.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_profile.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_fragment_phone_auth.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_phone_auth.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_playfair_display_medium.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/playfair_display_medium.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_money.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_money.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_fragment_job_seeker_home.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_job_seeker_home.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_bottom_sheet_job_filter.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/bottom_sheet_job_filter.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_item_job.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/item_job.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_people.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_people.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/layout_activity_auth.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_location.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_location.xml"
+    },
+    {
+        "merged": "com.worksy.app-debug-44:/drawable-mdpi_worksy_logo.png.flat",
+        "source": "com.worksy.app-main-46:/drawable-mdpi/worksy_logo.png"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/font_poppins_bold.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/font/poppins_bold.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-debug-44:/drawable_ic_business.xml.flat",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/drawable/ic_business.xml"
     }
 ]

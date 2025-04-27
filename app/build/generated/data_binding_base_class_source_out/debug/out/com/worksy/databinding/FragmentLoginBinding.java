@@ -4,12 +4,15 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.textview.MaterialTextView;
@@ -21,6 +24,9 @@ import java.lang.String;
 public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   private final ScrollView rootView;
+
+  @NonNull
+  public final TextView authenticateText;
 
   @NonNull
   public final MaterialButton buttonGoogleSignIn;
@@ -38,6 +44,15 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final TextInputEditText editTextPassword;
 
   @NonNull
+  public final MaterialRadioButton radioButtonEmployer;
+
+  @NonNull
+  public final MaterialRadioButton radioButtonJobSeeker;
+
+  @NonNull
+  public final RadioGroup radioGroupUserType;
+
+  @NonNull
   public final TextInputLayout textInputLayoutEmail;
 
   @NonNull
@@ -49,18 +64,24 @@ public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   public final MaterialTextView textViewSignUp;
 
-  private FragmentLoginBinding(@NonNull ScrollView rootView,
+  private FragmentLoginBinding(@NonNull ScrollView rootView, @NonNull TextView authenticateText,
       @NonNull MaterialButton buttonGoogleSignIn, @NonNull MaterialButton buttonPhoneSignIn,
       @NonNull MaterialButton buttonSignIn, @NonNull TextInputEditText editTextEmail,
-      @NonNull TextInputEditText editTextPassword, @NonNull TextInputLayout textInputLayoutEmail,
+      @NonNull TextInputEditText editTextPassword, @NonNull MaterialRadioButton radioButtonEmployer,
+      @NonNull MaterialRadioButton radioButtonJobSeeker, @NonNull RadioGroup radioGroupUserType,
+      @NonNull TextInputLayout textInputLayoutEmail,
       @NonNull TextInputLayout textInputLayoutPassword,
       @NonNull MaterialTextView textViewForgotPassword, @NonNull MaterialTextView textViewSignUp) {
     this.rootView = rootView;
+    this.authenticateText = authenticateText;
     this.buttonGoogleSignIn = buttonGoogleSignIn;
     this.buttonPhoneSignIn = buttonPhoneSignIn;
     this.buttonSignIn = buttonSignIn;
     this.editTextEmail = editTextEmail;
     this.editTextPassword = editTextPassword;
+    this.radioButtonEmployer = radioButtonEmployer;
+    this.radioButtonJobSeeker = radioButtonJobSeeker;
+    this.radioGroupUserType = radioGroupUserType;
     this.textInputLayoutEmail = textInputLayoutEmail;
     this.textInputLayoutPassword = textInputLayoutPassword;
     this.textViewForgotPassword = textViewForgotPassword;
@@ -94,6 +115,12 @@ public final class FragmentLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.authenticateText;
+      TextView authenticateText = ViewBindings.findChildViewById(rootView, id);
+      if (authenticateText == null) {
+        break missingId;
+      }
+
       id = R.id.buttonGoogleSignIn;
       MaterialButton buttonGoogleSignIn = ViewBindings.findChildViewById(rootView, id);
       if (buttonGoogleSignIn == null) {
@@ -124,6 +151,24 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.radioButtonEmployer;
+      MaterialRadioButton radioButtonEmployer = ViewBindings.findChildViewById(rootView, id);
+      if (radioButtonEmployer == null) {
+        break missingId;
+      }
+
+      id = R.id.radioButtonJobSeeker;
+      MaterialRadioButton radioButtonJobSeeker = ViewBindings.findChildViewById(rootView, id);
+      if (radioButtonJobSeeker == null) {
+        break missingId;
+      }
+
+      id = R.id.radioGroupUserType;
+      RadioGroup radioGroupUserType = ViewBindings.findChildViewById(rootView, id);
+      if (radioGroupUserType == null) {
+        break missingId;
+      }
+
       id = R.id.textInputLayoutEmail;
       TextInputLayout textInputLayoutEmail = ViewBindings.findChildViewById(rootView, id);
       if (textInputLayoutEmail == null) {
@@ -148,9 +193,10 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((ScrollView) rootView, buttonGoogleSignIn, buttonPhoneSignIn,
-          buttonSignIn, editTextEmail, editTextPassword, textInputLayoutEmail,
-          textInputLayoutPassword, textViewForgotPassword, textViewSignUp);
+      return new FragmentLoginBinding((ScrollView) rootView, authenticateText, buttonGoogleSignIn,
+          buttonPhoneSignIn, buttonSignIn, editTextEmail, editTextPassword, radioButtonEmployer,
+          radioButtonJobSeeker, radioGroupUserType, textInputLayoutEmail, textInputLayoutPassword,
+          textViewForgotPassword, textViewSignUp);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

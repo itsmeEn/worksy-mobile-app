@@ -3,7 +3,7 @@
     <string name="app_name">Worksy</string>
     
     <!-- Auth Strings -->
-    <string name="welcome_back">Welcome Back</string>
+    <string name="authenticate">Authenticate</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="email">Email</string>
@@ -17,14 +17,17 @@
     <string name="enter_code">Enter verification code</string>
     <string name="resend_code">Resend Code</string>
     <string name="or">OR</string>
-    <string name="dont_have_account">Don\'t have an account? Sign up</string>
+    <string name="dont_have_account">Create Account as</string>
     <string name="already_have_account">Already have an account? Sign in</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="verification_failed">Verification failed</string>
     <string name="code_sent">Verification code sent</string>
     
     <!-- Registration Strings -->
-    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="seeker_account">Job Seeker Registration</string>
+    <string name="recruiter_account">Recruiter Registration</string>
+    <string name="company_name">Company Name</string>
     <string name="user_type">User Type</string>
     <string name="job_seeker">Job Seeker</string>
     <string name="employer">Employer</string>

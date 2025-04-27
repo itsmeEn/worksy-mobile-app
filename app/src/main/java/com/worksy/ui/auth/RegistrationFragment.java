@@ -1,5 +1,6 @@
 package com.worksy.ui.auth;
-
+import com.worksy.ui.jobseeker.JobSeekerMainActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,28 +46,29 @@ public class RegistrationFragment extends Fragment {
     }
 
     private void attemptRegistration() {
-        String email = binding.editTextEmail.getText().toString();
-        String password = binding.editTextPassword.getText().toString();
-        String confirmPassword = binding.editTextConfirmPassword.getText().toString();
-        boolean isJobSeeker = binding.radioGroupUserType.getCheckedRadioButtonId() == binding.radioButtonJobSeeker.getId();
+        String name = binding.editTextName.getText().toString().trim();
+        String email = binding.editTextEmail.getText().toString().trim();
+        String password = binding.editTextPassword.getText().toString().trim();
+        String confirmPassword = binding.editTextConfirmPassword.getText().toString().trim();
 
-        if (!validateInputs(email, password, confirmPassword)) {
+        if (!validateInputs(name, email, password, confirmPassword)) {
             return;
         }
 
+        // Create user with email and password
         auth.createUserWithEmailAndPassword(email, password)
-            .addOnSuccessListener(authResult -> {
-                if (authResult.getUser() != null) {
-                    createUserProfile(authResult.getUser().getUid(), email, isJobSeeker);
-                }
-            })
-            .addOnFailureListener(e -> {
-                Toast.makeText(requireContext(), "Registration failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            });
+                .addOnSuccessListener(authResult -> {
+                    if (authResult.getUser() != null) {
+                        createUserProfile(authResult.getUser().getUid(), name, email);
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(requireContext(), "Registration failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 
-    private boolean validateInputs(String email, String password, String confirmPassword) {
-        if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+    private boolean validateInputs(String name, String email, String password, String confirmPassword) {
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
             Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -81,35 +83,33 @@ public class RegistrationFragment extends Fragment {
             return false;
         }
 
-        if (binding.radioGroupUserType.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(requireContext(), "Please select a user type", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-
         return true;
     }
 
-    private void createUserProfile(String userId, String email, boolean isJobSeeker) {
+    private void createUserProfile(String userId, String name, String email) {
         Map<String, Object> userProfile = new HashMap<>();
+        userProfile.put("name", name);
         userProfile.put("email", email);
-        userProfile.put("userType", isJobSeeker ? "jobSeeker" : "employer");
+        userProfile.put("userType", "jobSeeker");
         userProfile.put("createdAt", System.currentTimeMillis());
 
         db.collection("users")
-            .document(userId)
-            .set(userProfile)
-            .addOnSuccessListener(aVoid -> {
-                Toast.makeText(requireContext(), "Registration successful", Toast.LENGTH_SHORT).show();
-                navigateToMainActivity(isJobSeeker);
-            })
-            .addOnFailureListener(e -> {
-                Toast.makeText(requireContext(), "Failed to create profile: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            });
+                .document(userId)
+                .set(userProfile)
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(requireContext(), "Registration successful", Toast.LENGTH_SHORT).show();
+                    navigateToMainActivity();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(requireContext(), "Failed to create profile: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 
-    private void navigateToMainActivity(boolean isJobSeeker) {
-        // We'll implement this later when we create the main activities
-        Toast.makeText(requireContext(), "Registration successful! Redirecting...", Toast.LENGTH_SHORT).show();
+    private void navigateToMainActivity() {
+        // Navigate to JobSeekerMainActivity
+        Intent intent = new Intent(requireContext(), JobSeekerMainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear the back stack
+        startActivity(intent);
     }
 
     @Override

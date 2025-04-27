@@ -41,4 +41,9 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/text_secondary</item>
     </style>
+
+    <!--button color-->
+    <style name="Widget.Material3.Button.OutlinedButton" parent="Widget.Material3.Button">
+        <item name="colorPrimary">#38bdf8</item>
+    </style>
 </resources>

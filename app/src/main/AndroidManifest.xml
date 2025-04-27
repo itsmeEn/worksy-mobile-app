@@ -9,9 +9,9 @@
     <application
         android:name=".WorksyApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/worksy_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/worksy_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Worksy">
 
@@ -33,6 +33,10 @@
         <activity 
             android:name=".ui.employer.EmployerMainActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 </manifest>

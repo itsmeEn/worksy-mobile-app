@@ -1,36 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/front_log_in"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="24dp">
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
+            android:id="@+id/authenticateText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/welcome_back"
-            android:textAppearance="?attr/textAppearanceHeadlineMedium" />
+            android:layout_marginTop="260dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="@string/authenticate"
+            android:textColor="@android:color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="9dp"
             android:hint="@string/email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text"
+                android:backgroundTint="#D4F6FF"
+                android:fontFamily="@font/poppins_medium"
                 android:inputType="textEmailAddress" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -45,8 +53,10 @@
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
-
+                android:inputType="textPassword"
+                android:backgroundTint="#D4F6FF"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/rounded_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -56,20 +66,26 @@
             android:layout_gravity="end"
             android:layout_marginTop="8dp"
             android:text="@string/forgot_password"
+            android:backgroundTint="#D4F6FF"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="?attr/colorPrimary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSignIn"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/sign_in" />
+            android:text="@string/sign_in"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/black"
+            app:backgroundTint="#38bdf8" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_medium"
             android:text="@string/or" />
 
         <com.google.android.material.button.MaterialButton
@@ -79,7 +95,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/continue_with_google"
-            app:icon="@drawable/ic_google" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            app:icon="@drawable/ic_google"
+            android:background="@drawable/button_with_border"
+            app:iconTint="@null" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPhoneSignIn"
@@ -88,7 +108,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/continue_with_phone"
-            app:icon="@drawable/ic_phone" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            app:icon="@drawable/ic_phone"
+            android:background="@drawable/button_with_border"
+            app:iconTint="@null" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textViewSignUp"
@@ -96,9 +120,35 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_medium"
             android:text="@string/dont_have_account"
             android:textColor="?attr/colorPrimary" />
 
+        <RadioGroup
+            android:id="@+id/radioGroupUserType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonJobSeeker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/job_seeker" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonEmployer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/employer" />
+
+        </RadioGroup>
     </LinearLayout>
 
 </ScrollView>

@@ -82,11 +82,15 @@ animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array assume_strong_biometrics_models
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
 array crypto_fingerprint_fallback_prefixes
 array crypto_fingerprint_fallback_vendors
 array delay_showing_prompt_models
 array hide_fingerprint_instantly_prefixes
 array initial_slider_values
+array preloaded_fonts
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -3060,6 +3064,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_with_border
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3086,8 +3091,10 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
+drawable front_log_in
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable homepage
 drawable ic_add
 drawable ic_applications
 drawable ic_arrow_back_black_24
@@ -3200,9 +3207,20 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable reg_design
+drawable rounded_edit_text
+drawable screenpage
+drawable seeker_temp
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable worksy_logo
+font playfair_display_bold
+font playfair_display_medium
+font playfair_display_semibold
+font poppins_bold
+font poppins_medium
+font poppins_semibold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3291,6 +3309,7 @@ id arc
 id asConfigured
 id async
 id auth_container
+id authenticateText
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -3409,9 +3428,11 @@ id easeOut
 id east
 id edge
 id editTextCode
+id editTextCompanyName
 id editTextConfirmPassword
 id editTextEmail
 id editTextLocation
+id editTextName
 id editTextPassword
 id editTextPhone
 id editTextSearch
@@ -3719,8 +3740,10 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
+id textInputLayoutCompanyName
 id textInputLayoutConfirmPassword
 id textInputLayoutEmail
+id textInputLayoutName
 id textInputLayoutPassword
 id textInputLayoutSearch
 id textSpacerNoButtons
@@ -3735,7 +3758,6 @@ id textViewSalary
 id textViewSignUp
 id textViewTitle
 id textViewUserName
-id textViewUserType
 id textViewWelcome
 id text_input_end_icon
 id text_input_error_icon
@@ -3933,6 +3955,7 @@ layout fingerprint_dialog_layout
 layout fragment_job_seeker_home
 layout fragment_login
 layout fragment_phone_auth
+layout fragment_recruiter_registration
 layout fragment_registration
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -4042,6 +4065,7 @@ string applicants
 string apply_filters
 string apply_now
 string auth_failed
+string authenticate
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -4079,6 +4103,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string company_name
 string company_profile
 string confirm_device_credential_password
 string confirm_password
@@ -4086,7 +4111,6 @@ string continue_with_google
 string continue_with_phone
 string contract
 string copy_toast_msg
-string create_account
 string default_error_msg
 string delete
 string dont_have_account
@@ -4242,6 +4266,7 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string my_applications
+string name
 string no_jobs_found
 string no_jobs_found_message
 string or
@@ -4256,6 +4281,7 @@ string phone_number
 string post_job
 string profile
 string project_id
+string recruiter_account
 string register
 string resend_code
 string reset
@@ -4270,6 +4296,7 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string seeker_account
 string senior_level
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
@@ -4283,7 +4310,6 @@ string try_again
 string user_type
 string verification_failed
 string verify_phone
-string welcome_back
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

@@ -4,14 +4,12 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.textview.MaterialTextView;
@@ -37,16 +35,10 @@ public final class FragmentRegistrationBinding implements ViewBinding {
   public final TextInputEditText editTextEmail;
 
   @NonNull
+  public final TextInputEditText editTextName;
+
+  @NonNull
   public final TextInputEditText editTextPassword;
-
-  @NonNull
-  public final MaterialRadioButton radioButtonEmployer;
-
-  @NonNull
-  public final MaterialRadioButton radioButtonJobSeeker;
-
-  @NonNull
-  public final RadioGroup radioGroupUserType;
 
   @NonNull
   public final TextInputLayout textInputLayoutConfirmPassword;
@@ -55,37 +47,33 @@ public final class FragmentRegistrationBinding implements ViewBinding {
   public final TextInputLayout textInputLayoutEmail;
 
   @NonNull
+  public final TextInputLayout textInputLayoutName;
+
+  @NonNull
   public final TextInputLayout textInputLayoutPassword;
 
   @NonNull
   public final MaterialTextView textViewTitle;
 
-  @NonNull
-  public final MaterialTextView textViewUserType;
-
   private FragmentRegistrationBinding(@NonNull ScrollView rootView,
       @NonNull MaterialButton buttonLogin, @NonNull MaterialButton buttonRegister,
       @NonNull TextInputEditText editTextConfirmPassword, @NonNull TextInputEditText editTextEmail,
-      @NonNull TextInputEditText editTextPassword, @NonNull MaterialRadioButton radioButtonEmployer,
-      @NonNull MaterialRadioButton radioButtonJobSeeker, @NonNull RadioGroup radioGroupUserType,
+      @NonNull TextInputEditText editTextName, @NonNull TextInputEditText editTextPassword,
       @NonNull TextInputLayout textInputLayoutConfirmPassword,
-      @NonNull TextInputLayout textInputLayoutEmail,
-      @NonNull TextInputLayout textInputLayoutPassword, @NonNull MaterialTextView textViewTitle,
-      @NonNull MaterialTextView textViewUserType) {
+      @NonNull TextInputLayout textInputLayoutEmail, @NonNull TextInputLayout textInputLayoutName,
+      @NonNull TextInputLayout textInputLayoutPassword, @NonNull MaterialTextView textViewTitle) {
     this.rootView = rootView;
     this.buttonLogin = buttonLogin;
     this.buttonRegister = buttonRegister;
     this.editTextConfirmPassword = editTextConfirmPassword;
     this.editTextEmail = editTextEmail;
+    this.editTextName = editTextName;
     this.editTextPassword = editTextPassword;
-    this.radioButtonEmployer = radioButtonEmployer;
-    this.radioButtonJobSeeker = radioButtonJobSeeker;
-    this.radioGroupUserType = radioGroupUserType;
     this.textInputLayoutConfirmPassword = textInputLayoutConfirmPassword;
     this.textInputLayoutEmail = textInputLayoutEmail;
+    this.textInputLayoutName = textInputLayoutName;
     this.textInputLayoutPassword = textInputLayoutPassword;
     this.textViewTitle = textViewTitle;
-    this.textViewUserType = textViewUserType;
   }
 
   @Override
@@ -139,27 +127,15 @@ public final class FragmentRegistrationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.editTextName;
+      TextInputEditText editTextName = ViewBindings.findChildViewById(rootView, id);
+      if (editTextName == null) {
+        break missingId;
+      }
+
       id = R.id.editTextPassword;
       TextInputEditText editTextPassword = ViewBindings.findChildViewById(rootView, id);
       if (editTextPassword == null) {
-        break missingId;
-      }
-
-      id = R.id.radioButtonEmployer;
-      MaterialRadioButton radioButtonEmployer = ViewBindings.findChildViewById(rootView, id);
-      if (radioButtonEmployer == null) {
-        break missingId;
-      }
-
-      id = R.id.radioButtonJobSeeker;
-      MaterialRadioButton radioButtonJobSeeker = ViewBindings.findChildViewById(rootView, id);
-      if (radioButtonJobSeeker == null) {
-        break missingId;
-      }
-
-      id = R.id.radioGroupUserType;
-      RadioGroup radioGroupUserType = ViewBindings.findChildViewById(rootView, id);
-      if (radioGroupUserType == null) {
         break missingId;
       }
 
@@ -175,6 +151,12 @@ public final class FragmentRegistrationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textInputLayoutName;
+      TextInputLayout textInputLayoutName = ViewBindings.findChildViewById(rootView, id);
+      if (textInputLayoutName == null) {
+        break missingId;
+      }
+
       id = R.id.textInputLayoutPassword;
       TextInputLayout textInputLayoutPassword = ViewBindings.findChildViewById(rootView, id);
       if (textInputLayoutPassword == null) {
@@ -187,16 +169,10 @@ public final class FragmentRegistrationBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textViewUserType;
-      MaterialTextView textViewUserType = ViewBindings.findChildViewById(rootView, id);
-      if (textViewUserType == null) {
-        break missingId;
-      }
-
       return new FragmentRegistrationBinding((ScrollView) rootView, buttonLogin, buttonRegister,
-          editTextConfirmPassword, editTextEmail, editTextPassword, radioButtonEmployer,
-          radioButtonJobSeeker, radioGroupUserType, textInputLayoutConfirmPassword,
-          textInputLayoutEmail, textInputLayoutPassword, textViewTitle, textViewUserType);
+          editTextConfirmPassword, editTextEmail, editTextName, editTextPassword,
+          textInputLayoutConfirmPassword, textInputLayoutEmail, textInputLayoutName,
+          textInputLayoutPassword, textViewTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
