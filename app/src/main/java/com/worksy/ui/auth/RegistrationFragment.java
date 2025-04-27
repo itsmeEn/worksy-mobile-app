@@ -43,6 +43,7 @@ public class RegistrationFragment extends Fragment {
     private void setupClickListeners() {
         binding.buttonRegister.setOnClickListener(v -> attemptRegistration());
         binding.buttonLogin.setOnClickListener(v -> requireActivity().onBackPressed());
+        binding.buttonBack.setOnClickListener(v -> requireActivity().onBackPressed());
     }
 
     private void attemptRegistration() {

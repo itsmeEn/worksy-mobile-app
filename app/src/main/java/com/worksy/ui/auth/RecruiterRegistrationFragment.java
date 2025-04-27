@@ -42,6 +42,7 @@ public class RecruiterRegistrationFragment extends Fragment {
     private void setupClickListeners() {
         binding.buttonRegister.setOnClickListener(v -> attemptRecruiterRegistration());
         binding.buttonLogin.setOnClickListener(v -> requireActivity().onBackPressed());
+        binding.buttonBack.setOnClickListener(v -> requireActivity().onBackPressed());
     }
 
     private void attemptRecruiterRegistration() {
@@ -77,7 +78,7 @@ public class RecruiterRegistrationFragment extends Fragment {
         }
 
         if (password.length() < 6) {
-            Toast.makeText(requireContext(), "Password must be at least 6 characters", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "Password must be at least 8 characters", Toast.LENGTH_SHORT).show();
             return false;
         }
 

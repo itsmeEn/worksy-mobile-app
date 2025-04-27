@@ -23,6 +23,9 @@ public final class FragmentRecruiterRegistrationBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final MaterialButton buttonBack;
+
+  @NonNull
   public final MaterialButton buttonLogin;
 
   @NonNull
@@ -62,8 +65,8 @@ public final class FragmentRecruiterRegistrationBinding implements ViewBinding {
   public final MaterialTextView textViewTitle;
 
   private FragmentRecruiterRegistrationBinding(@NonNull ScrollView rootView,
-      @NonNull MaterialButton buttonLogin, @NonNull MaterialButton buttonRegister,
-      @NonNull TextInputEditText editTextCompanyName,
+      @NonNull MaterialButton buttonBack, @NonNull MaterialButton buttonLogin,
+      @NonNull MaterialButton buttonRegister, @NonNull TextInputEditText editTextCompanyName,
       @NonNull TextInputEditText editTextConfirmPassword, @NonNull TextInputEditText editTextEmail,
       @NonNull TextInputEditText editTextName, @NonNull TextInputEditText editTextPassword,
       @NonNull TextInputLayout textInputLayoutCompanyName,
@@ -71,6 +74,7 @@ public final class FragmentRecruiterRegistrationBinding implements ViewBinding {
       @NonNull TextInputLayout textInputLayoutEmail, @NonNull TextInputLayout textInputLayoutName,
       @NonNull TextInputLayout textInputLayoutPassword, @NonNull MaterialTextView textViewTitle) {
     this.rootView = rootView;
+    this.buttonBack = buttonBack;
     this.buttonLogin = buttonLogin;
     this.buttonRegister = buttonRegister;
     this.editTextCompanyName = editTextCompanyName;
@@ -113,6 +117,12 @@ public final class FragmentRecruiterRegistrationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.buttonBack;
+      MaterialButton buttonBack = ViewBindings.findChildViewById(rootView, id);
+      if (buttonBack == null) {
+        break missingId;
+      }
+
       id = R.id.buttonLogin;
       MaterialButton buttonLogin = ViewBindings.findChildViewById(rootView, id);
       if (buttonLogin == null) {
@@ -191,10 +201,11 @@ public final class FragmentRecruiterRegistrationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRecruiterRegistrationBinding((ScrollView) rootView, buttonLogin,
-          buttonRegister, editTextCompanyName, editTextConfirmPassword, editTextEmail, editTextName,
-          editTextPassword, textInputLayoutCompanyName, textInputLayoutConfirmPassword,
-          textInputLayoutEmail, textInputLayoutName, textInputLayoutPassword, textViewTitle);
+      return new FragmentRecruiterRegistrationBinding((ScrollView) rootView, buttonBack,
+          buttonLogin, buttonRegister, editTextCompanyName, editTextConfirmPassword, editTextEmail,
+          editTextName, editTextPassword, textInputLayoutCompanyName,
+          textInputLayoutConfirmPassword, textInputLayoutEmail, textInputLayoutName,
+          textInputLayoutPassword, textViewTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

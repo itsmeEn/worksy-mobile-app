@@ -23,6 +23,9 @@ public final class FragmentRegistrationBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final MaterialButton buttonBack;
+
+  @NonNull
   public final MaterialButton buttonLogin;
 
   @NonNull
@@ -56,13 +59,15 @@ public final class FragmentRegistrationBinding implements ViewBinding {
   public final MaterialTextView textViewTitle;
 
   private FragmentRegistrationBinding(@NonNull ScrollView rootView,
-      @NonNull MaterialButton buttonLogin, @NonNull MaterialButton buttonRegister,
-      @NonNull TextInputEditText editTextConfirmPassword, @NonNull TextInputEditText editTextEmail,
-      @NonNull TextInputEditText editTextName, @NonNull TextInputEditText editTextPassword,
+      @NonNull MaterialButton buttonBack, @NonNull MaterialButton buttonLogin,
+      @NonNull MaterialButton buttonRegister, @NonNull TextInputEditText editTextConfirmPassword,
+      @NonNull TextInputEditText editTextEmail, @NonNull TextInputEditText editTextName,
+      @NonNull TextInputEditText editTextPassword,
       @NonNull TextInputLayout textInputLayoutConfirmPassword,
       @NonNull TextInputLayout textInputLayoutEmail, @NonNull TextInputLayout textInputLayoutName,
       @NonNull TextInputLayout textInputLayoutPassword, @NonNull MaterialTextView textViewTitle) {
     this.rootView = rootView;
+    this.buttonBack = buttonBack;
     this.buttonLogin = buttonLogin;
     this.buttonRegister = buttonRegister;
     this.editTextConfirmPassword = editTextConfirmPassword;
@@ -103,6 +108,12 @@ public final class FragmentRegistrationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.buttonBack;
+      MaterialButton buttonBack = ViewBindings.findChildViewById(rootView, id);
+      if (buttonBack == null) {
+        break missingId;
+      }
+
       id = R.id.buttonLogin;
       MaterialButton buttonLogin = ViewBindings.findChildViewById(rootView, id);
       if (buttonLogin == null) {
@@ -169,8 +180,8 @@ public final class FragmentRegistrationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRegistrationBinding((ScrollView) rootView, buttonLogin, buttonRegister,
-          editTextConfirmPassword, editTextEmail, editTextName, editTextPassword,
+      return new FragmentRegistrationBinding((ScrollView) rootView, buttonBack, buttonLogin,
+          buttonRegister, editTextConfirmPassword, editTextEmail, editTextName, editTextPassword,
           textInputLayoutConfirmPassword, textInputLayoutEmail, textInputLayoutName,
           textInputLayoutPassword, textViewTitle);
     }

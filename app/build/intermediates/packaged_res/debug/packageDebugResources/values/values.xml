@@ -51,6 +51,7 @@
     <string name="apply_now">Apply Now</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="authenticate">Authenticate</string>
+    <string name="back_button">Back</string>
     <string name="cancel">Cancel</string>
     <string name="code_sent">Verification code sent</string>
     <string name="company_name">Company Name</string>
@@ -59,6 +60,7 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_with_phone">Continue with Phone</string>
     <string name="contract">Contract</string>
+    <string name="default_web_client_id" translatable="false">399000476267-f3ljrn2c5tukp95vsv13fs73i7vknkmi.apps.googleusercontent.com</string>
     <string name="delete">Delete</string>
     <string name="dont_have_account">Create Account as</string>
     <string name="edit">Edit</string>
@@ -70,6 +72,7 @@
     <string name="error_occurred">An error occurred</string>
     <string name="experience_level">Experience Level</string>
     <string name="filter_jobs">Filter Jobs</string>
+    <string name="firebase_database_url" translatable="false">https://worksy-mobile-app-job-portal-default-rtdb.firebaseio.com</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="full_time">Full-time</string>
     <string name="gcm_defaultSenderId" translatable="false">399000476267</string>

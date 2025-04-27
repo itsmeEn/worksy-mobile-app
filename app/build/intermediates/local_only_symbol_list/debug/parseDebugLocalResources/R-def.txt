@@ -48,6 +48,7 @@ drawable ic_phone
 drawable ic_profile
 drawable ic_search
 drawable logo
+drawable main
 drawable reg_design
 drawable rounded_edit_text
 drawable screenpage
@@ -65,8 +66,10 @@ id bottomNavigation
 id buttonApply
 id buttonBack
 id buttonGoogleSignIn
+id buttonJobSeeker
 id buttonLogin
 id buttonPhoneSignIn
+id buttonRecruiter
 id buttonRegister
 id buttonResend
 id buttonReset
@@ -131,6 +134,7 @@ layout activity_auth
 layout activity_employer_main
 layout activity_job_seeker_main
 layout bottom_sheet_job_filter
+layout dialog_role_selection
 layout fragment_job_seeker_home
 layout fragment_login
 layout fragment_phone_auth
@@ -149,6 +153,7 @@ string apply_filters
 string apply_now
 string auth_failed
 string authenticate
+string back_button
 string cancel
 string code_sent
 string company_name
@@ -157,6 +162,7 @@ string confirm_password
 string continue_with_google
 string continue_with_phone
 string contract
+string default_web_client_id
 string delete
 string dont_have_account
 string edit
@@ -168,6 +174,7 @@ string entry_level
 string error_occurred
 string experience_level
 string filter_jobs
+string firebase_database_url
 string forgot_password
 string full_time
 string gcm_defaultSenderId

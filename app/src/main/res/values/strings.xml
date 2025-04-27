@@ -92,6 +92,7 @@
     <string name="loading">Loading…</string>
     <string name="error_occurred">An error occurred</string>
     <string name="try_again">Try Again</string>
+    <string name="back_button">Back</string>
     
     <!-- Social Auth -->
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
