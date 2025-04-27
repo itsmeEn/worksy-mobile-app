@@ -3054,6 +3054,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable achievements
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -3065,6 +3066,8 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_with_border
+drawable chatbot
+drawable check_list
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3089,8 +3092,10 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable employment_records
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
+drawable framework
 drawable front_log_in
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -3136,6 +3141,8 @@ drawable ic_profile
 drawable ic_search
 drawable ic_search_black_24
 drawable indeterminate_static
+drawable industry
+drawable interview
 drawable logo
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3211,12 +3218,14 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable reg_design
+drawable robotic
 drawable rounded_edit_text
 drawable screenpage
 drawable seeker_temp
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upload_resume
 drawable worksy_logo
 font playfair_display_bold
 font playfair_display_medium
@@ -3354,6 +3363,7 @@ id buttonVerify
 id cache_measures
 id callMeasure
 id cancel_button
+id careerResourcesTitle
 id carryVelocity
 id center
 id centerCrop
@@ -3480,6 +3490,7 @@ id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
+id greetingTextView
 id group_divider
 id grouping
 id groups
@@ -3645,9 +3656,12 @@ id pin
 id position
 id postLayout
 id pressed
+id profileImageView
 id progressBar
 id progress_circular
 id progress_horizontal
+id quickActionsCard
+id quickActionsTitle
 id radio
 id radioButtonEmployer
 id radioButtonJobSeeker
@@ -3780,6 +3794,7 @@ id title_template
 id toggle
 id toolbar
 id top
+id topBar
 id topPanel
 id touch_outside
 id transitionToEnd
@@ -4061,6 +4076,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about_company
+string achievements
 string already_have_account
 string android_credentials_TYPE_PASSWORD_CREDENTIAL
 string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
@@ -4070,6 +4086,9 @@ string appbar_scrolling_view_behavior
 string applicants
 string apply_filters
 string apply_now
+string assessment
+string assessment_description
+string assistant_bot
 string auth_failed
 string authenticate
 string back_button
@@ -4087,6 +4106,7 @@ string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
 string cancel
+string career_resources
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -4148,6 +4168,8 @@ string fingerprint_error_user_canceled
 string fingerprint_not_recognized
 string firebase_database_url
 string forgot_password
+string framework
+string framework_description
 string full_time
 string gcm_defaultSenderId
 string generic_error_no_device_credential
@@ -4162,10 +4184,13 @@ string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string home
 string icon_content_description
+string industry
+string industry_description
 string internship
 string item_view_role_description
 string job_description
 string job_details
+string job_history
 string job_requirements
 string job_saved
 string job_seeker
@@ -4212,6 +4237,8 @@ string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string messages
 string mid_level
+string mock
+string mock_description
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -4290,6 +4317,7 @@ string phone_number
 string post_job
 string profile
 string project_id
+string quick_actions
 string recruiter_account
 string register
 string resend_code
@@ -4316,6 +4344,7 @@ string skills
 string sort_by
 string status_bar_notification_info_overflow
 string try_again
+string upload_resume
 string user_type
 string verification_failed
 string verify_phone

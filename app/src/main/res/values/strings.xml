@@ -93,7 +93,23 @@
     <string name="error_occurred">An error occurred</string>
     <string name="try_again">Try Again</string>
     <string name="back_button">Back</string>
-    
+
+    <!--grid text-->
+    <string name="quick_actions">Quick Actions</string>
+    <string name="career_resources">Career Resources</string>
+    <string name="achievements">Achievements</string>
+    <string name="job_history">Job History</string>
+    <string name="upload_resume">Upload Resume</string>
+    <string name="assistant_bot">Assistant Bot</string>
+    <string name="mock">Mock Interview Guide</string>
+    <string name="mock_description">Prepare for interviews with common questions and expert tips.</string>
+    <string name="industry">Industry Insights</string>
+    <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
+    <string name="framework">Job Search Strategies</string>
+    <string name="framework_description">Learn effective ways to network, apply, and stand out.</string>
+    <string name="assessment">Career Assessment</string>
+    <string name="assessment_description">Identify your strengths and ideal career path through assessments.</string>
+
     <!-- Social Auth -->
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>

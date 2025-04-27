@@ -44,15 +44,20 @@
     <color name="warning">#FFC107</color>
     <color name="white">#FFFFFF</color>
     <string name="about_company">About Company</string>
+    <string name="achievements">Achievements</string>
     <string name="already_have_account">Already have an account? Sign in</string>
     <string name="app_name">Worksy</string>
     <string name="applicants">Applicants</string>
     <string name="apply_filters">Apply Filters</string>
     <string name="apply_now">Apply Now</string>
+    <string name="assessment">Career Assessment</string>
+    <string name="assessment_description">Identify your strengths and ideal career path through assessments.</string>
+    <string name="assistant_bot">Assistant Bot</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="authenticate">Authenticate</string>
     <string name="back_button">Back</string>
     <string name="cancel">Cancel</string>
+    <string name="career_resources">Career Resources</string>
     <string name="code_sent">Verification code sent</string>
     <string name="company_name">Company Name</string>
     <string name="company_profile">Company Profile</string>
@@ -74,6 +79,8 @@
     <string name="filter_jobs">Filter Jobs</string>
     <string name="firebase_database_url" translatable="false">https://worksy-mobile-app-job-portal-default-rtdb.firebaseio.com</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="framework">Job Search Strategies</string>
+    <string name="framework_description">Learn effective ways to network, apply, and stand out.</string>
     <string name="full_time">Full-time</string>
     <string name="gcm_defaultSenderId" translatable="false">399000476267</string>
     <string name="good_morning">Good morning</string>
@@ -83,9 +90,12 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCNqlpaGvCdSa08YwBHoVaKtQgON3J1V-c</string>
     <string name="google_storage_bucket" translatable="false">worksy-mobile-app-job-portal.firebasestorage.app</string>
     <string name="home">Home</string>
+    <string name="industry">Industry Insights</string>
+    <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
     <string name="internship">Internship</string>
     <string name="job_description">Description</string>
     <string name="job_details">Job Details</string>
+    <string name="job_history">Job History</string>
     <string name="job_requirements">Requirements</string>
     <string name="job_saved">Job saved successfully</string>
     <string name="job_seeker">Job Seeker</string>
@@ -94,6 +104,8 @@
     <string name="manage_posts">Manage Posts</string>
     <string name="messages">Messages</string>
     <string name="mid_level">Mid Level</string>
+    <string name="mock">Mock Interview Guide</string>
+    <string name="mock_description">Prepare for interviews with common questions and expert tips.</string>
     <string name="my_applications">My Applications</string>
     <string name="name">Name</string>
     <string name="no_jobs_found">No Jobs Found</string>
@@ -105,6 +117,7 @@
     <string name="post_job">Post Job</string>
     <string name="profile">Profile</string>
     <string name="project_id" translatable="false">worksy-mobile-app-job-portal</string>
+    <string name="quick_actions">Quick Actions</string>
     <string name="recruiter_account">Recruiter Registration</string>
     <string name="register">Register</string>
     <string name="resend_code">Resend Code</string>
@@ -124,6 +137,7 @@
     <string name="skills">Skills</string>
     <string name="sort_by">Sort by</string>
     <string name="try_again">Try Again</string>
+    <string name="upload_resume">Upload Resume</string>
     <string name="user_type">User Type</string>
     <string name="verification_failed">Verification failed</string>
     <string name="verify_phone">Verify Phone Number</string>

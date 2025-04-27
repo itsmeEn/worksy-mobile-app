@@ -4,10 +4,12 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,14 +26,36 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final FragmentContainerView navHostFragment;
+  public final TextView careerResourcesTitle;
+
+  @NonNull
+  public final TextView greetingTextView;
+
+  @NonNull
+  public final ImageView profileImageView;
+
+  @NonNull
+  public final CardView quickActionsCard;
+
+  @NonNull
+  public final TextView quickActionsTitle;
+
+  @NonNull
+  public final View topBar;
 
   private ActivityJobSeekerMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation,
-      @NonNull FragmentContainerView navHostFragment) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull TextView careerResourcesTitle,
+      @NonNull TextView greetingTextView, @NonNull ImageView profileImageView,
+      @NonNull CardView quickActionsCard, @NonNull TextView quickActionsTitle,
+      @NonNull View topBar) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
-    this.navHostFragment = navHostFragment;
+    this.careerResourcesTitle = careerResourcesTitle;
+    this.greetingTextView = greetingTextView;
+    this.profileImageView = profileImageView;
+    this.quickActionsCard = quickActionsCard;
+    this.quickActionsTitle = quickActionsTitle;
+    this.topBar = topBar;
   }
 
   @Override
@@ -67,14 +91,45 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.nav_host_fragment;
-      FragmentContainerView navHostFragment = ViewBindings.findChildViewById(rootView, id);
-      if (navHostFragment == null) {
+      id = R.id.careerResourcesTitle;
+      TextView careerResourcesTitle = ViewBindings.findChildViewById(rootView, id);
+      if (careerResourcesTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.greetingTextView;
+      TextView greetingTextView = ViewBindings.findChildViewById(rootView, id);
+      if (greetingTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.profileImageView;
+      ImageView profileImageView = ViewBindings.findChildViewById(rootView, id);
+      if (profileImageView == null) {
+        break missingId;
+      }
+
+      id = R.id.quickActionsCard;
+      CardView quickActionsCard = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionsCard == null) {
+        break missingId;
+      }
+
+      id = R.id.quickActionsTitle;
+      TextView quickActionsTitle = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionsTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.topBar;
+      View topBar = ViewBindings.findChildViewById(rootView, id);
+      if (topBar == null) {
         break missingId;
       }
 
       return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomNavigation,
-          navHostFragment);
+          careerResourcesTitle, greetingTextView, profileImageView, quickActionsCard,
+          quickActionsTitle, topBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
