@@ -110,6 +110,15 @@
     <string name="assessment">Career Assessment</string>
     <string name="assessment_description">Identify your strengths and ideal career path through assessments.</string>
 
+    <!--company home-->
+    <string name="company">Company Name</string>
+    <string name="emp_rev">Rate Employee</string>
+    <string name="company_ratings">View Rating</string>
+    <string name="view_app">View Applicant</string>
+    <string name="about">Post About Company</string>
+    <string name="mantra">Post Company Mantra</string>
+    <string name="mission">Post Company Mission</string>
+    <string name="vision">Post Company Vision</string>
     <!-- Social Auth -->
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>
