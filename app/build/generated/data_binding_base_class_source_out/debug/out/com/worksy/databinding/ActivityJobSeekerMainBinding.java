@@ -4,7 +4,6 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,16 +22,19 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final CardView bottomLeftGridCard;
+
+  @NonNull
   public final BottomNavigationView bottomNavigation;
+
+  @NonNull
+  public final CardView bottomRightGridCard;
 
   @NonNull
   public final TextView careerResourcesTitle;
 
   @NonNull
   public final TextView greetingTextView;
-
-  @NonNull
-  public final ImageView profileImageView;
 
   @NonNull
   public final CardView quickActionsCard;
@@ -43,19 +45,29 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   @NonNull
   public final View topBar;
 
+  @NonNull
+  public final CardView topLeftGridCard;
+
+  @NonNull
+  public final CardView topRightGridCard;
+
   private ActivityJobSeekerMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull TextView careerResourcesTitle,
-      @NonNull TextView greetingTextView, @NonNull ImageView profileImageView,
-      @NonNull CardView quickActionsCard, @NonNull TextView quickActionsTitle,
-      @NonNull View topBar) {
+      @NonNull CardView bottomLeftGridCard, @NonNull BottomNavigationView bottomNavigation,
+      @NonNull CardView bottomRightGridCard, @NonNull TextView careerResourcesTitle,
+      @NonNull TextView greetingTextView, @NonNull CardView quickActionsCard,
+      @NonNull TextView quickActionsTitle, @NonNull View topBar, @NonNull CardView topLeftGridCard,
+      @NonNull CardView topRightGridCard) {
     this.rootView = rootView;
+    this.bottomLeftGridCard = bottomLeftGridCard;
     this.bottomNavigation = bottomNavigation;
+    this.bottomRightGridCard = bottomRightGridCard;
     this.careerResourcesTitle = careerResourcesTitle;
     this.greetingTextView = greetingTextView;
-    this.profileImageView = profileImageView;
     this.quickActionsCard = quickActionsCard;
     this.quickActionsTitle = quickActionsTitle;
     this.topBar = topBar;
+    this.topLeftGridCard = topLeftGridCard;
+    this.topRightGridCard = topRightGridCard;
   }
 
   @Override
@@ -85,9 +97,21 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomLeftGridCard;
+      CardView bottomLeftGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (bottomLeftGridCard == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavigation;
       BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigation == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomRightGridCard;
+      CardView bottomRightGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (bottomRightGridCard == null) {
         break missingId;
       }
 
@@ -100,12 +124,6 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
       id = R.id.greetingTextView;
       TextView greetingTextView = ViewBindings.findChildViewById(rootView, id);
       if (greetingTextView == null) {
-        break missingId;
-      }
-
-      id = R.id.profileImageView;
-      ImageView profileImageView = ViewBindings.findChildViewById(rootView, id);
-      if (profileImageView == null) {
         break missingId;
       }
 
@@ -127,9 +145,21 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomNavigation,
-          careerResourcesTitle, greetingTextView, profileImageView, quickActionsCard,
-          quickActionsTitle, topBar);
+      id = R.id.topLeftGridCard;
+      CardView topLeftGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (topLeftGridCard == null) {
+        break missingId;
+      }
+
+      id = R.id.topRightGridCard;
+      CardView topRightGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (topRightGridCard == null) {
+        break missingId;
+      }
+
+      return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomLeftGridCard,
+          bottomNavigation, bottomRightGridCard, careerResourcesTitle, greetingTextView,
+          quickActionsCard, quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

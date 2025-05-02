@@ -3143,6 +3143,7 @@ drawable ic_search_black_24
 drawable indeterminate_static
 drawable industry
 drawable interview
+drawable jobposting
 drawable logo
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3156,6 +3157,7 @@ drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable main
+drawable marketing
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3217,7 +3219,11 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable placeholder_image
+drawable rectangle
 drawable reg_design
+drawable reputation
+drawable research
 drawable robotic
 drawable rounded_edit_text
 drawable screenpage
@@ -3225,6 +3231,7 @@ drawable seeker_temp
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upload
 drawable upload_resume
 drawable worksy_logo
 font playfair_display_bold
@@ -3335,7 +3342,9 @@ id below
 id bestChoice
 id blocking
 id bottom
+id bottomLeftGridCard
 id bottomNavigation
+id bottomRightGridCard
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3352,6 +3361,8 @@ id buttonJobSeeker
 id buttonLogin
 id buttonPanel
 id buttonPhoneSignIn
+id buttonPinLocation
+id buttonPostNow
 id buttonRecruiter
 id buttonRegister
 id buttonResend
@@ -3391,6 +3402,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id companyIdentity
 id compress
 id confirm_button
 id constraint
@@ -3442,14 +3454,17 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editJobDescription
 id editTextCode
 id editTextCompanyName
 id editTextConfirmPassword
 id editTextEmail
+id editTextJobTitle
 id editTextLocation
 id editTextName
 id editTextPassword
 id editTextPhone
+id editTextSalaryRange
 id editTextSearch
 id edit_query
 id edit_text_id
@@ -3463,6 +3478,7 @@ id escape
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id experienceLevel
 id fade
 id fill
 id fill_horizontal
@@ -3490,6 +3506,7 @@ id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
+id greetingEmployerView
 id greetingTextView
 id group_divider
 id grouping
@@ -3509,6 +3526,10 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageDescriptionEditTextBottomLeft
+id imageDescriptionEditTextBottomRight
+id imageDescriptionEditTextTopLeft
+id imageDescriptionEditTextTopRight
 id imageViewCompanyLogo
 id immediateStop
 id included
@@ -3518,6 +3539,8 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id jobAddPost
+id jobDescription
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3534,6 +3557,8 @@ id line3
 id linear
 id listMode
 id list_item
+id locationInputLayout
+id locationLabel
 id m3_side_sheet
 id marquee
 id masked
@@ -3594,7 +3619,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id nav_host_fragment
 id navigation_applicants
 id navigation_applications
 id navigation_bar_item_active_indicator_view
@@ -3656,16 +3680,21 @@ id pin
 id position
 id postLayout
 id pressed
-id profileImageView
 id progressBar
 id progress_circular
 id progress_horizontal
 id quickActionsCard
 id quickActionsTitle
 id radio
+id radioButtonContract
 id radioButtonEmployer
+id radioButtonFullTime
+id radioButtonInternship
 id radioButtonJobSeeker
+id radioButtonPartTime
+id radioGroupExperienceLevel
 id radioGroupUserType
+id radioGroupWorkArrangement
 id ratio
 id rectangles
 id recyclerViewJobs
@@ -3677,6 +3706,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id salaryRangeLabel
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3762,8 +3792,10 @@ id textEnd
 id textInputLayoutCompanyName
 id textInputLayoutConfirmPassword
 id textInputLayoutEmail
+id textInputLayoutJobTitle
 id textInputLayoutName
 id textInputLayoutPassword
+id textInputLayoutSalaryRange
 id textInputLayoutSearch
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -3795,7 +3827,9 @@ id toggle
 id toolbar
 id top
 id topBar
+id topLeftGridCard
 id topPanel
+id topRightGridCard
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3812,6 +3846,10 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id uploadedImageViewBottomLeft
+id uploadedImageViewBottomRight
+id uploadedImageViewTopLeft
+id uploadedImageViewTopRight
 id useLogo
 id vertical
 id vertical_only
@@ -3829,6 +3867,7 @@ id wide
 id withText
 id with_icon
 id withinBounds
+id workArrangement
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3972,6 +4011,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_role_selection
+layout employee_post_job
 layout fingerprint_dialog_layout
 layout fragment_job_seeker_home
 layout fragment_login
@@ -4075,6 +4115,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about
 string about_company
 string achievements
 string already_have_account
@@ -4130,8 +4171,11 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string company
+string company_address
 string company_name
 string company_profile
+string company_ratings
 string confirm_device_credential_password
 string confirm_password
 string continue_with_google
@@ -4144,6 +4188,7 @@ string delete
 string dont_have_account
 string edit
 string email
+string emp_rev
 string employer
 string employment_type
 string enter_code
@@ -4183,6 +4228,7 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string home
+string hybrid
 string icon_content_description
 string industry
 string industry_description
@@ -4191,9 +4237,12 @@ string item_view_role_description
 string job_description
 string job_details
 string job_history
+string job_location
 string job_requirements
 string job_saved
 string job_seeker
+string job_title
+string job_type
 string loading
 string location
 string m3_exceed_max_badge_text_suffix
@@ -4213,6 +4262,7 @@ string m3_sys_motion_easing_standard
 string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
 string manage_posts
+string mantra
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_24h_suffix
@@ -4237,6 +4287,7 @@ string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string messages
 string mid_level
+string mission
 string mock
 string mock_description
 string mtrl_badge_numberless_content_description
@@ -4305,6 +4356,7 @@ string my_applications
 string name
 string no_jobs_found
 string no_jobs_found_message
+string on_site
 string or
 string part_time
 string password
@@ -4314,12 +4366,16 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string phone_number
+string pin_location
 string post_job
+string post_now
+string posted_jobs
 string profile
 string project_id
 string quick_actions
 string recruiter_account
 string register
+string remote
 string resend_code
 string reset
 string resume
@@ -4348,6 +4404,10 @@ string upload_resume
 string user_type
 string verification_failed
 string verify_phone
+string view_app
+string vision
+string work_arrangement
+string work_location
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

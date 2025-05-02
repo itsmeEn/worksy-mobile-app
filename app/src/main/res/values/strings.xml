@@ -101,11 +101,11 @@
     <string name="job_history">Job History</string>
     <string name="upload_resume">Upload Resume</string>
     <string name="assistant_bot">Assistant Bot</string>
-    <string name="mock">Mock Interview Guide</string>
+    <string name="mock">Interview Guide</string>
     <string name="mock_description">Prepare for interviews with common questions and expert tips.</string>
     <string name="industry">Industry Insights</string>
     <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
-    <string name="framework">Job Search Strategies</string>
+    <string name="framework">Job Strategies</string>
     <string name="framework_description">Learn effective ways to network, apply, and stand out.</string>
     <string name="assessment">Career Assessment</string>
     <string name="assessment_description">Identify your strengths and ideal career path through assessments.</string>
@@ -119,6 +119,22 @@
     <string name="mantra">Post Company Mantra</string>
     <string name="mission">Post Company Mission</string>
     <string name="vision">Post Company Vision</string>
+    <string name="posted_jobs">Recent Post Jobs</string>
+
+    <!--Post Job Text-->
+    <string name="job_title">Job Title</string>
+    <string name="job_location">Job Location</string>
+    <string name="job_type">Job Type</string>
+    <string name="work_arrangement">Work Arrangement</string>
+    <string name="work_location">Work Location</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="remote">Remote</string>
+    <string name="on_site">On Site</string>
+    <string name="post_now">Post Now</string>
+    <string name="company_address">Company Address</string>
+    <string name="pin_location">Pin Location</string>
+
+
     <!-- Social Auth -->
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>

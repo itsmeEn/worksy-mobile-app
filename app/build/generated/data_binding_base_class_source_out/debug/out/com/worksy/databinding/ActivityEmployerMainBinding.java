@@ -4,10 +4,13 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -21,17 +24,89 @@ public final class ActivityEmployerMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final CardView bottomLeftGridCard;
+
+  @NonNull
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final FragmentContainerView navHostFragment;
+  public final CardView bottomRightGridCard;
+
+  @NonNull
+  public final TextView companyIdentity;
+
+  @NonNull
+  public final TextView greetingEmployerView;
+
+  @NonNull
+  public final EditText imageDescriptionEditTextBottomLeft;
+
+  @NonNull
+  public final EditText imageDescriptionEditTextBottomRight;
+
+  @NonNull
+  public final EditText imageDescriptionEditTextTopLeft;
+
+  @NonNull
+  public final EditText imageDescriptionEditTextTopRight;
+
+  @NonNull
+  public final CardView quickActionsCard;
+
+  @NonNull
+  public final TextView quickActionsTitle;
+
+  @NonNull
+  public final View topBar;
+
+  @NonNull
+  public final CardView topLeftGridCard;
+
+  @NonNull
+  public final CardView topRightGridCard;
+
+  @NonNull
+  public final ImageView uploadedImageViewBottomLeft;
+
+  @NonNull
+  public final ImageView uploadedImageViewBottomRight;
+
+  @NonNull
+  public final ImageView uploadedImageViewTopLeft;
+
+  @NonNull
+  public final ImageView uploadedImageViewTopRight;
 
   private ActivityEmployerMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation,
-      @NonNull FragmentContainerView navHostFragment) {
+      @NonNull CardView bottomLeftGridCard, @NonNull BottomNavigationView bottomNavigation,
+      @NonNull CardView bottomRightGridCard, @NonNull TextView companyIdentity,
+      @NonNull TextView greetingEmployerView, @NonNull EditText imageDescriptionEditTextBottomLeft,
+      @NonNull EditText imageDescriptionEditTextBottomRight,
+      @NonNull EditText imageDescriptionEditTextTopLeft,
+      @NonNull EditText imageDescriptionEditTextTopRight, @NonNull CardView quickActionsCard,
+      @NonNull TextView quickActionsTitle, @NonNull View topBar, @NonNull CardView topLeftGridCard,
+      @NonNull CardView topRightGridCard, @NonNull ImageView uploadedImageViewBottomLeft,
+      @NonNull ImageView uploadedImageViewBottomRight, @NonNull ImageView uploadedImageViewTopLeft,
+      @NonNull ImageView uploadedImageViewTopRight) {
     this.rootView = rootView;
+    this.bottomLeftGridCard = bottomLeftGridCard;
     this.bottomNavigation = bottomNavigation;
-    this.navHostFragment = navHostFragment;
+    this.bottomRightGridCard = bottomRightGridCard;
+    this.companyIdentity = companyIdentity;
+    this.greetingEmployerView = greetingEmployerView;
+    this.imageDescriptionEditTextBottomLeft = imageDescriptionEditTextBottomLeft;
+    this.imageDescriptionEditTextBottomRight = imageDescriptionEditTextBottomRight;
+    this.imageDescriptionEditTextTopLeft = imageDescriptionEditTextTopLeft;
+    this.imageDescriptionEditTextTopRight = imageDescriptionEditTextTopRight;
+    this.quickActionsCard = quickActionsCard;
+    this.quickActionsTitle = quickActionsTitle;
+    this.topBar = topBar;
+    this.topLeftGridCard = topLeftGridCard;
+    this.topRightGridCard = topRightGridCard;
+    this.uploadedImageViewBottomLeft = uploadedImageViewBottomLeft;
+    this.uploadedImageViewBottomRight = uploadedImageViewBottomRight;
+    this.uploadedImageViewTopLeft = uploadedImageViewTopLeft;
+    this.uploadedImageViewTopRight = uploadedImageViewTopRight;
   }
 
   @Override
@@ -61,20 +136,120 @@ public final class ActivityEmployerMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomLeftGridCard;
+      CardView bottomLeftGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (bottomLeftGridCard == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavigation;
       BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigation == null) {
         break missingId;
       }
 
-      id = R.id.nav_host_fragment;
-      FragmentContainerView navHostFragment = ViewBindings.findChildViewById(rootView, id);
-      if (navHostFragment == null) {
+      id = R.id.bottomRightGridCard;
+      CardView bottomRightGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (bottomRightGridCard == null) {
         break missingId;
       }
 
-      return new ActivityEmployerMainBinding((ConstraintLayout) rootView, bottomNavigation,
-          navHostFragment);
+      id = R.id.companyIdentity;
+      TextView companyIdentity = ViewBindings.findChildViewById(rootView, id);
+      if (companyIdentity == null) {
+        break missingId;
+      }
+
+      id = R.id.greetingEmployerView;
+      TextView greetingEmployerView = ViewBindings.findChildViewById(rootView, id);
+      if (greetingEmployerView == null) {
+        break missingId;
+      }
+
+      id = R.id.imageDescriptionEditTextBottomLeft;
+      EditText imageDescriptionEditTextBottomLeft = ViewBindings.findChildViewById(rootView, id);
+      if (imageDescriptionEditTextBottomLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.imageDescriptionEditTextBottomRight;
+      EditText imageDescriptionEditTextBottomRight = ViewBindings.findChildViewById(rootView, id);
+      if (imageDescriptionEditTextBottomRight == null) {
+        break missingId;
+      }
+
+      id = R.id.imageDescriptionEditTextTopLeft;
+      EditText imageDescriptionEditTextTopLeft = ViewBindings.findChildViewById(rootView, id);
+      if (imageDescriptionEditTextTopLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.imageDescriptionEditTextTopRight;
+      EditText imageDescriptionEditTextTopRight = ViewBindings.findChildViewById(rootView, id);
+      if (imageDescriptionEditTextTopRight == null) {
+        break missingId;
+      }
+
+      id = R.id.quickActionsCard;
+      CardView quickActionsCard = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionsCard == null) {
+        break missingId;
+      }
+
+      id = R.id.quickActionsTitle;
+      TextView quickActionsTitle = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionsTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.topBar;
+      View topBar = ViewBindings.findChildViewById(rootView, id);
+      if (topBar == null) {
+        break missingId;
+      }
+
+      id = R.id.topLeftGridCard;
+      CardView topLeftGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (topLeftGridCard == null) {
+        break missingId;
+      }
+
+      id = R.id.topRightGridCard;
+      CardView topRightGridCard = ViewBindings.findChildViewById(rootView, id);
+      if (topRightGridCard == null) {
+        break missingId;
+      }
+
+      id = R.id.uploadedImageViewBottomLeft;
+      ImageView uploadedImageViewBottomLeft = ViewBindings.findChildViewById(rootView, id);
+      if (uploadedImageViewBottomLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.uploadedImageViewBottomRight;
+      ImageView uploadedImageViewBottomRight = ViewBindings.findChildViewById(rootView, id);
+      if (uploadedImageViewBottomRight == null) {
+        break missingId;
+      }
+
+      id = R.id.uploadedImageViewTopLeft;
+      ImageView uploadedImageViewTopLeft = ViewBindings.findChildViewById(rootView, id);
+      if (uploadedImageViewTopLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.uploadedImageViewTopRight;
+      ImageView uploadedImageViewTopRight = ViewBindings.findChildViewById(rootView, id);
+      if (uploadedImageViewTopRight == null) {
+        break missingId;
+      }
+
+      return new ActivityEmployerMainBinding((ConstraintLayout) rootView, bottomLeftGridCard,
+          bottomNavigation, bottomRightGridCard, companyIdentity, greetingEmployerView,
+          imageDescriptionEditTextBottomLeft, imageDescriptionEditTextBottomRight,
+          imageDescriptionEditTextTopLeft, imageDescriptionEditTextTopRight, quickActionsCard,
+          quickActionsTitle, topBar, topLeftGridCard, topRightGridCard, uploadedImageViewBottomLeft,
+          uploadedImageViewBottomRight, uploadedImageViewTopLeft, uploadedImageViewTopRight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
