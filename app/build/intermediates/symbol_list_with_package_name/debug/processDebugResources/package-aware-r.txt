@@ -87,6 +87,7 @@ array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array crypto_fingerprint_fallback_prefixes
 array crypto_fingerprint_fallback_vendors
+array currency_options
 array delay_showing_prompt_models
 array hide_fingerprint_instantly_prefixes
 array initial_slider_values
@@ -3096,11 +3097,11 @@ drawable employment_records
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
 drawable framework
-drawable front_log_in
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable home
 drawable home_1
+drawable home_page
 drawable homepage
 drawable ic_add
 drawable ic_applications
@@ -3143,8 +3144,6 @@ drawable ic_search_black_24
 drawable indeterminate_static
 drawable industry
 drawable interview
-drawable jobposting
-drawable logo
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3156,7 +3155,6 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
-drawable main
 drawable marketing
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -3225,6 +3223,7 @@ drawable reg_design
 drawable reputation
 drawable research
 drawable robotic
+drawable rounded_corner
 drawable rounded_edit_text
 drawable screenpage
 drawable seeker_temp
@@ -3356,6 +3355,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id buttonApply
 id buttonBack
+id buttonContainer
 id buttonGoogleSignIn
 id buttonJobSeeker
 id buttonLogin
@@ -3478,7 +3478,6 @@ id escape
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id experienceLevel
 id fade
 id fill
 id fill_horizontal
@@ -3557,8 +3556,6 @@ id line3
 id linear
 id listMode
 id list_item
-id locationInputLayout
-id locationLabel
 id m3_side_sheet
 id marquee
 id masked
@@ -3688,13 +3685,20 @@ id quickActionsTitle
 id radio
 id radioButtonContract
 id radioButtonEmployer
+id radioButtonEntry
 id radioButtonFullTime
+id radioButtonHybrid
 id radioButtonInternship
 id radioButtonJobSeeker
+id radioButtonMid
+id radioButtonOnSite
 id radioButtonPartTime
+id radioButtonRemote
+id radioButtonSenior
 id radioGroupExperienceLevel
 id radioGroupUserType
 id radioGroupWorkArrangement
+id radioGroupWorkSetup
 id ratio
 id rectangles
 id recyclerViewJobs
@@ -3706,7 +3710,6 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id salaryRangeLabel
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3716,6 +3719,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollViewForm
 id scrollable
 id search_badge
 id search_bar
@@ -3748,6 +3752,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerCurrency
 id spline
 id split_action_bar
 id spread
@@ -3867,7 +3872,7 @@ id wide
 id withText
 id with_icon
 id withinBounds
-id workArrangement
+id worksyLogo
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -4119,6 +4124,7 @@ string about
 string about_company
 string achievements
 string already_have_account
+string amount
 string android_credentials_TYPE_PASSWORD_CREDENTIAL
 string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
@@ -4203,6 +4209,7 @@ string fab_transformation_sheet_behavior
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string fetching_location
 string filter_jobs
 string fingerprint_dialog_touch_sensor
 string fingerprint_error_hw_not_available
@@ -4407,7 +4414,7 @@ string verify_phone
 string view_app
 string vision
 string work_arrangement
-string work_location
+string work_setup
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

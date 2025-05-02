@@ -4,11 +4,12 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
@@ -23,7 +24,7 @@ import java.lang.String;
 
 public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final TextView authenticateText;
@@ -64,14 +65,19 @@ public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   public final MaterialTextView textViewSignUp;
 
-  private FragmentLoginBinding(@NonNull ScrollView rootView, @NonNull TextView authenticateText,
-      @NonNull MaterialButton buttonGoogleSignIn, @NonNull MaterialButton buttonPhoneSignIn,
-      @NonNull MaterialButton buttonSignIn, @NonNull TextInputEditText editTextEmail,
-      @NonNull TextInputEditText editTextPassword, @NonNull MaterialRadioButton radioButtonEmployer,
+  @NonNull
+  public final ImageView worksyLogo;
+
+  private FragmentLoginBinding(@NonNull ConstraintLayout rootView,
+      @NonNull TextView authenticateText, @NonNull MaterialButton buttonGoogleSignIn,
+      @NonNull MaterialButton buttonPhoneSignIn, @NonNull MaterialButton buttonSignIn,
+      @NonNull TextInputEditText editTextEmail, @NonNull TextInputEditText editTextPassword,
+      @NonNull MaterialRadioButton radioButtonEmployer,
       @NonNull MaterialRadioButton radioButtonJobSeeker, @NonNull RadioGroup radioGroupUserType,
       @NonNull TextInputLayout textInputLayoutEmail,
       @NonNull TextInputLayout textInputLayoutPassword,
-      @NonNull MaterialTextView textViewForgotPassword, @NonNull MaterialTextView textViewSignUp) {
+      @NonNull MaterialTextView textViewForgotPassword, @NonNull MaterialTextView textViewSignUp,
+      @NonNull ImageView worksyLogo) {
     this.rootView = rootView;
     this.authenticateText = authenticateText;
     this.buttonGoogleSignIn = buttonGoogleSignIn;
@@ -86,11 +92,12 @@ public final class FragmentLoginBinding implements ViewBinding {
     this.textInputLayoutPassword = textInputLayoutPassword;
     this.textViewForgotPassword = textViewForgotPassword;
     this.textViewSignUp = textViewSignUp;
+    this.worksyLogo = worksyLogo;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -193,10 +200,16 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((ScrollView) rootView, authenticateText, buttonGoogleSignIn,
-          buttonPhoneSignIn, buttonSignIn, editTextEmail, editTextPassword, radioButtonEmployer,
-          radioButtonJobSeeker, radioGroupUserType, textInputLayoutEmail, textInputLayoutPassword,
-          textViewForgotPassword, textViewSignUp);
+      id = R.id.worksyLogo;
+      ImageView worksyLogo = ViewBindings.findChildViewById(rootView, id);
+      if (worksyLogo == null) {
+        break missingId;
+      }
+
+      return new FragmentLoginBinding((ConstraintLayout) rootView, authenticateText,
+          buttonGoogleSignIn, buttonPhoneSignIn, buttonSignIn, editTextEmail, editTextPassword,
+          radioButtonEmployer, radioButtonJobSeeker, radioGroupUserType, textInputLayoutEmail,
+          textInputLayoutPassword, textViewForgotPassword, textViewSignUp, worksyLogo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

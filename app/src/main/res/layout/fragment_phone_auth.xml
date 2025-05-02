@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/verify_phone"
+                android:textColor="#000000"
                 android:textAppearance="?attr/textAppearanceHeadlineMedium" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -67,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/enter_code"
+                android:textColor="#000000"
                 android:textAppearance="?attr/textAppearanceHeadlineMedium" />
 
             <com.google.android.material.textfield.TextInputLayout

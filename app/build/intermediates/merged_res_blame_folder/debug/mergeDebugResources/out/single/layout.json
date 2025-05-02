@@ -8,8 +8,12 @@
         "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/dialog_role_selection.xml"
     },
     {
-        "merged": "com.worksy.app-mergeDebugResources-43:/layout/activity_job_seeker_main.xml",
-        "source": "com.worksy.app-main-46:/layout/activity_job_seeker_main.xml"
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/employee_post_job.xml",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/employee_post_job.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/employer_post_job.xml",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/employer_post_job.xml"
     },
     {
         "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/item_job.xml",
@@ -18,10 +22,6 @@
     {
         "merged": "com.worksy.app-mergeDebugResources-43:/layout/employee_post_job.xml",
         "source": "com.worksy.app-main-46:/layout/employee_post_job.xml"
-    },
-    {
-        "merged": "com.worksy.app-mergeDebugResources-43:/layout/activity_employer_main.xml",
-        "source": "com.worksy.app-main-46:/layout/activity_employer_main.xml"
     },
     {
         "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_login.xml",

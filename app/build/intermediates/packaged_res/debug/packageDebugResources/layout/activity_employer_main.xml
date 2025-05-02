@@ -192,6 +192,7 @@
                 android:layout_marginTop="8dp"
                 android:hint="@string/about"
                 android:textSize="12sp"
+                android:textColor="#000000"
                 android:gravity="center" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -231,6 +232,7 @@
                 android:layout_marginTop="8dp"
                 android:hint="@string/mantra"
                 android:textSize="12sp"
+                android:textColor="#000000"
                 android:gravity="center" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

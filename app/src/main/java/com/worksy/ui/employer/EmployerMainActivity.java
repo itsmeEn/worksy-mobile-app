@@ -44,12 +44,22 @@ public class EmployerMainActivity extends AppCompatActivity {
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.navigation_dashboard) {
+                // Don't recreate the current activity
                 return true;
             } else if (itemId == R.id.navigation_post_job) {
+                Intent intent = new Intent(this, EmployerJobPost.class);
+                startActivity(intent);
+                finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_applicants) {
+                Intent intent = new Intent(this, ViewApplicant.class);
+                startActivity(intent);
+                finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_company) {
+                Intent intent = new Intent(this, ViewApplicant.class); //since wala pa nagagawang company page as is muna to
+                startActivity(intent);
+                finish(); // Finish the current activity
                 return true;
             }
             return false;

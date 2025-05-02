@@ -223,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/mock_description"
                 android:textSize="14sp"
-                android:textColor="#666666"
+                android:textColor="#000000"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -269,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/industry_description"
                 android:textSize="14sp"
-                android:textColor="#666666"
+                android:textColor="#000000"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -315,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/framework_description"
                 android:textSize="14sp"
-                android:textColor="#666666"
+                android:textColor="#000000"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -361,7 +361,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/assessment_description"
                 android:textSize="14sp"
-                android:textColor="#666666"
+                android:textColor="#000000"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

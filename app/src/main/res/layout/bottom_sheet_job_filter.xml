@@ -14,6 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/filter_jobs"
+            android:textColor="#000000"
             android:textAppearance="?attr/textAppearanceHeadlineSmall" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -21,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/employment_type"
+            android:textColor="#000000"
             android:textAppearance="?attr/textAppearanceBodyLarge"
             android:textStyle="bold" />
 
@@ -64,6 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/experience_level"
+            android:textColor="#000000"
             android:textAppearance="?attr/textAppearanceBodyLarge"
             android:textStyle="bold" />
 
@@ -100,6 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/salary_range"
+            android:textColor="#000000"
             android:textAppearance="?attr/textAppearanceBodyLarge"
             android:textStyle="bold" />
 

@@ -7,6 +7,7 @@ anim slide_out_right
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
+array currency_options
 array initial_slider_values
 array preloaded_fonts
 color background
@@ -33,9 +34,9 @@ drawable chatbot
 drawable check_list
 drawable employment_records
 drawable framework
-drawable front_log_in
 drawable home
 drawable home_1
+drawable home_page
 drawable homepage
 drawable ic_add
 drawable ic_applications
@@ -56,9 +57,6 @@ drawable ic_profile
 drawable ic_search
 drawable industry
 drawable interview
-drawable jobposting
-drawable logo
-drawable main
 drawable marketing
 drawable placeholder_image
 drawable rectangle
@@ -66,6 +64,7 @@ drawable reg_design
 drawable reputation
 drawable research
 drawable robotic
+drawable rounded_corner
 drawable rounded_edit_text
 drawable screenpage
 drawable seeker_temp
@@ -85,6 +84,7 @@ id bottomNavigation
 id bottomRightGridCard
 id buttonApply
 id buttonBack
+id buttonContainer
 id buttonGoogleSignIn
 id buttonJobSeeker
 id buttonLogin
@@ -121,7 +121,6 @@ id editTextPassword
 id editTextPhone
 id editTextSalaryRange
 id editTextSearch
-id experienceLevel
 id greetingEmployerView
 id greetingTextView
 id imageDescriptionEditTextBottomLeft
@@ -134,8 +133,6 @@ id jobDescription
 id layoutEmpty
 id layoutPhone
 id layoutVerification
-id locationInputLayout
-id locationLabel
 id navigation_applicants
 id navigation_applications
 id navigation_company
@@ -149,16 +146,24 @@ id quickActionsCard
 id quickActionsTitle
 id radioButtonContract
 id radioButtonEmployer
+id radioButtonEntry
 id radioButtonFullTime
+id radioButtonHybrid
 id radioButtonInternship
 id radioButtonJobSeeker
+id radioButtonMid
+id radioButtonOnSite
 id radioButtonPartTime
+id radioButtonRemote
+id radioButtonSenior
 id radioGroupExperienceLevel
 id radioGroupUserType
 id radioGroupWorkArrangement
+id radioGroupWorkSetup
 id recyclerViewJobs
-id salaryRangeLabel
+id scrollViewForm
 id sliderSalary
+id spinnerCurrency
 id swipeRefreshLayout
 id textInputLayoutCompanyName
 id textInputLayoutConfirmPassword
@@ -185,7 +190,7 @@ id uploadedImageViewBottomLeft
 id uploadedImageViewBottomRight
 id uploadedImageViewTopLeft
 id uploadedImageViewTopRight
-id workArrangement
+id worksyLogo
 layout activity_auth
 layout activity_employer_main
 layout activity_job_seeker_main
@@ -206,6 +211,7 @@ string about
 string about_company
 string achievements
 string already_have_account
+string amount
 string app_name
 string applicants
 string apply_filters
@@ -240,6 +246,7 @@ string enter_code
 string entry_level
 string error_occurred
 string experience_level
+string fetching_location
 string filter_jobs
 string firebase_database_url
 string forgot_password
@@ -319,7 +326,7 @@ string verify_phone
 string view_app
 string vision
 string work_arrangement
-string work_location
+string work_setup
 style TextAppearance.Worksy.BodyLarge
 style TextAppearance.Worksy.BodyMedium
 style TextAppearance.Worksy.HeadlineLarge

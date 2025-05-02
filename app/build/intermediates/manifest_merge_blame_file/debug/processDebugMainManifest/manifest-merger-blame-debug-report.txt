@@ -15,9 +15,7 @@
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 13-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:6:5-79
 13-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:6:22-76
-14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:7:5-80
-14-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:7:22-77
+14    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
 15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 15-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:8:5-78
 15-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:8:22-76
@@ -49,7 +47,7 @@
 26-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
 27
 28    <application
-28-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-46:19
+28-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-47:19
 29        android:name="com.worksy.WorksyApp"
 29-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:13:9-34
 30        android:allowBackup="true"
@@ -110,11 +108,11 @@
 59-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:13-37
 60
 61        <meta-data
-61-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:42:9-44:57
+61-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:9-45:57
 62            android:name="preloaded_fonts"
-62-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:13-43
+62-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:44:13-43
 63            android:resource="@array/preloaded_fonts" />
-63-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:44:13-54
+63-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:45:13-54
 64
 65        <activity
 65-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:29:9-46:20

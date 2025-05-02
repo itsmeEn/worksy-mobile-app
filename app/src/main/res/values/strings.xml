@@ -126,7 +126,7 @@
     <string name="job_location">Job Location</string>
     <string name="job_type">Job Type</string>
     <string name="work_arrangement">Work Arrangement</string>
-    <string name="work_location">Work Location</string>
+    <string name="work_setup">Work Setup</string>
     <string name="hybrid">Hybrid</string>
     <string name="remote">Remote</string>
     <string name="on_site">On Site</string>
@@ -134,8 +134,16 @@
     <string name="company_address">Company Address</string>
     <string name="pin_location">Pin Location</string>
 
+    <!--currency-->
+    <string-array name="currency_options">
+        <item>₱ PHP</item>
+        <item>$ USD</item>
+    </string-array>
+    <string name="amount">Enter Salary Amount</string>
 
     <!-- Social Auth -->
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>
+
+    <string name="fetching_location">Fetching Location...</string>
 </resources>
