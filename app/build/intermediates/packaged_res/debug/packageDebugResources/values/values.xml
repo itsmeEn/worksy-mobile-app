@@ -22,6 +22,18 @@
         <item>0.0</item>
         <item>200000.0</item>
     </array>
+    <string-array name="job_categories">
+        <item>Technology</item>
+        <item>Healthcare</item>
+        <item>Finance</item>
+        <item>Education</item>
+        <item>Marketing</item>
+        <item>Sales</item>
+        <item>Customer Service</item>
+        <item>Engineering</item>
+        <item>Human Resources</item>
+        <item>Arts and Design</item>
+    </string-array>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/playfair_display_bold</item>
         <item>@font/playfair_display_medium</item>
@@ -105,6 +117,8 @@
     <string name="industry">Industry Insights</string>
     <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
     <string name="internship">Internship</string>
+    <string name="job_category">Job Category</string>
+    <string name="job_category_placeholder">Job Category Placeholder</string>
     <string name="job_description">Description</string>
     <string name="job_details">Job Details</string>
     <string name="job_history">Job History</string>
@@ -113,9 +127,11 @@
     <string name="job_saved">Job saved successfully</string>
     <string name="job_seeker">Job Seeker</string>
     <string name="job_title">Job Title</string>
+    <string name="job_title_placeholder">Job Title Placeholder</string>
     <string name="job_type">Job Type</string>
     <string name="loading">Loading…</string>
     <string name="location">Location</string>
+    <string name="location_placeholder">Location Placeholder</string>
     <string name="manage_posts">Manage Posts</string>
     <string name="mantra">Post Company Mantra</string>
     <string name="messages">Messages</string>
@@ -166,6 +182,7 @@
     <string name="view_app">View Applicant</string>
     <string name="vision">Post Company Vision</string>
     <string name="work_arrangement">Work Arrangement</string>
+    <string name="work_arrangement_placeholder">Work Arrangement Placeholder</string>
     <string name="work_setup">Work Setup</string>
     <style name="TextAppearance.Worksy.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">16sp</item>

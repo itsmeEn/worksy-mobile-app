@@ -1,7 +1,0 @@
-com.worksy.test.app-core-1.5.0-0 /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5b86b44bcbec297a26c996df6a54f214/transformed/core-1.5.0/res
-com.worksy.test.app-annotation-experimental-1.4.1-1 /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7b3581b6e3e8fb6dd56a75f5b21298d1/transformed/annotation-experimental-1.4.1/res
-com.worksy.test.app-tracing-1.2.0-2 /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ed67161f558d9990bd1bbacdda2f2f56/transformed/tracing-1.2.0/res
-com.worksy.test.app-androidTest-3 /Users/judeibardaloza/StudioProjects/WorksyApp/app/build/generated/res/resValues/androidTest/debug
-com.worksy.test.app-mergeDebugAndroidTestResources-4 /Users/judeibardaloza/StudioProjects/WorksyApp/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.worksy.test.app-mergeDebugAndroidTestResources-5 /Users/judeibardaloza/StudioProjects/WorksyApp/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.worksy.test.app-debugAndroidTest-6 /Users/judeibardaloza/StudioProjects/WorksyApp/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

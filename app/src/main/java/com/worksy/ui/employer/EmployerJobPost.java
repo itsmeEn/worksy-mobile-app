@@ -8,8 +8,10 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -42,6 +44,7 @@ public class EmployerJobPost extends AppCompatActivity {
     private EditText editTextLocation;
     private RadioGroup radioGroupWorkArrangement;
     private RadioGroup radioGroupExperienceLevel;
+    private Spinner spinnerJobCategory; // Added Spinner for Job Category
 
     private FusedLocationProviderClient fusedLocationProviderClient;
     private LocationCallback locationCallback;
@@ -64,6 +67,16 @@ public class EmployerJobPost extends AppCompatActivity {
         editTextLocation = findViewById(R.id.editTextLocation);
         radioGroupWorkArrangement = findViewById(R.id.radioGroupWorkArrangement);
         radioGroupExperienceLevel = findViewById(R.id.radioGroupExperienceLevel);
+        spinnerJobCategory = findViewById(R.id.spinnerJobCategory); // Initialize Job Category Spinner
+
+        // Populate Job Category Spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.job_categories,
+                android.R.layout.simple_spinner_item
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerJobCategory.setAdapter(adapter);
 
         findViewById(R.id.buttonPinLocation).setOnClickListener(v -> getCurrentLocation());
 
@@ -71,6 +84,7 @@ public class EmployerJobPost extends AppCompatActivity {
 
         findViewById(R.id.buttonReset).setOnClickListener(v -> showResetConfirmationDialog());
     }
+
 
     private void getCurrentLocation() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -164,6 +178,7 @@ public class EmployerJobPost extends AppCompatActivity {
         String description = editJobDescription.getText().toString().trim();
         String salaryRange = editTextSalaryRange.getText().toString().trim();
         String location = editTextLocation.getText().toString().trim();
+        String jobCategory = spinnerJobCategory.getSelectedItem().toString(); // Get selected job category
 
         String workArrangement = getSelectedWorkArrangement();
         if (workArrangement.isEmpty()) {
@@ -192,6 +207,7 @@ public class EmployerJobPost extends AppCompatActivity {
         jobData.put("location", location);
         jobData.put("workArrangement", workArrangement);
         jobData.put("experienceLevel", experienceLevel);
+        jobData.put("jobCategory", jobCategory); // Add job category to data
         jobData.put("timestamp", com.google.firebase.firestore.FieldValue.serverTimestamp());
 
         firebaseFirestore.collection("jobs")
@@ -209,7 +225,9 @@ public class EmployerJobPost extends AppCompatActivity {
         int selectedId = radioGroupWorkArrangement.getCheckedRadioButtonId();
         if (selectedId != -1) {
             View radioButton = radioGroupWorkArrangement.findViewById(selectedId);
-            return (String) radioButton.getTag();
+            if (radioButton != null && radioButton.getTag() != null) {
+                return radioButton.getTag().toString();
+            }
         }
         return "";
     }
@@ -218,7 +236,9 @@ public class EmployerJobPost extends AppCompatActivity {
         int selectedId = radioGroupExperienceLevel.getCheckedRadioButtonId();
         if (selectedId != -1) {
             View radioButton = radioGroupExperienceLevel.findViewById(selectedId);
-            return (String) radioButton.getTag();
+            if (radioButton != null && radioButton.getTag() != null) {
+                return radioButton.getTag().toString();
+            }
         }
         return "";
     }
@@ -230,5 +250,6 @@ public class EmployerJobPost extends AppCompatActivity {
         editTextLocation.setText("");
         radioGroupWorkArrangement.clearCheck();
         radioGroupExperienceLevel.clearCheck();
+        spinnerJobCategory.setSelection(0); // Reset to the first item (if it's a default like "Select Category")
     }
 }

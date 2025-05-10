@@ -9,6 +9,7 @@ array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array currency_options
 array initial_slider_values
+array job_categories
 array preloaded_fonts
 color background
 color black
@@ -123,10 +124,6 @@ id editTextSalaryRange
 id editTextSearch
 id greetingEmployerView
 id greetingTextView
-id imageDescriptionEditTextBottomLeft
-id imageDescriptionEditTextBottomRight
-id imageDescriptionEditTextTopLeft
-id imageDescriptionEditTextTopRight
 id imageViewCompanyLogo
 id jobAddPost
 id jobDescription
@@ -160,10 +157,12 @@ id radioGroupExperienceLevel
 id radioGroupUserType
 id radioGroupWorkArrangement
 id radioGroupWorkSetup
+id recentJobsRecyclerView
 id recyclerViewJobs
 id scrollViewForm
 id sliderSalary
 id spinnerCurrency
+id spinnerJobCategory
 id swipeRefreshLayout
 id textInputLayoutCompanyName
 id textInputLayoutConfirmPassword
@@ -174,7 +173,9 @@ id textInputLayoutPassword
 id textInputLayoutSalaryRange
 id textInputLayoutSearch
 id textViewCompanyName
+id textViewExperienceLevel
 id textViewForgotPassword
+id textViewJobCategory
 id textViewJobTitle
 id textViewLocation
 id textViewSalary
@@ -182,14 +183,12 @@ id textViewSignUp
 id textViewTitle
 id textViewUserName
 id textViewWelcome
+id textViewWorkArrangement
+id textViewWorkSetUp
 id toolbar
 id topBar
 id topLeftGridCard
 id topRightGridCard
-id uploadedImageViewBottomLeft
-id uploadedImageViewBottomRight
-id uploadedImageViewTopLeft
-id uploadedImageViewTopRight
 id worksyLogo
 layout activity_auth
 layout activity_employer_main
@@ -203,6 +202,7 @@ layout fragment_phone_auth
 layout fragment_recruiter_registration
 layout fragment_registration
 layout item_job
+layout item_recent_job
 menu menu_employer_bottom_nav
 menu menu_job_seeker_bottom_nav
 mipmap ic_launcher
@@ -265,6 +265,8 @@ string hybrid
 string industry
 string industry_description
 string internship
+string job_category
+string job_category_placeholder
 string job_description
 string job_details
 string job_history
@@ -273,9 +275,11 @@ string job_requirements
 string job_saved
 string job_seeker
 string job_title
+string job_title_placeholder
 string job_type
 string loading
 string location
+string location_placeholder
 string manage_posts
 string mantra
 string messages
@@ -326,6 +330,7 @@ string verify_phone
 string view_app
 string vision
 string work_arrangement
+string work_arrangement_placeholder
 string work_setup
 style TextAppearance.Worksy.BodyLarge
 style TextAppearance.Worksy.BodyMedium

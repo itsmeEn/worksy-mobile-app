@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/home_1"
     android:layout_height="match_parent"
-    tools:context=".ui.employer.EmployerMainActivity"   >
+    tools:context=".ui.employer.EmployerMainActivity">
 
     <View
         android:id="@+id/topBar"
@@ -35,10 +35,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
-        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topBar">
@@ -157,163 +157,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quickActionsCard" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/topLeftGridCard"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recentJobsRecyclerView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/topRightGridCard"
-        app:layout_constraintTop_toBottomOf="@+id/companyIdentity">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/uploadedImageViewTopLeft"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/about"
-                android:src="@drawable/placeholder_image" />
-
-            <EditText
-                android:id="@+id/imageDescriptionEditTextTopLeft"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/about"
-                android:textSize="12sp"
-                android:textColor="#000000"
-                android:gravity="center" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/topRightGridCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:layout_constraintStart_toEndOf="@+id/topLeftGridCard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/companyIdentity">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/uploadedImageViewTopRight"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/mantra"
-                android:src="@drawable/placeholder_image" />
-
-            <EditText
-                android:id="@+id/imageDescriptionEditTextTopRight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/mantra"
-                android:textSize="12sp"
-                android:textColor="#000000"
-                android:gravity="center" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bottomLeftGridCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/companyIdentity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bottomRightGridCard"
-        app:layout_constraintTop_toBottomOf="@+id/topLeftGridCard">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/uploadedImageViewBottomLeft"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/mission"
-                android:src="@drawable/placeholder_image" />
-
-            <EditText
-                android:id="@+id/imageDescriptionEditTextBottomLeft"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/mission"
-                android:textSize="12sp"
-                android:gravity="center" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bottomRightGridCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:layout_constraintStart_toEndOf="@+id/bottomLeftGridCard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topRightGridCard">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/uploadedImageViewBottomRight"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/vision"
-                android:src="@drawable/placeholder_image" />
-
-            <EditText
-                android:id="@+id/imageDescriptionEditTextBottomRight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/vision"
-                android:textSize="12sp"
-                android:gravity="center" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"

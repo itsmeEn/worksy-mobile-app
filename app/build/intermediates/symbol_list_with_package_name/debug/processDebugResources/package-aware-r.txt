@@ -91,6 +91,7 @@ array currency_options
 array delay_showing_prompt_models
 array hide_fingerprint_instantly_prefixes
 array initial_slider_values
+array job_categories
 array preloaded_fonts
 attr SharedValue
 attr SharedValueId
@@ -3525,10 +3526,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageDescriptionEditTextBottomLeft
-id imageDescriptionEditTextBottomRight
-id imageDescriptionEditTextTopLeft
-id imageDescriptionEditTextTopRight
 id imageViewCompanyLogo
 id immediateStop
 id included
@@ -3700,6 +3697,7 @@ id radioGroupUserType
 id radioGroupWorkArrangement
 id radioGroupWorkSetup
 id ratio
+id recentJobsRecyclerView
 id rectangles
 id recyclerViewJobs
 id report_drawn
@@ -3753,6 +3751,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinnerCurrency
+id spinnerJobCategory
 id spline
 id split_action_bar
 id spread
@@ -3807,7 +3806,9 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textViewCompanyName
+id textViewExperienceLevel
 id textViewForgotPassword
+id textViewJobCategory
 id textViewJobTitle
 id textViewLocation
 id textViewSalary
@@ -3815,6 +3816,8 @@ id textViewSignUp
 id textViewTitle
 id textViewUserName
 id textViewWelcome
+id textViewWorkArrangement
+id textViewWorkSetUp
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3851,10 +3854,6 @@ id unchecked
 id uniform
 id unlabeled
 id up
-id uploadedImageViewBottomLeft
-id uploadedImageViewBottomRight
-id uploadedImageViewTopLeft
-id uploadedImageViewTopRight
 id useLogo
 id vertical
 id vertical_only
@@ -4026,6 +4025,7 @@ layout fragment_registration
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_job
+layout item_recent_job
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4241,6 +4241,8 @@ string industry
 string industry_description
 string internship
 string item_view_role_description
+string job_category
+string job_category_placeholder
 string job_description
 string job_details
 string job_history
@@ -4249,9 +4251,11 @@ string job_requirements
 string job_saved
 string job_seeker
 string job_title
+string job_title_placeholder
 string job_type
 string loading
 string location
+string location_placeholder
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4414,6 +4418,7 @@ string verify_phone
 string view_app
 string vision
 string work_arrangement
+string work_arrangement_placeholder
 string work_setup
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

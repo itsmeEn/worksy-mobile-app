@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewJobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#000000"
+            android:text="@string/job_title_placeholder" />
+
+        <TextView
+            android:id="@+id/textViewJobCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/job_category_placeholder"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textViewWorkArrangement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:text="@string/work_arrangement_placeholder"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/location_placeholder"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textViewExperienceLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/experience_level"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textViewWorkSetUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/work_setup"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
