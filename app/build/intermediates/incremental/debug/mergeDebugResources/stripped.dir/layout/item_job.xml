@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewCompanyLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/surface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewJobTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#000000"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/buttonSave"
+            app:layout_constraintStart_toEndOf="@id/imageViewCompanyLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Senior Android Developer" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewCompanyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#000000"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            app:layout_constraintEnd_toEndOf="@id/textViewJobTitle"
+            app:layout_constraintStart_toStartOf="@id/textViewJobTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewJobTitle"
+            tools:text="Tech Company Inc." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSave"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/save"
+            app:icon="@drawable/ic_bookmark_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            app:drawableStartCompat="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="@id/imageViewCompanyLogo"
+            app:layout_constraintTop_toBottomOf="@id/imageViewCompanyLogo"
+            tools:text="San Francisco, CA" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            app:drawableStartCompat="@drawable/ic_money"
+            app:layout_constraintStart_toEndOf="@id/textViewLocation"
+            app:layout_constraintTop_toTopOf="@id/textViewLocation"
+            tools:text="$120K - $150K" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipEmploymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewLocation"
+            tools:text="Full-time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

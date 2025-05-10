@@ -1,0 +1,133 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    tools:context=".ui.jobseeker.CareerAssessmentActivity">
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Career Assessment"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#007BFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        android:layout_marginTop="24dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 1: What are your primary career goals?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/answerGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option A: Achieve a high-level position"
+                    android:textSize="16sp"
+                    android:textColor="#6B7280" />
+
+                <RadioButton
+                    android:id="@+id/answer1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option B: Develop specialized skills"
+                    android:textSize="16sp"
+                    android:textColor="#6B7280" />
+
+                <RadioButton
+                    android:id="@+id/answer1_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option C: Work in a creative environment"
+                    android:textSize="16sp"
+                    android:textColor="#6B7280" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 2: What type of work environment do you prefer?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/answerGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option A: Collaborative team environment"
+                    android:textSize="16sp"
+                    android:textColor="#6B7280" />
+
+                <RadioButton
+                    android:id="@+id/answer2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option B: Independent work environment"
+                    android:textSize="16sp"
+                    android:textColor="#6B7280" />
+
+                <RadioButton
+                    android:id="@+id/answer2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option C: Fast-paced and dynamic environment"
+                    android:textSize="16sp"
+                    android:textColor="#6B7280" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

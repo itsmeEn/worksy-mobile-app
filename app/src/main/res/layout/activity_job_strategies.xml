@@ -1,0 +1,122 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    tools:context=".ui.jobseeker.JobStrategiesActivity">
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Search Strategies"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#007BFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        android:layout_marginTop="24dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:itemIconTint="#374151"
+        app:itemTextColor="#374151"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_job_seeker_bottom_nav" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/section1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Networking Tips"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/section1Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Strategies for effective networking and building professional relationships."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/section2Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resume Building"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/section2Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guidance on creating a compelling and effective resume."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/section3Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interview Skills"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/section3Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tips and techniques for acing job interviews."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    tools:context=".ui.jobseeker.InterviewGuideActivity">
+
+    <Button
+        android:id="@+id/interview_guide_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/interview_guide_button_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interview Guide"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#007BFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        android:layout_marginTop="24dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/section1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Section 1: Preparing"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/section1Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Include details about researching the company, understanding the job description, and practicing common interview questions."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/section2Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Section 2: During"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/section2Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Provide guidance on making a good first impression, answering questions effectively, and asking insightful questions."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/section3Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Section 3: After"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4B5563"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/section3Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explain the importance of sending a thank-you note, following up appropriately, and evaluating your performance."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:itemIconTint="#374151"
+        app:itemTextColor="#374151"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_job_seeker_bottom_nav" />
+
+    <View
+        android:id="@+id/centerBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E0F7FA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0.2" /> </androidx.constraintlayout.widget.ConstraintLayout>
