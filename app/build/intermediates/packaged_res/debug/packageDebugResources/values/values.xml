@@ -76,9 +76,14 @@
     <string name="back_button">Back</string>
     <string name="cancel">Cancel</string>
     <string name="career_resources">Career Resources</string>
+    <string name="change_logo">change_logo</string>
     <string name="code_sent">Verification code sent</string>
     <string name="company">Company Name</string>
     <string name="company_address">Company Address</string>
+    <string name="company_benefits">company_benefits</string>
+    <string name="company_culture">company_culture</string>
+    <string name="company_details">Company Details</string>
+    <string name="company_logo">company_logo</string>
     <string name="company_name">Company Name</string>
     <string name="company_profile">Company Profile</string>
     <string name="company_ratings">View Rating</string>
@@ -86,6 +91,7 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_with_phone">Continue with Phone</string>
     <string name="contract">Contract</string>
+    <string name="culture_amp_benefits"><![CDATA[Culture & Benefits]]></string>
     <string name="default_web_client_id" translatable="false">399000476267-f3ljrn2c5tukp95vsv13fs73i7vknkmi.apps.googleusercontent.com</string>
     <string name="delete">Delete</string>
     <string name="dont_have_account">Create Account as</string>
@@ -102,6 +108,7 @@
     <string name="filter_jobs">Filter Jobs</string>
     <string name="firebase_database_url" translatable="false">https://worksy-mobile-app-job-portal-default-rtdb.firebaseio.com</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="founded_year">founded_year</string>
     <string name="framework">Job Strategies</string>
     <string name="framework_description">Learn effective ways to network, apply, and stand out.</string>
     <string name="full_time">Full-time</string>
@@ -116,6 +123,7 @@
     <string name="hybrid">Hybrid</string>
     <string name="industry">Industry Insights</string>
     <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
+    <string name="industry_specialization">industry_specialization</string>
     <string name="internship">Internship</string>
     <string name="job_category">Job Category</string>
     <string name="job_category_placeholder">Job Category Placeholder</string>
@@ -164,6 +172,7 @@
     <string name="salary_range">Salary Range</string>
     <string name="save">Save</string>
     <string name="save_job">Save Job</string>
+    <string name="save_profile">save_profile</string>
     <string name="saved_jobs">Saved Jobs</string>
     <string name="search">Search</string>
     <string name="search_jobs">Search jobs, companies, or keywords</string>

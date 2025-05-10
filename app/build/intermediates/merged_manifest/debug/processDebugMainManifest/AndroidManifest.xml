@@ -57,6 +57,14 @@
         <activity
             android:name="com.worksy.ui.employer.EmployerJobPost"
             android:exported="false" />
+        <activity
+            android:name="com.worksy.ui.employer.EmployerCompanyProfile"
+            android:exported="false" />
+
+        <!--
+            <activity android:name=".ui.employer.ViewApplicant"
+            android:exported="false"/>
+        -->
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M60,60m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0" />
+
+    <!-- Building Icon -->
+    <path
+        android:fillColor="#757575"
+        android:pathData="M40,40L40,80L80,80L80,40L40,40ZM45,45L75,45L75,75L45,75L45,45ZM50,50L50,55L55,55L55,50L50,50ZM60,50L60,55L65,55L65,50L60,50ZM70,50L70,55L75,55L75,50L70,50ZM50,60L50,65L55,65L55,60L50,60ZM60,60L60,65L65,65L65,60L60,60ZM70,60L70,65L75,65L75,60L70,60ZM50,70L50,75L55,75L55,70L50,70ZM60,70L60,75L65,75L65,70L60,70ZM70,70L70,75L75,75L75,70L70,70Z" />
+
+</vector>

@@ -61,18 +61,21 @@ public class EmployerMainActivity extends AppCompatActivity {
                 return true;
             } else if (itemId == R.id.navigation_post_job) {
                 Intent intent = new Intent(this, EmployerJobPost.class);
+                intent.putExtra("source", "main");
                 startActivity(intent);
-                finish(); // Finish the current activity
+                //finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_applicants) {
-                Intent intent = new Intent(this, ViewApplicant.class);
+                Intent intent = new Intent(this, EmployerViewApplicantActivity.class);
+                intent.putExtra("source", "main");
                 startActivity(intent);
-                finish(); // Finish the current activity
+                //finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_company) {
-                Intent intent = new Intent(this, ViewApplicant.class); //since wala pa nagagawang company page as is muna to
+                Intent intent = new Intent(this, EmployerCompanyProfile.class);
+                intent.putExtra("source", "main");
                 startActivity(intent);
-                finish(); // Finish the current activity
+                //finish(); // Finish the current activity
                 return true;
             }
             return false;
