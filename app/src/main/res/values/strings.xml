@@ -146,4 +146,27 @@
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>
 
     <string name="fetching_location">Fetching Location...</string>
+
+    <!-- Achievements Section -->
+    <string name="achievements_label">Achievements</string>
+    <string name="star_icon">Star</string>
+    <string name="freelance_completion">Completed 50+ Freelance Projects</string>
+    <string name="rating_icon">Rating Icon</string>
+    <string name="client_rating">Maintained a 4.9/5 Client Rating</string>
+    <string name="metal_icon">Metal Icon</string>
+    <string name="design_category">Top-Rated in Design Category (Q1 2025)</string>
+
+    <!-- Job History -->
+    <string name="job_histories">Job History</string>
+    <string name="graphic_designer">Graphic Designer</string>
+    <string name="pixel_studios">Pixel Studios</string>
+    <string name="designed_digital_studios">Designed digital assets for marketing campaigns, collaborated with product teams to improve UI/UX, and managed creative assets for brand consistency.</string>
+    <string name="freelance_web_developer">Freelance Web Developer</string>
+    <string name="self_employed">Self-Employed | Aug 2020 - Dec 2021</string>
+    <string name="built_responsive_websites">SBuilt responsive websites for small businesses using HTML, CSS, and JavaScript. Integrated WordPress themes and provided SEO consulting.</string>
+
+    <string name="interview_guide_button_text">Interview Guide</string>
+        <!-- Other strings -->
+
+
 </resources>

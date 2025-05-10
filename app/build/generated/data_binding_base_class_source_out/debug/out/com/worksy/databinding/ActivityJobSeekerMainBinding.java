@@ -4,6 +4,8 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +24,24 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final LinearLayout achievementsButton;
+
+  @NonNull
+  public final ImageView achievementsButtonImage;
+
+  @NonNull
+  public final TextView achievementsButtonText;
+
+  @NonNull
+  public final LinearLayout assistantBotButton;
+
+  @NonNull
+  public final ImageView assistantBotButtonImage;
+
+  @NonNull
+  public final TextView assistantBotButtonText;
+
+  @NonNull
   public final CardView bottomLeftGridCard;
 
   @NonNull
@@ -34,7 +54,16 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final TextView careerResourcesTitle;
 
   @NonNull
-  public final TextView greetingTextView;
+  public final LinearLayout jobHistoryButton;
+
+  @NonNull
+  public final ImageView jobHistoryButtonImage;
+
+  @NonNull
+  public final TextView jobHistoryButtonText;
+
+  @NonNull
+  public final LinearLayout jobStrategiesButton;
 
   @NonNull
   public final CardView quickActionsCard;
@@ -43,31 +72,54 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final TextView quickActionsTitle;
 
   @NonNull
-  public final View topBar;
-
-  @NonNull
   public final CardView topLeftGridCard;
 
   @NonNull
   public final CardView topRightGridCard;
 
+  @NonNull
+  public final LinearLayout uploadResumeButton;
+
+  @NonNull
+  public final ImageView uploadResumeButtonImage;
+
+  @NonNull
+  public final TextView uploadResumeButtonText;
+
   private ActivityJobSeekerMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull LinearLayout achievementsButton, @NonNull ImageView achievementsButtonImage,
+      @NonNull TextView achievementsButtonText, @NonNull LinearLayout assistantBotButton,
+      @NonNull ImageView assistantBotButtonImage, @NonNull TextView assistantBotButtonText,
       @NonNull CardView bottomLeftGridCard, @NonNull BottomNavigationView bottomNavigation,
       @NonNull CardView bottomRightGridCard, @NonNull TextView careerResourcesTitle,
-      @NonNull TextView greetingTextView, @NonNull CardView quickActionsCard,
-      @NonNull TextView quickActionsTitle, @NonNull View topBar, @NonNull CardView topLeftGridCard,
-      @NonNull CardView topRightGridCard) {
+      @NonNull LinearLayout jobHistoryButton, @NonNull ImageView jobHistoryButtonImage,
+      @NonNull TextView jobHistoryButtonText, @NonNull LinearLayout jobStrategiesButton,
+      @NonNull CardView quickActionsCard, @NonNull TextView quickActionsTitle,
+      @NonNull CardView topLeftGridCard, @NonNull CardView topRightGridCard,
+      @NonNull LinearLayout uploadResumeButton, @NonNull ImageView uploadResumeButtonImage,
+      @NonNull TextView uploadResumeButtonText) {
     this.rootView = rootView;
+    this.achievementsButton = achievementsButton;
+    this.achievementsButtonImage = achievementsButtonImage;
+    this.achievementsButtonText = achievementsButtonText;
+    this.assistantBotButton = assistantBotButton;
+    this.assistantBotButtonImage = assistantBotButtonImage;
+    this.assistantBotButtonText = assistantBotButtonText;
     this.bottomLeftGridCard = bottomLeftGridCard;
     this.bottomNavigation = bottomNavigation;
     this.bottomRightGridCard = bottomRightGridCard;
     this.careerResourcesTitle = careerResourcesTitle;
-    this.greetingTextView = greetingTextView;
+    this.jobHistoryButton = jobHistoryButton;
+    this.jobHistoryButtonImage = jobHistoryButtonImage;
+    this.jobHistoryButtonText = jobHistoryButtonText;
+    this.jobStrategiesButton = jobStrategiesButton;
     this.quickActionsCard = quickActionsCard;
     this.quickActionsTitle = quickActionsTitle;
-    this.topBar = topBar;
     this.topLeftGridCard = topLeftGridCard;
     this.topRightGridCard = topRightGridCard;
+    this.uploadResumeButton = uploadResumeButton;
+    this.uploadResumeButtonImage = uploadResumeButtonImage;
+    this.uploadResumeButtonText = uploadResumeButtonText;
   }
 
   @Override
@@ -97,6 +149,42 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.achievements_button;
+      LinearLayout achievementsButton = ViewBindings.findChildViewById(rootView, id);
+      if (achievementsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.achievements_button_image;
+      ImageView achievementsButtonImage = ViewBindings.findChildViewById(rootView, id);
+      if (achievementsButtonImage == null) {
+        break missingId;
+      }
+
+      id = R.id.achievements_button_text;
+      TextView achievementsButtonText = ViewBindings.findChildViewById(rootView, id);
+      if (achievementsButtonText == null) {
+        break missingId;
+      }
+
+      id = R.id.assistant_bot_button;
+      LinearLayout assistantBotButton = ViewBindings.findChildViewById(rootView, id);
+      if (assistantBotButton == null) {
+        break missingId;
+      }
+
+      id = R.id.assistant_bot_button_image;
+      ImageView assistantBotButtonImage = ViewBindings.findChildViewById(rootView, id);
+      if (assistantBotButtonImage == null) {
+        break missingId;
+      }
+
+      id = R.id.assistant_bot_button_text;
+      TextView assistantBotButtonText = ViewBindings.findChildViewById(rootView, id);
+      if (assistantBotButtonText == null) {
+        break missingId;
+      }
+
       id = R.id.bottomLeftGridCard;
       CardView bottomLeftGridCard = ViewBindings.findChildViewById(rootView, id);
       if (bottomLeftGridCard == null) {
@@ -121,9 +209,27 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.greetingTextView;
-      TextView greetingTextView = ViewBindings.findChildViewById(rootView, id);
-      if (greetingTextView == null) {
+      id = R.id.job_history_button;
+      LinearLayout jobHistoryButton = ViewBindings.findChildViewById(rootView, id);
+      if (jobHistoryButton == null) {
+        break missingId;
+      }
+
+      id = R.id.job_history_button_image;
+      ImageView jobHistoryButtonImage = ViewBindings.findChildViewById(rootView, id);
+      if (jobHistoryButtonImage == null) {
+        break missingId;
+      }
+
+      id = R.id.job_history_button_text;
+      TextView jobHistoryButtonText = ViewBindings.findChildViewById(rootView, id);
+      if (jobHistoryButtonText == null) {
+        break missingId;
+      }
+
+      id = R.id.job_strategies_button;
+      LinearLayout jobStrategiesButton = ViewBindings.findChildViewById(rootView, id);
+      if (jobStrategiesButton == null) {
         break missingId;
       }
 
@@ -139,12 +245,6 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.topBar;
-      View topBar = ViewBindings.findChildViewById(rootView, id);
-      if (topBar == null) {
-        break missingId;
-      }
-
       id = R.id.topLeftGridCard;
       CardView topLeftGridCard = ViewBindings.findChildViewById(rootView, id);
       if (topLeftGridCard == null) {
@@ -157,9 +257,31 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomLeftGridCard,
-          bottomNavigation, bottomRightGridCard, careerResourcesTitle, greetingTextView,
-          quickActionsCard, quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
+      id = R.id.upload_resume_button;
+      LinearLayout uploadResumeButton = ViewBindings.findChildViewById(rootView, id);
+      if (uploadResumeButton == null) {
+        break missingId;
+      }
+
+      id = R.id.upload_resume_button_image;
+      ImageView uploadResumeButtonImage = ViewBindings.findChildViewById(rootView, id);
+      if (uploadResumeButtonImage == null) {
+        break missingId;
+      }
+
+      id = R.id.upload_resume_button_text;
+      TextView uploadResumeButtonText = ViewBindings.findChildViewById(rootView, id);
+      if (uploadResumeButtonText == null) {
+        break missingId;
+      }
+
+      return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, achievementsButton,
+          achievementsButtonImage, achievementsButtonText, assistantBotButton,
+          assistantBotButtonImage, assistantBotButtonText, bottomLeftGridCard, bottomNavigation,
+          bottomRightGridCard, careerResourcesTitle, jobHistoryButton, jobHistoryButtonImage,
+          jobHistoryButtonText, jobStrategiesButton, quickActionsCard, quickActionsTitle,
+          topLeftGridCard, topRightGridCard, uploadResumeButton, uploadResumeButtonImage,
+          uploadResumeButtonText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

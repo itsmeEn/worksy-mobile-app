@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "com.worksy.test.app-mergeDebugAndroidTestResources-4:/values-v21/values-v21.xml",
+            "outputFile": "com.worksy.test.app-mergeDebugAndroidTestResources-3:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5b86b44bcbec297a26c996df6a54f214/transformed/core-1.5.0/res/values-v21/values.xml",
+                    "source": "C:\\Users\\Patricia\\.gradle\\caches\\8.10.2\\transforms\\7bf60cf38023e1bb4947b53ee33ec1ee\\transformed\\core-1.6.1\\res\\values-v21\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",
-                        "startOffsets": "180,655",
+                        "startOffsets": "146,621",
                         "endLines": "12,21",
                         "endColumns": "8,8",
-                        "endOffsets": "654,1127"
+                        "endOffsets": "620,1093"
                     },
                     "to": {
                         "startLines": "2,11",

@@ -34,7 +34,9 @@
     <color name="error">#B00020</color>
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="info">#2196F3</color>
+    <color name="my_tint_color">#FFD700</color>
     <color name="primary">#1976D2</color>
+    <color name="primaryBlue">#2196F3</color>
     <color name="primary_light">#BBDEFB</color>
     <color name="primary_variant">#1565C0</color>
     <color name="secondary">#2E7D32</color>
@@ -50,6 +52,7 @@
     <string name="about">Post About Company</string>
     <string name="about_company">About Company</string>
     <string name="achievements">Achievements</string>
+    <string name="achievements_label">Achievements</string>
     <string name="already_have_account">Already have an account? Sign in</string>
     <string name="amount">Enter Salary Amount</string>
     <string name="app_name">Worksy</string>
@@ -62,8 +65,10 @@
     <string name="auth_failed">Authentication failed</string>
     <string name="authenticate">Authenticate</string>
     <string name="back_button">Back</string>
+    <string name="built_responsive_websites">SBuilt responsive websites for small businesses using HTML, CSS, and JavaScript. Integrated WordPress themes and provided SEO consulting.</string>
     <string name="cancel">Cancel</string>
     <string name="career_resources">Career Resources</string>
+    <string name="client_rating">Maintained a 4.9/5 Client Rating</string>
     <string name="code_sent">Verification code sent</string>
     <string name="company">Company Name</string>
     <string name="company_address">Company Address</string>
@@ -76,6 +81,8 @@
     <string name="contract">Contract</string>
     <string name="default_web_client_id" translatable="false">399000476267-f3ljrn2c5tukp95vsv13fs73i7vknkmi.apps.googleusercontent.com</string>
     <string name="delete">Delete</string>
+    <string name="design_category">Top-Rated in Design Category (Q1 2025)</string>
+    <string name="designed_digital_studios">Designed digital assets for marketing campaigns, collaborated with product teams to improve UI/UX, and managed creative assets for brand consistency.</string>
     <string name="dont_have_account">Create Account as</string>
     <string name="edit">Edit</string>
     <string name="email">Email</string>
@@ -92,6 +99,8 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="framework">Job Strategies</string>
     <string name="framework_description">Learn effective ways to network, apply, and stand out.</string>
+    <string name="freelance_completion">Completed 50+ Freelance Projects</string>
+    <string name="freelance_web_developer">Freelance Web Developer</string>
     <string name="full_time">Full-time</string>
     <string name="gcm_defaultSenderId" translatable="false">399000476267</string>
     <string name="good_morning">Good morning</string>
@@ -100,13 +109,16 @@
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCNqlpaGvCdSa08YwBHoVaKtQgON3J1V-c</string>
     <string name="google_storage_bucket" translatable="false">worksy-mobile-app-job-portal.firebasestorage.app</string>
+    <string name="graphic_designer">Graphic Designer</string>
     <string name="home">Home</string>
     <string name="hybrid">Hybrid</string>
     <string name="industry">Industry Insights</string>
     <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
     <string name="internship">Internship</string>
+    <string name="interview_guide_button_text">Interview Guide</string>
     <string name="job_description">Description</string>
     <string name="job_details">Job Details</string>
+    <string name="job_histories">Job History</string>
     <string name="job_history">Job History</string>
     <string name="job_location">Job Location</string>
     <string name="job_requirements">Requirements</string>
@@ -119,6 +131,7 @@
     <string name="manage_posts">Manage Posts</string>
     <string name="mantra">Post Company Mantra</string>
     <string name="messages">Messages</string>
+    <string name="metal_icon">Metal Icon</string>
     <string name="mid_level">Mid Level</string>
     <string name="mission">Post Company Mission</string>
     <string name="mock">Interview Guide</string>
@@ -133,12 +146,14 @@
     <string name="password">Password</string>
     <string name="phone_number">Phone Number</string>
     <string name="pin_location">Pin Location</string>
+    <string name="pixel_studios">Pixel Studios</string>
     <string name="post_job">Post Job</string>
     <string name="post_now">Post Now</string>
     <string name="posted_jobs">Recent Post Jobs</string>
     <string name="profile">Profile</string>
     <string name="project_id" translatable="false">worksy-mobile-app-job-portal</string>
     <string name="quick_actions">Quick Actions</string>
+    <string name="rating_icon">Rating Icon</string>
     <string name="recruiter_account">Recruiter Registration</string>
     <string name="register">Register</string>
     <string name="remote">Remote</string>
@@ -152,12 +167,14 @@
     <string name="search">Search</string>
     <string name="search_jobs">Search jobs, companies, or keywords</string>
     <string name="seeker_account">Job Seeker Registration</string>
+    <string name="self_employed">Self-Employed | Aug 2020 - Dec 2021</string>
     <string name="senior_level">Senior Level</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="similar_jobs">Similar Jobs</string>
     <string name="skills">Skills</string>
     <string name="sort_by">Sort by</string>
+    <string name="star_icon">Star</string>
     <string name="try_again">Try Again</string>
     <string name="upload_resume">Upload Resume</string>
     <string name="user_type">User Type</string>

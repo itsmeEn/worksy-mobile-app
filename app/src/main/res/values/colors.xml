@@ -28,4 +28,7 @@
     <color name="success">#4CAF50</color>
     <color name="warning">#FFC107</color>
     <color name="info">#2196F3</color>
+
+    <color name="my_tint_color">#FFD700</color>
+    <color name="primaryBlue">#2196F3</color>
 </resources>
