@@ -40,6 +40,13 @@
         <activity android:name=".ui.employer.EmployerJobPost"
             android:exported="false"/>
 
+        <activity android:name=".ui.employer.EmployerCompanyProfile"
+            android:exported="false"/>
+
+        <activity android:name=".ui.employer.ViewApplicant"
+            android:exported="false"/>
+
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

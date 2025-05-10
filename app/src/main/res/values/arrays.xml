@@ -4,4 +4,5 @@
         <item>0.0</item>
         <item>200000.0</item>
     </array>
+    <string-array name="application_statuses">job_status</string-array>
 </resources>

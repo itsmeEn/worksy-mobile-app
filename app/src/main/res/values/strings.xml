@@ -141,9 +141,57 @@
     </string-array>
     <string name="amount">Enter Salary Amount</string>
 
+    <!--Job Category-->
+    <string-array name="job_categories">
+        <item>Technology</item>
+        <item>Healthcare</item>
+        <item>Finance</item>
+        <item>Education</item>
+        <item>Marketing</item>
+        <item>Sales</item>
+        <item>Customer Service</item>
+        <item>Engineering</item>
+        <item>Human Resources</item>
+        <item>Arts and Design</item>
+    </string-array>
+
     <!-- Social Auth -->
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>
 
     <string name="fetching_location">Fetching Location...</string>
+    <string name="job_category">Job Category</string>
+    <string name="job_title_placeholder">Job Title Placeholder</string>
+    <string name="job_category_placeholder">Job Category Placeholder</string>
+    <string name="work_arrangement_placeholder">Work Arrangement Placeholder</string>
+    <string name="location_placeholder">Location Placeholder</string>
+    <string name="company_details">Company Details</string>
+    <string name="culture_amp_benefits"><![CDATA[Culture & Benefits]]></string>
+    <string name="company_logo">company_logo</string>
+    <string name="change_logo">change_logo</string>
+    <string name="industry_specialization">industry_specialization</string>
+    <string name="founded_year">founded_year</string>
+    <string name="company_benefits">company_benefits</string>
+    <string name="company_culture">company_culture</string>
+    <string name="save_profile">save_profile</string>
+    <string name="applicant_name">Name: %1$s</string>
+    <string name="applied_for">Position Applied For</string>
+    <string name="search_applicants">Search applicants...</string>
+    <string name="update_application_status">Update Application Status</string>
+    <string name="interview_date">Interview Date:</string>
+    <string name="yyyy_mm_dd">YYYY-MM-DD</string>
+    <string name="schedule_interview">Schedule Interview</string>
+    <string name="selected_applicant">Selected Applicant: %1$s</string>
+    <string name="update_status">Update Status:</string>
+    <string name="application_date">Application Date: %1$s</string>
+    <string name="status">Status: %1$s</string>
+
+    <!--job status-->
+    <string-array name="job_status">"
+        <item>Pending</item>
+        <item>Accepted</item>
+        <item>Rejected</item>
+        <item>Shortlisted</item>
+        <item>Reviewing</item>
+    </string-array>
 </resources>

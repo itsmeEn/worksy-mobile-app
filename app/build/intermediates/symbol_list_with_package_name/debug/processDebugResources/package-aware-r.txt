@@ -91,6 +91,7 @@ array currency_options
 array delay_showing_prompt_models
 array hide_fingerprint_instantly_prefixes
 array initial_slider_values
+array job_categories
 array preloaded_fonts
 attr SharedValue
 attr SharedValueId
@@ -3088,6 +3089,8 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable company_logo_placeholder
+drawable companyprof
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3225,6 +3228,7 @@ drawable research
 drawable robotic
 drawable rounded_corner
 drawable rounded_edit_text
+drawable samo
 drawable screenpage
 drawable seeker_temp
 drawable test_level_drawable
@@ -3384,6 +3388,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id changeLogoButton
 id checkbox
 id checked
 id chipContract
@@ -3402,7 +3407,12 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id companyAddressInput
+id companyBenefitsInput
+id companyCultureInput
 id companyIdentity
+id companyLogo
+id companyNameInput
 id compress
 id confirm_button
 id constraint
@@ -3496,6 +3506,7 @@ id fixed
 id flip
 id floating
 id forever
+id foundedYearInput
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3525,14 +3536,11 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageDescriptionEditTextBottomLeft
-id imageDescriptionEditTextBottomRight
-id imageDescriptionEditTextTopLeft
-id imageDescriptionEditTextTopRight
 id imageViewCompanyLogo
 id immediateStop
 id included
 id indeterminate
+id industrySpecializationInput
 id info
 id invisible
 id inward
@@ -3700,6 +3708,7 @@ id radioGroupUserType
 id radioGroupWorkArrangement
 id radioGroupWorkSetup
 id ratio
+id recentJobsRecyclerView
 id rectangles
 id recyclerViewJobs
 id report_drawn
@@ -3710,6 +3719,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id saveProfileButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3753,6 +3763,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinnerCurrency
+id spinnerJobCategory
 id spline
 id split_action_bar
 id spread
@@ -3807,7 +3818,9 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textViewCompanyName
+id textViewExperienceLevel
 id textViewForgotPassword
+id textViewJobCategory
 id textViewJobTitle
 id textViewLocation
 id textViewSalary
@@ -3815,6 +3828,8 @@ id textViewSignUp
 id textViewTitle
 id textViewUserName
 id textViewWelcome
+id textViewWorkArrangement
+id textViewWorkSetUp
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3851,10 +3866,6 @@ id unchecked
 id uniform
 id unlabeled
 id up
-id uploadedImageViewBottomLeft
-id uploadedImageViewBottomRight
-id uploadedImageViewTopLeft
-id uploadedImageViewTopRight
 id useLogo
 id vertical
 id vertical_only
@@ -4017,6 +4028,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_role_selection
 layout employee_post_job
+layout employer_company_profile
+layout employer_view_applicant
 layout fingerprint_dialog_layout
 layout fragment_job_seeker_home
 layout fragment_login
@@ -4026,6 +4039,7 @@ layout fragment_registration
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_job
+layout item_recent_job
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4154,6 +4168,7 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string cancel
 string career_resources
+string change_logo
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -4179,6 +4194,10 @@ string common_signin_button_text
 string common_signin_button_text_long
 string company
 string company_address
+string company_benefits
+string company_culture
+string company_details
+string company_logo
 string company_name
 string company_profile
 string company_ratings
@@ -4188,6 +4207,7 @@ string continue_with_google
 string continue_with_phone
 string contract
 string copy_toast_msg
+string culture_amp_benefits
 string default_error_msg
 string default_web_client_id
 string delete
@@ -4220,6 +4240,7 @@ string fingerprint_error_user_canceled
 string fingerprint_not_recognized
 string firebase_database_url
 string forgot_password
+string founded_year
 string framework
 string framework_description
 string full_time
@@ -4239,8 +4260,11 @@ string hybrid
 string icon_content_description
 string industry
 string industry_description
+string industry_specialization
 string internship
 string item_view_role_description
+string job_category
+string job_category_placeholder
 string job_description
 string job_details
 string job_history
@@ -4249,9 +4273,11 @@ string job_requirements
 string job_saved
 string job_seeker
 string job_title
+string job_title_placeholder
 string job_type
 string loading
 string location
+string location_placeholder
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4389,6 +4415,7 @@ string resume
 string salary_range
 string save
 string save_job
+string save_profile
 string saved_jobs
 string search
 string search_jobs
@@ -4414,6 +4441,7 @@ string verify_phone
 string view_app
 string vision
 string work_arrangement
+string work_arrangement_placeholder
 string work_setup
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

@@ -2,20 +2,25 @@ package com.worksy.ui.employer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.view.View;
-import android.widget.ImageView;
+import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.worksy.R;
 import com.worksy.databinding.ActivityEmployerMainBinding;
+import com.worksy.data.model.Job; //Import Job model
+import com.worksy.ui.adapter.RecentJobAdapter; // Import adapter
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmployerMainActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -23,8 +28,9 @@ public class EmployerMainActivity extends AppCompatActivity {
     private ActivityEmployerMainBinding binding;
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
-
-    private ImageView currentImageView;
+    private RecyclerView recentJobsRecyclerView; // Declare RecyclerView
+    private RecentJobAdapter recentJobAdapter;
+    private List<Job> recentJobList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +41,16 @@ public class EmployerMainActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
+        // Initialize RecyclerView
+        recentJobsRecyclerView = binding.recentJobsRecyclerView; //  findViewById
+        recentJobsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recentJobList = new ArrayList<>();
+        recentJobAdapter = new RecentJobAdapter(recentJobList);
+        recentJobsRecyclerView.setAdapter(recentJobAdapter);
+
         setupBottomNavigation();
-        setupImageUploadListeners();
         fetchCompanyName();
+        fetchRecentJobs(); // Call method to fetch jobs
     }
 
     private void setupBottomNavigation() {
@@ -48,46 +61,27 @@ public class EmployerMainActivity extends AppCompatActivity {
                 return true;
             } else if (itemId == R.id.navigation_post_job) {
                 Intent intent = new Intent(this, EmployerJobPost.class);
+                intent.putExtra("source", "main");
                 startActivity(intent);
-                finish(); // Finish the current activity
+                //finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_applicants) {
-                Intent intent = new Intent(this, ViewApplicant.class);
+                Intent intent = new Intent(this, EmployerViewApplicantActivity.class);
+                intent.putExtra("source", "main");
                 startActivity(intent);
-                finish(); // Finish the current activity
+                //finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_company) {
-                Intent intent = new Intent(this, ViewApplicant.class); //since wala pa nagagawang company page as is muna to
+                Intent intent = new Intent(this, EmployerCompanyProfile.class);
+                intent.putExtra("source", "main");
                 startActivity(intent);
-                finish(); // Finish the current activity
+                //finish(); // Finish the current activity
                 return true;
             }
             return false;
         });
 
         binding.bottomNavigation.setSelectedItemId(R.id.navigation_dashboard);
-    }
-
-    private void setupImageUploadListeners() {
-        setImageClickListener(R.id.uploadedImageViewTopLeft);
-        setImageClickListener(R.id.uploadedImageViewTopRight);
-        setImageClickListener(R.id.uploadedImageViewBottomLeft);
-        setImageClickListener(R.id.uploadedImageViewBottomRight);
-    }
-
-    private void setImageClickListener(int imageViewId) {
-        ImageView imageView = binding.getRoot().findViewById(imageViewId);
-        if (imageView != null) {
-            imageView.setOnClickListener(v -> dispatchTakePictureIntent(imageView));
-        }
-    }
-
-    private void dispatchTakePictureIntent(ImageView imageView) {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            currentImageView = imageView;
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
     }
 
     private void fetchCompanyName() {
@@ -110,6 +104,46 @@ public class EmployerMainActivity extends AppCompatActivity {
                 .addOnFailureListener(e ->
                         Toast.makeText(this, "Failed to fetch user data.", Toast.LENGTH_SHORT).show()
                 );
+    }
+
+    private void fetchRecentJobs() {
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        if (currentUser == null) {
+            Toast.makeText(this, "User not logged in.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String employerId = currentUser.getUid();
+
+        firebaseFirestore.collection("jobs")
+                .whereEqualTo("employerId", employerId)
+                .orderBy("timestamp", Query.Direction.DESCENDING) //changed postedDate to timestamp
+                .limit(4)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    if (queryDocumentSnapshots.isEmpty()) {
+                        recentJobList.clear();
+                        recentJobAdapter.notifyDataSetChanged();
+                        Toast.makeText(this, "No recent job posts.", Toast.LENGTH_SHORT).show();
+                        Log.d("FirestoreData", "No jobs found for employerId: " + employerId); //debugging
+                        return;
+                    }
+
+                    recentJobList.clear();
+                    for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                        Job job = document.toObject(Job.class);
+                        if (job != null) {
+                            job.setId(document.getId());
+                            recentJobList.add(job);
+                            Log.d("FirestoreData", "Job ID: " + job.getId() + ", Title: " + job.getTitle() + ", Employer ID: " + job.getEmployerId() + ", Timestamp: " + document.get("timestamp")); //debugging
+                        }
+                    }
+                    recentJobAdapter.notifyDataSetChanged();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(this, "Failed to fetch recent jobs: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                    Log.e("FirestoreError", "Error fetching jobs: " + e.getMessage(), e); // Include the exception
+                });
     }
 
     @Override
