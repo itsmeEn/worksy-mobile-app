@@ -1,5 +1,6 @@
 package com.worksy.data.model;
 
+// Represents an applicant.
 public class Applicant {
     private int id;
     private String name;

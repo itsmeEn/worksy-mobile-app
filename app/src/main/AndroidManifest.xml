@@ -43,7 +43,7 @@
         <activity android:name=".ui.employer.EmployerCompanyProfile"
             android:exported="false"/>
 
-        <activity android:name=".ui.employer.ViewApplicant"
+        <activity android:name=".ui.employer.EmployerViewApplicantActivity"
             android:exported="false"/>
 
 

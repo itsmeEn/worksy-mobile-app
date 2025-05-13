@@ -252,6 +252,12 @@ ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/A
 		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:44:13-37
 	android:name
 		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:19-69
+activity#com.worksy.ui.employer.EmployerViewApplicantActivity
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:46:9-47:39
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:46:19-76
 meta-data#preloaded_fonts
 ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:50:9-52:57
 	android:resource

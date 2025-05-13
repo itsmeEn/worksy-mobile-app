@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="application_statuses">
+        <item>Pending</item>
+        <item>Accepted</item>
+        <item>Rejected</item>
+        <item>Shortlisted</item>
+        <item>Reviewing</item>
+    </string-array>
     <array name="com_google_android_gms_fonts_certs">
         <item>@array/com_google_android_gms_fonts_certs_dev</item>
         <item>@array/com_google_android_gms_fonts_certs_prod</item>
@@ -65,7 +72,10 @@
     <string name="already_have_account">Already have an account? Sign in</string>
     <string name="amount">Enter Salary Amount</string>
     <string name="app_name">Worksy</string>
+    <string name="applicant_name">Name: %1$s</string>
     <string name="applicants">Applicants</string>
+    <string name="application_date">Application Date: %1$s</string>
+    <string name="applied_for">Position Applied For</string>
     <string name="apply_filters">Apply Filters</string>
     <string name="apply_now">Apply Now</string>
     <string name="assessment">Career Assessment</string>
@@ -75,9 +85,11 @@
     <string name="authenticate">Authenticate</string>
     <string name="back_button">Back</string>
     <string name="cancel">Cancel</string>
+    <string name="cannot_schedule_interview">Cannot schedule interview. Applicant status is not Accepted.</string>
     <string name="career_resources">Career Resources</string>
     <string name="change_logo">change_logo</string>
     <string name="code_sent">Verification code sent</string>
+    <string name="communication_skills">Communication Skills</string>
     <string name="company">Company Name</string>
     <string name="company_address">Company Address</string>
     <string name="company_benefits">company_benefits</string>
@@ -91,12 +103,13 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_with_phone">Continue with Phone</string>
     <string name="contract">Contract</string>
-    <string name="culture_amp_benefits"><![CDATA[Culture & Benefits]]></string>
+    <string name="culture_amp_benefits">Culture and Benefits</string>
     <string name="default_web_client_id" translatable="false">399000476267-f3ljrn2c5tukp95vsv13fs73i7vknkmi.apps.googleusercontent.com</string>
     <string name="delete">Delete</string>
     <string name="dont_have_account">Create Account as</string>
     <string name="edit">Edit</string>
     <string name="email">Email</string>
+    <string name="email_not_available">Email address not available</string>
     <string name="emp_rev">Rate Employee</string>
     <string name="employer">Employer</string>
     <string name="employment_type">Employment Type</string>
@@ -104,7 +117,7 @@
     <string name="entry_level">Entry Level</string>
     <string name="error_occurred">An error occurred</string>
     <string name="experience_level">Experience Level</string>
-    <string name="fetching_location">Fetching Location...</string>
+    <string name="fetching_location">Fetching Location…</string>
     <string name="filter_jobs">Filter Jobs</string>
     <string name="firebase_database_url" translatable="false">https://worksy-mobile-app-job-portal-default-rtdb.firebaseio.com</string>
     <string name="forgot_password">Forgot Password?</string>
@@ -124,7 +137,10 @@
     <string name="industry">Industry Insights</string>
     <string name="industry_description">Stay updated on trends, salaries, and job market demands.</string>
     <string name="industry_specialization">industry_specialization</string>
+    <string name="initiative_and_proactiveness">Initiative and Proactiveness</string>
     <string name="internship">Internship</string>
+    <string name="interview_date">Interview Date:</string>
+    <string name="interview_date_sched">Interview scheduled for %1$s</string>
     <string name="job_category">Job Category</string>
     <string name="job_category_placeholder">Job Category Placeholder</string>
     <string name="job_description">Description</string>
@@ -135,6 +151,7 @@
     <string name="job_saved">Job saved successfully</string>
     <string name="job_seeker">Job Seeker</string>
     <string name="job_title">Job Title</string>
+    <string name="job_title_applicant">Job Title: %1$s</string>
     <string name="job_title_placeholder">Job Title Placeholder</string>
     <string name="job_type">Job Type</string>
     <string name="loading">Loading…</string>
@@ -149,6 +166,7 @@
     <string name="mock_description">Prepare for interviews with common questions and expert tips.</string>
     <string name="my_applications">My Applications</string>
     <string name="name">Name</string>
+    <string name="no_email_app_found">No email app found</string>
     <string name="no_jobs_found">No Jobs Found</string>
     <string name="no_jobs_found_message">We couldn\'t find any jobs matching your criteria. Try adjusting your search or filters.</string>
     <string name="on_site">On Site</string>
@@ -157,33 +175,47 @@
     <string name="password">Password</string>
     <string name="phone_number">Phone Number</string>
     <string name="pin_location">Pin Location</string>
+    <string name="please_enter_interview_date">Please enter an interview date</string>
+    <string name="please_select_applicant">Please select an applicant first</string>
     <string name="post_job">Post Job</string>
     <string name="post_now">Post Now</string>
     <string name="posted_jobs">Recent Post Jobs</string>
     <string name="profile">Profile</string>
     <string name="project_id" translatable="false">worksy-mobile-app-job-portal</string>
+    <string name="quality_of_work_adaptability_problem_solving">Quality of Work (Adaptability, Problem Solving)</string>
     <string name="quick_actions">Quick Actions</string>
     <string name="recruiter_account">Recruiter Registration</string>
+    <string name="regarding_application">Regarding your application</string>
     <string name="register">Register</string>
     <string name="remote">Remote</string>
     <string name="resend_code">Resend Code</string>
     <string name="reset">Reset</string>
     <string name="resume">Resume</string>
+    <string name="resume_not_available">Resume not available</string>
     <string name="salary_range">Salary Range</string>
     <string name="save">Save</string>
     <string name="save_job">Save Job</string>
     <string name="save_profile">save_profile</string>
     <string name="saved_jobs">Saved Jobs</string>
+    <string name="schedule_interview">Schedule Interview</string>
     <string name="search">Search</string>
+    <string name="search_applicants">Search applicants…</string>
     <string name="search_jobs">Search jobs, companies, or keywords</string>
     <string name="seeker_account">Job Seeker Registration</string>
+    <string name="selected_applicant">Selected Applicant: %1$s</string>
     <string name="senior_level">Senior Level</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="similar_jobs">Similar Jobs</string>
     <string name="skills">Skills</string>
+    <string name="skills_and_knowledge">Skills and Knowledge</string>
     <string name="sort_by">Sort by</string>
+    <string name="status">Status: %1$s</string>
+    <string name="submit_rating">Submit Rating</string>
+    <string name="teamwork_and_collaboration">Teamwork and Collaboration</string>
     <string name="try_again">Try Again</string>
+    <string name="update_application_status">Update Application Status</string>
+    <string name="update_status">Update Status:</string>
     <string name="upload_resume">Upload Resume</string>
     <string name="user_type">User Type</string>
     <string name="verification_failed">Verification failed</string>
@@ -193,6 +225,7 @@
     <string name="work_arrangement">Work Arrangement</string>
     <string name="work_arrangement_placeholder">Work Arrangement Placeholder</string>
     <string name="work_setup">Work Setup</string>
+    <string name="yyyy_mm_dd">YYYY-MM-DD</string>
     <style name="TextAppearance.Worksy.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/text_secondary</item>

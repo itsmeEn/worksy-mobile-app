@@ -8,6 +8,10 @@
         "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/dialog_role_selection.xml"
     },
     {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_rate_job_seeker.xml",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_rate_job_seeker.xml"
+    },
+    {
         "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/employee_post_job.xml",
         "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/employee_post_job.xml"
     },
@@ -40,10 +44,6 @@
         "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/bottom_sheet_job_filter.xml"
     },
     {
-        "merged": "com.worksy.app-mergeDebugResources-43:/layout/employer_view_applicant.xml",
-        "source": "com.worksy.app-main-46:/layout/employer_view_applicant.xml"
-    },
-    {
         "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/activity_auth.xml",
         "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_auth.xml"
     },
@@ -58,5 +58,17 @@
     {
         "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_recruiter_registration.xml",
         "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_recruiter_registration.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/employer_view_applicant.xml",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/employer_view_applicant.xml"
+    },
+    {
+        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/applicant_item_layout.xml",
+        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/applicant_item_layout.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-43:/layout/fragment_rate_job_seeker.xml",
+        "source": "com.worksy.app-main-46:/layout/fragment_rate_job_seeker.xml"
     }
 ]
