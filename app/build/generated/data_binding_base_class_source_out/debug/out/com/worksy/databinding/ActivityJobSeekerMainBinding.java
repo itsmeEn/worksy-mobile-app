@@ -46,6 +46,9 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final TextView greetingTextView;
 
   @NonNull
+  public final LinearLayout quickActionAssistantBot;
+
+  @NonNull
   public final LinearLayout quickActionUploadResume;
 
   @NonNull
@@ -67,9 +70,10 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
       @NonNull CardView bottomLeftGridCard, @NonNull BottomNavigationView bottomNavigation,
       @NonNull CardView bottomRightGridCard, @NonNull Button buttonUploadResume,
       @NonNull TextView careerResourcesTitle, @NonNull FrameLayout fragmentContainer,
-      @NonNull TextView greetingTextView, @NonNull LinearLayout quickActionUploadResume,
-      @NonNull CardView quickActionsCard, @NonNull TextView quickActionsTitle, @NonNull View topBar,
-      @NonNull CardView topLeftGridCard, @NonNull CardView topRightGridCard) {
+      @NonNull TextView greetingTextView, @NonNull LinearLayout quickActionAssistantBot,
+      @NonNull LinearLayout quickActionUploadResume, @NonNull CardView quickActionsCard,
+      @NonNull TextView quickActionsTitle, @NonNull View topBar, @NonNull CardView topLeftGridCard,
+      @NonNull CardView topRightGridCard) {
     this.rootView = rootView;
     this.bottomLeftGridCard = bottomLeftGridCard;
     this.bottomNavigation = bottomNavigation;
@@ -78,6 +82,7 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
     this.careerResourcesTitle = careerResourcesTitle;
     this.fragmentContainer = fragmentContainer;
     this.greetingTextView = greetingTextView;
+    this.quickActionAssistantBot = quickActionAssistantBot;
     this.quickActionUploadResume = quickActionUploadResume;
     this.quickActionsCard = quickActionsCard;
     this.quickActionsTitle = quickActionsTitle;
@@ -155,6 +160,12 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.quickActionAssistantBot;
+      LinearLayout quickActionAssistantBot = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionAssistantBot == null) {
+        break missingId;
+      }
+
       id = R.id.quickActionUploadResume;
       LinearLayout quickActionUploadResume = ViewBindings.findChildViewById(rootView, id);
       if (quickActionUploadResume == null) {
@@ -193,8 +204,8 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
 
       return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomLeftGridCard,
           bottomNavigation, bottomRightGridCard, buttonUploadResume, careerResourcesTitle,
-          fragmentContainer, greetingTextView, quickActionUploadResume, quickActionsCard,
-          quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
+          fragmentContainer, greetingTextView, quickActionAssistantBot, quickActionUploadResume,
+          quickActionsCard, quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

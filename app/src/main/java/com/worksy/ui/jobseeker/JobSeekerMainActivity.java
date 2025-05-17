@@ -31,6 +31,7 @@ public class JobSeekerMainActivity extends AppCompatActivity {
 
         setupBottomNavigation();
         //setupQuickActions();
+        setupQuickActionClicks();
         fetchUserGreeting();
     }
 
@@ -60,6 +61,15 @@ public class JobSeekerMainActivity extends AppCompatActivity {
 
         // Set default selection
         binding.bottomNavigation.setSelectedItemId(R.id.navigation_home);
+    }
+
+    private void setupQuickActionClicks() {
+        binding.quickActionAssistantBot.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ChatBotActivity.class);
+            startActivity(intent);
+        });
+
+        // TODO: Add click listeners for other quick actions if needed
     }
 
     private void fetchUserGreeting() {

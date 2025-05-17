@@ -3071,6 +3071,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable achievements
+drawable ai_technology
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -3082,6 +3083,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_with_border
+drawable chat_gpt
 drawable chatbot
 drawable check_list
 drawable common_full_open_on_phone
@@ -3110,6 +3112,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_text_bg
 drawable employment_records
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
@@ -3154,10 +3157,12 @@ drawable ic_other_sign_in
 drawable ic_passkey
 drawable ic_password
 drawable ic_people
+drawable ic_person
 drawable ic_phone
 drawable ic_profile
 drawable ic_search
 drawable ic_search_black_24
+drawable ic_send
 drawable indeterminate_static
 drawable industry
 drawable interview
@@ -3366,6 +3371,7 @@ id bottom
 id bottomLeftGridCard
 id bottomNavigation
 id bottomRightGridCard
+id bottom_layout
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3408,6 +3414,7 @@ id chain
 id chain2
 id chains
 id changeLogoButton
+id chatGPT_icon
 id checkbox
 id checked
 id chipContract
@@ -3584,6 +3591,8 @@ id layoutPhone
 id layoutVerification
 id left
 id leftToRight
+id left_chat_text_view
+id left_chat_view
 id legacy
 id light
 id line1
@@ -3619,6 +3628,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id message
+id message_text_text
 id middle
 id mini
 id month_grid
@@ -3709,6 +3719,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id person
 id pin
 id position
 id postLayout
@@ -3726,6 +3737,7 @@ id profileUpdateStatusButton
 id progressBar
 id progress_circular
 id progress_horizontal
+id quickActionAssistantBot
 id quickActionUploadResume
 id quickActionsCard
 id quickActionsTitle
@@ -3755,12 +3767,15 @@ id ratingTeamworkCollaboration
 id ratio
 id recentJobsRecyclerView
 id rectangles
+id recyclerView
 id recyclerViewApplications
 id recyclerViewJobs
 id report_drawn
 id reverseSawtooth
 id right
 id rightToLeft
+id right_chat_text_view
+id right_chat_view
 id right_icon
 id right_side
 id rounded
@@ -3793,6 +3808,7 @@ id select_dialog_listview
 id selected
 id selected_applicant_name
 id selection_type
+id send_btn
 id send_email_button
 id sharedValueSet
 id sharedValueUnset
@@ -4064,6 +4080,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_auth
+layout activity_chatbot_job_seeker
 layout activity_employer_main
 layout activity_job_seeker_main
 layout activity_job_seeker_profile
@@ -4072,6 +4089,7 @@ layout applicant_item_layout
 layout bottom_sheet_job_filter
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout chat_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4547,6 +4565,7 @@ string status_end_of_contract
 string submit_rating
 string teamwork_and_collaboration
 string try_again
+string type_your_message
 string update_application_status
 string update_status
 string upload_icon

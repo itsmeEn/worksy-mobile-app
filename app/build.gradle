@@ -80,9 +80,9 @@ dependencies {
     //location access
     implementation'com.google.android.gms:play-services-location:21.3.0'
 
-    // CircleImageView
-   // implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // Volley Library
+    implementation 'com.android.volley:volley:1.2.1'
 
-    // PdfBox-Android
-    //implementation 'com.tom_roush:pdfbox-android:2.0.28' // Or the latest version'
+    // ok http
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
 }

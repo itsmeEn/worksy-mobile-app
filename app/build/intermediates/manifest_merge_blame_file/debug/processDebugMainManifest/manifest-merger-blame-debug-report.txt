@@ -24,450 +24,459 @@
 16    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 16-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:10:5-84
 16-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:10:22-82
-17    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
-17-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:24:5-72
-17-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:24:22-69
-18    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-18-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:27:5-74
-18-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:27:22-71
-19    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-19-->[com.google.android.recaptcha:recaptcha:18.6.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/eb76e0dcc341c1ebe2cbd64f8c342762/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:5-98
-19-->[com.google.android.recaptcha:recaptcha:18.6.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/eb76e0dcc341c1ebe2cbd64f8c342762/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:22-95
-20
-21    <permission
-21-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
-22        android:name="com.worksy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-22-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
-23        android:protectionLevel="signature" />
-23-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
-24
-25    <uses-permission android:name="com.worksy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-25-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
-25-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:5:5-67
+17-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:5:22-64
+18    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+18-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-75
+18-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:22-73
+19    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+19-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:24:5-72
+19-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:24:22-69
+20    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+20-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:27:5-74
+20-->[androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/AndroidManifest.xml:27:22-71
+21    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+21-->[com.google.android.recaptcha:recaptcha:18.6.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/eb76e0dcc341c1ebe2cbd64f8c342762/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:5-98
+21-->[com.google.android.recaptcha:recaptcha:18.6.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/eb76e0dcc341c1ebe2cbd64f8c342762/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:22-95
+22
+23    <permission
+23-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+24        android:name="com.worksy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+24-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+25        android:protectionLevel="signature" />
+25-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
 26
-27    <application
-27-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-63:19
-28        android:name="com.worksy.WorksyApp"
-28-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:13:9-34
-29        android:allowBackup="true"
-29-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:14:9-35
-30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
-31        android:debuggable="true"
-32        android:extractNativeLibs="false"
-33        android:icon="@drawable/worksy_logo"
-33-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:15:9-45
-34        android:label="@string/app_name"
-34-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:16:9-41
-35        android:roundIcon="@drawable/worksy_logo"
-35-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:17:9-50
-36        android:supportsRtl="true"
-36-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:18:9-35
-37        android:testOnly="true"
-38        android:theme="@style/Theme.Worksy" >
-38-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:19:9-44
-39        <activity
-39-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:21:9-30:20
-40            android:name="com.worksy.ui.auth.AuthActivity"
-40-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:22:13-49
-41            android:exported="true"
-41-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:23:13-36
-42            android:launchMode="singleTop"
-42-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:24:13-43
-43            android:windowSoftInputMode="adjustResize" >
-43-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:25:13-55
-44            <intent-filter>
-44-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:26:13-29:29
-45                <action android:name="android.intent.action.MAIN" />
-45-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:27:17-69
-45-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:27:25-66
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:28:17-77
-47-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:28:27-74
-48            </intent-filter>
-49        </activity>
-50
-51        <!-- Job Seeker Activity -->
-52        <activity
-52-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:33:9-35:40
-53            android:name="com.worksy.ui.jobseeker.JobSeekerMainActivity"
-53-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:34:13-63
-54            android:exported="false" />
-54-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:35:13-37
-55        <activity
-55-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:37:9-38:38
-56            android:name="com.worksy.ui.jobseeker.JobSeekerSearchJobActivity"
-56-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:37:19-74
-57            android:exported="true" />
-57-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:38:13-36
+27    <uses-permission android:name="com.worksy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+27-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+27-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+28
+29    <application
+29-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:14:5-65:19
+30        android:name="com.worksy.WorksyApp"
+30-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:15:9-34
+31        android:allowBackup="true"
+31-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:16:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+35        android:icon="@drawable/worksy_logo"
+35-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:17:9-45
+36        android:label="@string/app_name"
+36-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:18:9-41
+37        android:roundIcon="@drawable/worksy_logo"
+37-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:19:9-50
+38        android:supportsRtl="true"
+38-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:20:9-35
+39        android:testOnly="true"
+40        android:theme="@style/Theme.Worksy" >
+40-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:21:9-44
+41        <activity
+41-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:23:9-32:20
+42            android:name="com.worksy.ui.auth.AuthActivity"
+42-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:24:13-49
+43            android:exported="true"
+43-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:25:13-36
+44            android:launchMode="singleTop"
+44-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:26:13-43
+45            android:windowSoftInputMode="adjustResize" >
+45-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:27:13-55
+46            <intent-filter>
+46-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:28:13-31:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:29:17-69
+47-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:29:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:30:17-77
+49-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:30:27-74
+50            </intent-filter>
+51        </activity>
+52
+53        <!-- Job Seeker Activity -->
+54        <activity
+54-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:35:9-37:40
+55            android:name="com.worksy.ui.jobseeker.JobSeekerMainActivity"
+55-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:36:13-63
+56            android:exported="false" />
+56-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:37:13-37
+57        <activity android:name="com.worksy.ui.jobseeker.ChatBotActivity" />
+57-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:38:9-65
+57-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:38:19-63
 58        <activity
 58-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:39:9-40:38
-59            android:name="com.worksy.ui.jobseeker.JobSeekerMyApplicationsActivity"
-59-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:39:19-79
+59            android:name="com.worksy.ui.jobseeker.JobSeekerSearchJobActivity"
+59-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:39:19-74
 60            android:exported="true" />
 60-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:40:13-36
 61        <activity
 61-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:9-42:38
-62            android:name="com.worksy.ui.jobseeker.JobSeekerProfileActivity"
-62-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:19-72
+62            android:name="com.worksy.ui.jobseeker.JobSeekerMyApplicationsActivity"
+62-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:19-79
 63            android:exported="true" />
 63-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:42:13-36
-64
-65        <!-- employer activity -->
-66        <activity
-66-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:45:9-47:40
-67            android:name="com.worksy.ui.employer.EmployerMainActivity"
-67-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:46:13-61
-68            android:exported="false" />
-68-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:47:13-37
+64        <activity
+64-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:9-44:38
+65            android:name="com.worksy.ui.jobseeker.JobSeekerProfileActivity"
+65-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:19-72
+66            android:exported="true" />
+66-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:44:13-36
+67
+68        <!-- employer activity -->
 69        <activity
-69-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:49:9-50:39
-70            android:name="com.worksy.ui.employer.EmployerJobPost"
-70-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:49:19-62
+69-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:47:9-49:40
+70            android:name="com.worksy.ui.employer.EmployerMainActivity"
+70-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:48:13-61
 71            android:exported="false" />
-71-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:50:13-37
+71-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:49:13-37
 72        <activity
-72-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:52:9-53:39
-73            android:name="com.worksy.ui.employer.EmployerCompanyProfile"
-73-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:52:19-69
+72-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:51:9-52:39
+73            android:name="com.worksy.ui.employer.EmployerJobPost"
+73-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:51:19-62
 74            android:exported="false" />
-74-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:53:13-37
+74-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:52:13-37
 75        <activity
-75-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:55:9-56:39
-76            android:name="com.worksy.ui.employer.EmployerViewApplicantActivity"
-76-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:55:19-76
+75-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:54:9-55:39
+76            android:name="com.worksy.ui.employer.EmployerCompanyProfile"
+76-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:54:19-69
 77            android:exported="false" />
-77-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:56:13-37
-78
-79        <meta-data
-79-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:59:9-61:57
-80            android:name="preloaded_fonts"
-80-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:60:13-43
-81            android:resource="@array/preloaded_fonts" />
-81-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:61:13-54
-82
-83        <activity
-83-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:29:9-46:20
-84            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-84-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:30:13-80
-85            android:excludeFromRecents="true"
-85-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:31:13-46
-86            android:exported="true"
-86-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:32:13-36
-87            android:launchMode="singleTask"
-87-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:33:13-44
-88            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-88-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:34:13-72
-89            <intent-filter>
-89-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:35:13-45:29
-90                <action android:name="android.intent.action.VIEW" />
-90-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:17-69
-90-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:25-66
-91
-92                <category android:name="android.intent.category.DEFAULT" />
-92-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:17-76
-92-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:27-73
-93                <category android:name="android.intent.category.BROWSABLE" />
-93-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:17-78
-93-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:27-75
+77-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:55:13-37
+78        <activity
+78-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:57:9-58:39
+79            android:name="com.worksy.ui.employer.EmployerViewApplicantActivity"
+79-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:57:19-76
+80            android:exported="false" />
+80-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:58:13-37
+81
+82        <meta-data
+82-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:61:9-63:57
+83            android:name="preloaded_fonts"
+83-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:62:13-43
+84            android:resource="@array/preloaded_fonts" />
+84-->/Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:63:13-54
+85
+86        <activity
+86-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:29:9-46:20
+87            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+87-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:30:13-80
+88            android:excludeFromRecents="true"
+88-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:31:13-46
+89            android:exported="true"
+89-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:32:13-36
+90            android:launchMode="singleTask"
+90-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:33:13-44
+91            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+91-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:34:13-72
+92            <intent-filter>
+92-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:35:13-45:29
+93                <action android:name="android.intent.action.VIEW" />
+93-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:17-69
+93-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:25-66
 94
-95                <data
-95-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:41:17-44:51
-96                    android:host="firebase.auth"
-96-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:42:21-49
-97                    android:path="/"
-97-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:43:21-37
-98                    android:scheme="genericidp" />
-98-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:44:21-48
-99            </intent-filter>
-100        </activity>
-101        <activity
-101-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:47:9-64:20
-102            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-102-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:48:13-79
-103            android:excludeFromRecents="true"
-103-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:49:13-46
-104            android:exported="true"
-104-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:50:13-36
-105            android:launchMode="singleTask"
-105-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:51:13-44
-106            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-106-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:52:13-72
-107            <intent-filter>
-107-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:53:13-63:29
-108                <action android:name="android.intent.action.VIEW" />
-108-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:17-69
-108-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:25-66
-109
-110                <category android:name="android.intent.category.DEFAULT" />
-110-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:17-76
-110-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:27-73
-111                <category android:name="android.intent.category.BROWSABLE" />
-111-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:17-78
-111-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:27-75
+95                <category android:name="android.intent.category.DEFAULT" />
+95-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:17-76
+95-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:27-73
+96                <category android:name="android.intent.category.BROWSABLE" />
+96-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:17-78
+96-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:27-75
+97
+98                <data
+98-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:41:17-44:51
+99                    android:host="firebase.auth"
+99-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:42:21-49
+100                    android:path="/"
+100-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:43:21-37
+101                    android:scheme="genericidp" />
+101-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:44:21-48
+102            </intent-filter>
+103        </activity>
+104        <activity
+104-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:47:9-64:20
+105            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+105-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:48:13-79
+106            android:excludeFromRecents="true"
+106-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:49:13-46
+107            android:exported="true"
+107-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:50:13-36
+108            android:launchMode="singleTask"
+108-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:51:13-44
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+109-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:52:13-72
+110            <intent-filter>
+110-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:53:13-63:29
+111                <action android:name="android.intent.action.VIEW" />
+111-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:17-69
+111-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:36:25-66
 112
-113                <data
-113-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:41:17-44:51
-114                    android:host="firebase.auth"
-114-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:42:21-49
-115                    android:path="/"
-115-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:43:21-37
-116                    android:scheme="recaptcha" />
-116-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:44:21-48
-117            </intent-filter>
-118        </activity>
-119
-120        <service
-120-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:66:9-72:19
-121            android:name="com.google.firebase.components.ComponentDiscoveryService"
-121-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:67:13-84
-122            android:directBootAware="true"
-122-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
-123            android:exported="false" >
-123-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:68:13-37
-124            <meta-data
-124-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:69:13-71:85
-125                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-125-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:70:17-109
-126                android:value="com.google.firebase.components.ComponentRegistrar" />
-126-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:71:17-82
+113                <category android:name="android.intent.category.DEFAULT" />
+113-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:17-76
+113-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:38:27-73
+114                <category android:name="android.intent.category.BROWSABLE" />
+114-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:17-78
+114-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:39:27-75
+115
+116                <data
+116-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:41:17-44:51
+117                    android:host="firebase.auth"
+117-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:42:21-49
+118                    android:path="/"
+118-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:43:21-37
+119                    android:scheme="recaptcha" />
+119-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:44:21-48
+120            </intent-filter>
+121        </activity>
+122
+123        <service
+123-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:66:9-72:19
+124            android:name="com.google.firebase.components.ComponentDiscoveryService"
+124-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:67:13-84
+125            android:directBootAware="true"
+125-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+126            android:exported="false" >
+126-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:68:13-37
 127            <meta-data
-127-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:29:13-31:85
-128                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-128-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:30:17-120
+127-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:69:13-71:85
+128                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+128-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:70:17-109
 129                android:value="com.google.firebase.components.ComponentRegistrar" />
-129-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:31:17-82
+129-->[com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:71:17-82
 130            <meta-data
-130-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:32:13-34:85
-131                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-131-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:33:17-109
+130-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:29:13-31:85
+131                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+131-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:30:17-120
 132                android:value="com.google.firebase.components.ComponentRegistrar" />
-132-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:34:17-82
+132-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:31:17-82
 133            <meta-data
-133-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:17:13-19:85
-134                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
-134-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:18:17-122
+133-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:32:13-34:85
+134                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+134-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:33:17-109
 135                android:value="com.google.firebase.components.ComponentRegistrar" />
-135-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:19:17-82
+135-->[com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:34:17-82
 136            <meta-data
-136-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:20:13-22:85
-137                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-137-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:21:17-111
+136-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:17:13-19:85
+137                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+137-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:18:17-122
 138                android:value="com.google.firebase.components.ComponentRegistrar" />
-138-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:22:17-82
+138-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:19:17-82
 139            <meta-data
-139-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:30:13-32:85
-140                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
-140-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:31:17-118
+139-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:20:13-22:85
+140                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+140-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:21:17-111
 141                android:value="com.google.firebase.components.ComponentRegistrar" />
-141-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:32:17-82
+141-->[com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:22:17-82
 142            <meta-data
-142-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:33:13-35:85
-143                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-143-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:34:17-107
+142-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:30:13-32:85
+143                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+143-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:31:17-118
 144                android:value="com.google.firebase.components.ComponentRegistrar" />
-144-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:35:17-82
+144-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:32:17-82
 145            <meta-data
-145-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:25:13-27:85
-146                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
-146-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:26:17-120
+145-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:33:13-35:85
+146                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+146-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:34:17-107
 147                android:value="com.google.firebase.components.ComponentRegistrar" />
-147-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:27:17-82
+147-->[com.google.firebase:firebase-storage:21.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f64b381567959d26c3396b360dfaef4a/transformed/firebase-storage-21.0.1/AndroidManifest.xml:35:17-82
 148            <meta-data
-148-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:28:13-30:85
-149                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
-149-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:29:17-117
+148-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:25:13-27:85
+149                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+149-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:26:17-120
 150                android:value="com.google.firebase.components.ComponentRegistrar" />
-150-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:30:17-82
+150-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:27:17-82
 151            <meta-data
-151-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/453083e1d92bc4d8112a5e3be2a7d6ac/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
-152                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-152-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/453083e1d92bc4d8112a5e3be2a7d6ac/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+151-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:28:13-30:85
+152                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+152-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:29:17-117
 153                android:value="com.google.firebase.components.ComponentRegistrar" />
-153-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/453083e1d92bc4d8112a5e3be2a7d6ac/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+153-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/7a561aa28eaae1a9b7e9677d0ebaec8d/transformed/firebase-appcheck-18.0.0/AndroidManifest.xml:30:17-82
 154            <meta-data
-154-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
-155                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-155-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+154-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/453083e1d92bc4d8112a5e3be2a7d6ac/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+155                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+155-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/453083e1d92bc4d8112a5e3be2a7d6ac/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
 156                android:value="com.google.firebase.components.ComponentRegistrar" />
-156-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
-157        </service>
-158        <service
-158-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:24:9-32:19
-159            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
-159-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:25:13-94
-160            android:enabled="true"
-160-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:26:13-35
-161            android:exported="false" >
-161-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:27:13-37
-162            <meta-data
-162-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:29:13-31:104
-163                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
-163-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:30:17-76
-164                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
-164-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:31:17-101
-165        </service>
-166
-167        <activity
-167-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:34:9-41:20
-168            android:name="androidx.credentials.playservices.HiddenActivity"
-168-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:35:13-76
-169            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-169-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:36:13-87
-170            android:enabled="true"
-170-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:37:13-35
-171            android:exported="false"
-171-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:38:13-37
-172            android:fitsSystemWindows="true"
-172-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:39:13-45
-173            android:theme="@style/Theme.Hidden" >
-173-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:40:13-48
-174        </activity>
-175        <activity
-175-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:42:9-49:20
-176            android:name="androidx.credentials.playservices.IdentityCredentialApiHiddenActivity"
-176-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:43:13-97
-177            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-177-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:44:13-87
-178            android:enabled="true"
-178-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:45:13-35
-179            android:exported="false"
-179-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:46:13-37
-180            android:fitsSystemWindows="true"
-180-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:47:13-45
-181            android:theme="@style/Theme.Hidden" >
-181-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:48:13-48
-182        </activity>
-183        <activity
-183-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:23:9-27:75
-184            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-184-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:24:13-93
-185            android:excludeFromRecents="true"
-185-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:25:13-46
-186            android:exported="false"
-186-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:26:13-37
-187            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-187-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:27:13-72
-188        <!--
-189            Service handling Google Sign-In user revocation. For apps that do not integrate with
-190            Google Sign-In, this service will never be started.
-191        -->
-192        <service
-192-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:33:9-37:51
-193            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-193-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:34:13-89
-194            android:exported="true"
-194-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:35:13-36
-195            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-195-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:36:13-107
-196            android:visibleToInstantApps="true" />
-196-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:37:13-48
-197
-198        <provider
-198-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
-199            android:name="com.google.firebase.provider.FirebaseInitProvider"
-199-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
-200            android:authorities="com.worksy.firebaseinitprovider"
-200-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
-201            android:directBootAware="true"
-201-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
-202            android:exported="false"
-202-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
-203            android:initOrder="100" />
-203-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
-204
-205        <activity
-205-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
-206            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-206-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
-207            android:exported="false"
-207-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
-208            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-208-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
-209
-210        <provider
-210-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-211            android:name="androidx.startup.InitializationProvider"
-211-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-212            android:authorities="com.worksy.androidx-startup"
-212-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-213            android:exported="false" >
-213-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-214            <meta-data
-214-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-215                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-215-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-216                android:value="androidx.startup" />
-216-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+156-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/453083e1d92bc4d8112a5e3be2a7d6ac/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+157            <meta-data
+157-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+158                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+158-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+159                android:value="com.google.firebase.components.ComponentRegistrar" />
+159-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+160        </service>
+161        <service
+161-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:24:9-32:19
+162            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+162-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:25:13-94
+163            android:enabled="true"
+163-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:26:13-35
+164            android:exported="false" >
+164-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:27:13-37
+165            <meta-data
+165-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:29:13-31:104
+166                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+166-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:30:17-76
+167                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+167-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:31:17-101
+168        </service>
+169
+170        <activity
+170-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:34:9-41:20
+171            android:name="androidx.credentials.playservices.HiddenActivity"
+171-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:35:13-76
+172            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+172-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:36:13-87
+173            android:enabled="true"
+173-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:37:13-35
+174            android:exported="false"
+174-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:38:13-37
+175            android:fitsSystemWindows="true"
+175-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:39:13-45
+176            android:theme="@style/Theme.Hidden" >
+176-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:40:13-48
+177        </activity>
+178        <activity
+178-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:42:9-49:20
+179            android:name="androidx.credentials.playservices.IdentityCredentialApiHiddenActivity"
+179-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:43:13-97
+180            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+180-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:44:13-87
+181            android:enabled="true"
+181-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:45:13-35
+182            android:exported="false"
+182-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:46:13-37
+183            android:fitsSystemWindows="true"
+183-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:47:13-45
+184            android:theme="@style/Theme.Hidden" >
+184-->[androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:48:13-48
+185        </activity>
+186        <activity
+186-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:23:9-27:75
+187            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+187-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:24:13-93
+188            android:excludeFromRecents="true"
+188-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:25:13-46
+189            android:exported="false"
+189-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:26:13-37
+190            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+190-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:27:13-72
+191        <!--
+192            Service handling Google Sign-In user revocation. For apps that do not integrate with
+193            Google Sign-In, this service will never be started.
+194        -->
+195        <service
+195-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:33:9-37:51
+196            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+196-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:34:13-89
+197            android:exported="true"
+197-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:35:13-36
+198            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+198-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:36:13-107
+199            android:visibleToInstantApps="true" />
+199-->[com.google.android.gms:play-services-auth:21.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/AndroidManifest.xml:37:13-48
+200
+201        <provider
+201-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+202            android:name="com.google.firebase.provider.FirebaseInitProvider"
+202-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+203            android:authorities="com.worksy.firebaseinitprovider"
+203-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+204            android:directBootAware="true"
+204-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+205            android:exported="false"
+205-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+206            android:initOrder="100" />
+206-->[com.google.firebase:firebase-common:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/2b013765679077d3217848bf475e8351/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+207
+208        <activity
+208-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+209            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+209-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+210            android:exported="false"
+210-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+211            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+211-->[com.google.android.gms:play-services-base:18.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/9278611b4a85be0c3057c8cf22e40011/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+212
+213        <provider
+213-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+214            android:name="androidx.startup.InitializationProvider"
+214-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+215            android:authorities="com.worksy.androidx-startup"
+215-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+216            android:exported="false" >
+216-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
 217            <meta-data
-217-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/286402580e037027ac8314324c110adb/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-218                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-218-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/286402580e037027ac8314324c110adb/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+217-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+218                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+218-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 219                android:value="androidx.startup" />
-219-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/286402580e037027ac8314324c110adb/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+219-->[androidx.emoji2:emoji2:1.3.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/12cadb9a10fd1633e93cfff352e9c175/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
 220            <meta-data
-220-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-221                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-221-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+220-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/286402580e037027ac8314324c110adb/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+221                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+221-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/286402580e037027ac8314324c110adb/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
 222                android:value="androidx.startup" />
-222-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-223        </provider>
-224
-225        <meta-data
-225-->[com.google.android.gms:play-services-basement:18.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
-226            android:name="com.google.android.gms.version"
-226-->[com.google.android.gms:play-services-basement:18.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
-227            android:value="@integer/google_play_services_version" />
-227-->[com.google.android.gms:play-services-basement:18.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
-228
-229        <receiver
-229-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-230            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-230-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-231            android:directBootAware="false"
-231-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-232            android:enabled="true"
-232-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-233            android:exported="true"
-233-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-234            android:permission="android.permission.DUMP" >
-234-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-235            <intent-filter>
-235-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-236                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-236-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-236-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-237            </intent-filter>
+222-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/286402580e037027ac8314324c110adb/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+223            <meta-data
+223-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+224                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+224-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+225                android:value="androidx.startup" />
+225-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+226        </provider>
+227
+228        <meta-data
+228-->[com.google.android.gms:play-services-basement:18.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+229            android:name="com.google.android.gms.version"
+229-->[com.google.android.gms:play-services-basement:18.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+230            android:value="@integer/google_play_services_version" />
+230-->[com.google.android.gms:play-services-basement:18.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+231
+232        <receiver
+232-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+233            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+233-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+234            android:directBootAware="false"
+234-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+235            android:enabled="true"
+235-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+236            android:exported="true"
+236-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+237            android:permission="android.permission.DUMP" >
+237-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
 238            <intent-filter>
-238-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-239                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-239-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-239-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+238-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+239                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+239-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+239-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
 240            </intent-filter>
 241            <intent-filter>
-241-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-242                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-242-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-242-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+241-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+242                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+242-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+242-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
 243            </intent-filter>
 244            <intent-filter>
-244-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-245                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-245-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-245-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+244-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+245                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+245-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+245-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
 246            </intent-filter>
-247        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
-248        <activity
-248-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
-249            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-249-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
-250            android:exported="false"
-250-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
-251            android:stateNotNeeded="true"
-251-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
-252            android:theme="@style/Theme.PlayCore.Transparent" />
-252-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
-253    </application>
-254
-255</manifest>
+247            <intent-filter>
+247-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+248                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+248-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+248-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c75aa963df9bbcccb79dbb51ae131fb6/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+249            </intent-filter>
+250        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+251        <activity
+251-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+252            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+252-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
+253            android:exported="false"
+253-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
+254            android:stateNotNeeded="true"
+254-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
+255            android:theme="@style/Theme.PlayCore.Transparent" />
+255-->[com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a6d1d13bb310c3d8f5d17a87fe4c42de/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
+256    </application>
+257
+258</manifest>
