@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/apk/res-auto"
     package="com.worksy"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -48,9 +47,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Job Seeker Activity -->
         <activity
             android:name="com.worksy.ui.jobseeker.JobSeekerMainActivity"
             android:exported="false" />
+        <activity
+            android:name="com.worksy.ui.jobseeker.JobSeekerSearchJobActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.worksy.ui.jobseeker.JobSeekerMyApplicationsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.worksy.ui.jobseeker.JobSeekerProfileActivity"
+            android:exported="true" />
+
+        <!-- employer activity -->
         <activity
             android:name="com.worksy.ui.employer.EmployerMainActivity"
             android:exported="false" />

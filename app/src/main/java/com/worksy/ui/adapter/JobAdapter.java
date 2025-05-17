@@ -11,12 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
-    private List<Job> jobs = new ArrayList<>();
-    private OnJobClickListener listener;
+    private final List<Job> jobs = new ArrayList<>();
+    private final OnJobClickListener listener;
 
     public interface OnJobClickListener {
         void onJobClick(Job job);
         void onSaveJobClick(Job job);
+        void onApplyClick(Job job);
     }
 
     public JobAdapter(OnJobClickListener listener) {
@@ -33,7 +34,8 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull JobViewHolder holder, int position) {
-        holder.bind(jobs.get(position));
+        Job job = jobs.get(position);
+        holder.bind(job, listener);
     }
 
     @Override
@@ -47,7 +49,7 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
         notifyDataSetChanged();
     }
 
-    class JobViewHolder extends RecyclerView.ViewHolder {
+    public static class JobViewHolder extends RecyclerView.ViewHolder {
         private final ItemJobBinding binding;
 
         JobViewHolder(ItemJobBinding binding) {
@@ -55,12 +57,17 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
             this.binding = binding;
         }
 
-        void bind(Job job) {
+        void bind(Job job, OnJobClickListener listener) {
+            if (job == null) return;
+            
             binding.textViewJobTitle.setText(job.getTitle());
             binding.textViewCompanyName.setText(job.getCompanyName());
             binding.textViewLocation.setText(job.getLocation());
             binding.textViewSalary.setText(job.getFormattedSalary());
+            binding.textViewWorkSetup.setText(job.getWorkSetup());
+            binding.textViewWorkArrangement.setText(job.getWorkArrangement());
             binding.chipEmploymentType.setText(job.getEmploymentType());
+            binding.textViewExperienceLevel.setText(job.getExperienceLevel());
 
             // Set click listeners
             binding.getRoot().setOnClickListener(v -> {
@@ -69,9 +76,9 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
                 }
             });
 
-            binding.buttonSave.setOnClickListener(v -> {
+            binding.buttonApplyNow.setOnClickListener(v -> {
                 if (listener != null) {
-                    listener.onSaveJobClick(job);
+                    listener.onApplyClick(job);
                 }
             });
         }

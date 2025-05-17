@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.databinding:viewbinding:8.8.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/c1316c82e2bc25e58a249fd21123be0d/transformed/viewbinding-8.8.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/1d694f89503b3ae4b5093e1e84d14115/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/1871730626e62c80b7427f189c82ee61/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
@@ -86,7 +86,7 @@ MERGED from [com.google.android.play:core-common:2.0.3] /Users/judeibardaloza/.g
 	android:versionName
 		INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:3:5-58
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml
 	xmlns:android
@@ -134,8 +134,8 @@ ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/A
 	android:name
 		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:10:22-82
 application
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-54:19
-INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-54:19
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-63:19
+INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:12:5-63:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/1d694f89503b3ae4b5093e1e84d14115/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/1d694f89503b3ae4b5093e1e84d14115/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/1871730626e62c80b7427f189c82ee61/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
@@ -229,41 +229,59 @@ ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/A
 	android:name
 		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:28:27-74
 activity#com.worksy.ui.jobseeker.JobSeekerMainActivity
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:32:9-34:40
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:33:9-35:40
 	android:exported
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:34:13-37
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:33:13-63
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:34:13-63
+activity#com.worksy.ui.jobseeker.JobSeekerSearchJobActivity
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:37:9-38:38
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:38:13-36
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:37:19-74
+activity#com.worksy.ui.jobseeker.JobSeekerMyApplicationsActivity
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:39:9-40:38
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:39:19-79
+activity#com.worksy.ui.jobseeker.JobSeekerProfileActivity
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:9-42:38
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:19-72
 activity#com.worksy.ui.employer.EmployerMainActivity
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:36:9-38:40
-	android:exported
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:38:13-37
-	android:name
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:37:13-61
-activity#com.worksy.ui.employer.EmployerJobPost
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:40:9-41:39
-	android:exported
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:41:13-37
-	android:name
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:40:19-62
-activity#com.worksy.ui.employer.EmployerCompanyProfile
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:9-44:39
-	android:exported
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:44:13-37
-	android:name
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:43:19-69
-activity#com.worksy.ui.employer.EmployerViewApplicantActivity
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:46:9-47:39
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:45:9-47:40
 	android:exported
 		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:46:19-76
-meta-data#preloaded_fonts
-ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:50:9-52:57
-	android:resource
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:52:13-54
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:46:13-61
+activity#com.worksy.ui.employer.EmployerJobPost
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:49:9-50:39
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:51:13-43
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:49:19-62
+activity#com.worksy.ui.employer.EmployerCompanyProfile
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:52:9-53:39
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:53:13-37
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:52:19-69
+activity#com.worksy.ui.employer.EmployerViewApplicantActivity
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:55:9-56:39
+	android:exported
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:56:13-37
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:55:19-76
+meta-data#preloaded_fonts
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:59:9-61:57
+	android:resource
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:61:13-54
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:60:13-43
 uses-sdk
 INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml

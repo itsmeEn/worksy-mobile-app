@@ -44,6 +44,14 @@
     <string name="saved_jobs">Saved Jobs</string>
     <string name="resume">Resume</string>
     <string name="skills">Skills</string>
+    <string name="employment_status">Employment Status</string>
+    <string name="status_available">Available for Work</string>
+    <string name="status_employed">Currently Employed</string>
+    <string name="status_end_of_contract">End of Contract</string>
+    <string name="current_employer">Current Employer</string>
+    <string name="contract_start_date">Start Date: %1$s</string>
+    <string name="contract_end_date">End Date: %1$s</string>
+    <string name="update_status">Update Status</string>
     
     <!-- Employer Specific -->
     <string name="post_job">Post Job</string>
@@ -182,7 +190,6 @@
     <string name="yyyy_mm_dd">YYYY-MM-DD</string>
     <string name="schedule_interview">Schedule Interview</string>
     <string name="selected_applicant">Selected Applicant: %1$s</string>
-    <string name="update_status">Update Status:</string>
     <string name="application_date">Application Date: %1$s</string>
     <string name="status">Status: %1$s</string>
 
@@ -213,4 +220,36 @@
     <string name="initiative_and_proactiveness">Initiative and Proactiveness</string>
     <string name="teamwork_and_collaboration">Teamwork and Collaboration</string>
     <string name="submit_rating">Submit Rating</string>
+    <string name="upload_icon">Upload Icon</string>
+    <string name="or_upload_a_file_pdf_doc_docx">UPLOAD RESUME (PDF File Only)</string>
+    <string name="choose_file">Choose File</string>
+    
+    <!-- Profile strings -->
+    <string name="profile_background">Profile Background</string>
+    <string name="phone">Phone</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="github">GitHub</string>
+    <string name="website">Website</string>
+    <string name="document">Resume Document</string>
+    <string name="no_resume_uploaded_yet">No resume uploaded yet</string>
+    <string name="uploaded_on_jan_1_2023">Uploaded on Jan 1, 2023</string>
+    <string name="myresume_pdf">MyResume.pdf</string>
+    <string name="johndoe_com">johndoe.com</string>
+    <string name="error_initializing_activity">error_initializing_activity</string>
+    <string name="please_log_in">Please Log In</string>
+    <string name="cannot_apply_to_current_employer">Unable to Apply</string>
+    <string name="yes_continue">Continue</string>
+    <string name="employed_warning">You are Employed!</string>
+    <string name="currently_employed">You are currently Employed!</string>
+    <string name="select_resume">Select Resume</string>
+    <string name="close">Close</string>
+    <string name="error_loading_jobs">Failed to Load Jobs!</string>
+    <string name="failed_to_load_jobs">Cannot Load Jobs</string>
+
+    <string-array name="profile_status_options">
+        <item>Available</item>
+        <item>Open to Offers</item>
+        <item>Not Looking</item>
+        <item>Busy</item>
+    </string-array>
 </resources>

@@ -4,6 +4,9 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,10 +34,19 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final CardView bottomRightGridCard;
 
   @NonNull
+  public final Button buttonUploadResume;
+
+  @NonNull
   public final TextView careerResourcesTitle;
 
   @NonNull
+  public final FrameLayout fragmentContainer;
+
+  @NonNull
   public final TextView greetingTextView;
+
+  @NonNull
+  public final LinearLayout quickActionUploadResume;
 
   @NonNull
   public final CardView quickActionsCard;
@@ -53,16 +65,20 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
 
   private ActivityJobSeekerMainBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView bottomLeftGridCard, @NonNull BottomNavigationView bottomNavigation,
-      @NonNull CardView bottomRightGridCard, @NonNull TextView careerResourcesTitle,
-      @NonNull TextView greetingTextView, @NonNull CardView quickActionsCard,
-      @NonNull TextView quickActionsTitle, @NonNull View topBar, @NonNull CardView topLeftGridCard,
-      @NonNull CardView topRightGridCard) {
+      @NonNull CardView bottomRightGridCard, @NonNull Button buttonUploadResume,
+      @NonNull TextView careerResourcesTitle, @NonNull FrameLayout fragmentContainer,
+      @NonNull TextView greetingTextView, @NonNull LinearLayout quickActionUploadResume,
+      @NonNull CardView quickActionsCard, @NonNull TextView quickActionsTitle, @NonNull View topBar,
+      @NonNull CardView topLeftGridCard, @NonNull CardView topRightGridCard) {
     this.rootView = rootView;
     this.bottomLeftGridCard = bottomLeftGridCard;
     this.bottomNavigation = bottomNavigation;
     this.bottomRightGridCard = bottomRightGridCard;
+    this.buttonUploadResume = buttonUploadResume;
     this.careerResourcesTitle = careerResourcesTitle;
+    this.fragmentContainer = fragmentContainer;
     this.greetingTextView = greetingTextView;
+    this.quickActionUploadResume = quickActionUploadResume;
     this.quickActionsCard = quickActionsCard;
     this.quickActionsTitle = quickActionsTitle;
     this.topBar = topBar;
@@ -115,15 +131,33 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.buttonUploadResume;
+      Button buttonUploadResume = ViewBindings.findChildViewById(rootView, id);
+      if (buttonUploadResume == null) {
+        break missingId;
+      }
+
       id = R.id.careerResourcesTitle;
       TextView careerResourcesTitle = ViewBindings.findChildViewById(rootView, id);
       if (careerResourcesTitle == null) {
         break missingId;
       }
 
+      id = R.id.fragmentContainer;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
+        break missingId;
+      }
+
       id = R.id.greetingTextView;
       TextView greetingTextView = ViewBindings.findChildViewById(rootView, id);
       if (greetingTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.quickActionUploadResume;
+      LinearLayout quickActionUploadResume = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionUploadResume == null) {
         break missingId;
       }
 
@@ -158,8 +192,9 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
       }
 
       return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomLeftGridCard,
-          bottomNavigation, bottomRightGridCard, careerResourcesTitle, greetingTextView,
-          quickActionsCard, quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
+          bottomNavigation, bottomRightGridCard, buttonUploadResume, careerResourcesTitle,
+          fragmentContainer, greetingTextView, quickActionUploadResume, quickActionsCard,
+          quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

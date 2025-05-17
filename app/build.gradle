@@ -79,4 +79,10 @@ dependencies {
 
     //location access
     implementation'com.google.android.gms:play-services-location:21.3.0'
+
+    // CircleImageView
+   // implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // PdfBox-Android
+    //implementation 'com.tom_roush:pdfbox-android:2.0.28' // Or the latest version'
 }

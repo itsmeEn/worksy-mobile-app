@@ -48,6 +48,12 @@
         <item>@font/poppins_bold</item>
         <item>@font/poppins_semibold</item>
     </array>
+    <string-array name="profile_status_options">
+        <item>Available</item>
+        <item>Open to Offers</item>
+        <item>Not Looking</item>
+        <item>Busy</item>
+    </string-array>
     <color name="background">#FAFAFA</color>
     <color name="black">#000000</color>
     <color name="error">#B00020</color>
@@ -59,6 +65,17 @@
     <color name="secondary">#2E7D32</color>
     <color name="secondary_light">#C8E6C9</color>
     <color name="secondary_variant">#1B5E20</color>
+    <color name="skill_chip_background">#E0F7FA</color>
+    <color name="status_accepted_bg">#D1FAE5</color>
+    <color name="status_accepted_text">#065F46</color>
+    <color name="status_rejected_bg">#FEE2E2</color>
+    <color name="status_rejected_text">#991B1B</color>
+    <color name="status_reviewing_bg">#FEF3C7</color>
+    <color name="status_reviewing_text">#92400E</color>
+    <color name="status_shortlisted_bg">#DBEAFE</color>
+    <color name="status_shortlisted_text">#1E40AF</color>
+    <color name="status_unknown_bg">#E5E7EB</color>
+    <color name="status_unknown_text">#4B5563</color>
     <color name="success">#4CAF50</color>
     <color name="surface">#FFFFFF</color>
     <color name="text_hint">#BDBDBD</color>
@@ -85,9 +102,12 @@
     <string name="authenticate">Authenticate</string>
     <string name="back_button">Back</string>
     <string name="cancel">Cancel</string>
+    <string name="cannot_apply_to_current_employer">Unable to Apply</string>
     <string name="cannot_schedule_interview">Cannot schedule interview. Applicant status is not Accepted.</string>
     <string name="career_resources">Career Resources</string>
     <string name="change_logo">change_logo</string>
+    <string name="choose_file">Choose File</string>
+    <string name="close">Close</string>
     <string name="code_sent">Verification code sent</string>
     <string name="communication_skills">Communication Skills</string>
     <string name="company">Company Name</string>
@@ -103,20 +123,30 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_with_phone">Continue with Phone</string>
     <string name="contract">Contract</string>
+    <string name="contract_end_date">End Date: %1$s</string>
+    <string name="contract_start_date">Start Date: %1$s</string>
     <string name="culture_amp_benefits">Culture and Benefits</string>
+    <string name="current_employer">Current Employer</string>
+    <string name="currently_employed">You are currently Employed!</string>
     <string name="default_web_client_id" translatable="false">399000476267-f3ljrn2c5tukp95vsv13fs73i7vknkmi.apps.googleusercontent.com</string>
     <string name="delete">Delete</string>
+    <string name="document">Resume Document</string>
     <string name="dont_have_account">Create Account as</string>
     <string name="edit">Edit</string>
     <string name="email">Email</string>
     <string name="email_not_available">Email address not available</string>
     <string name="emp_rev">Rate Employee</string>
+    <string name="employed_warning">You are Employed!</string>
     <string name="employer">Employer</string>
+    <string name="employment_status">Employment Status</string>
     <string name="employment_type">Employment Type</string>
     <string name="enter_code">Enter verification code</string>
     <string name="entry_level">Entry Level</string>
+    <string name="error_initializing_activity">error_initializing_activity</string>
+    <string name="error_loading_jobs">Failed to Load Jobs!</string>
     <string name="error_occurred">An error occurred</string>
     <string name="experience_level">Experience Level</string>
+    <string name="failed_to_load_jobs">Cannot Load Jobs</string>
     <string name="fetching_location">Fetching Location…</string>
     <string name="filter_jobs">Filter Jobs</string>
     <string name="firebase_database_url" translatable="false">https://worksy-mobile-app-job-portal-default-rtdb.firebaseio.com</string>
@@ -126,6 +156,7 @@
     <string name="framework_description">Learn effective ways to network, apply, and stand out.</string>
     <string name="full_time">Full-time</string>
     <string name="gcm_defaultSenderId" translatable="false">399000476267</string>
+    <string name="github">GitHub</string>
     <string name="good_morning">Good morning</string>
     <string name="google_api_key" translatable="false">AIzaSyCNqlpaGvCdSa08YwBHoVaKtQgON3J1V-c</string>
     <string name="google_app_id" translatable="false">1:399000476267:android:78d5779a899bd619edef2e</string>
@@ -154,6 +185,8 @@
     <string name="job_title_applicant">Job Title: %1$s</string>
     <string name="job_title_placeholder">Job Title Placeholder</string>
     <string name="job_type">Job Type</string>
+    <string name="johndoe_com">johndoe.com</string>
+    <string name="linkedin">LinkedIn</string>
     <string name="loading">Loading…</string>
     <string name="location">Location</string>
     <string name="location_placeholder">Location Placeholder</string>
@@ -165,22 +198,28 @@
     <string name="mock">Interview Guide</string>
     <string name="mock_description">Prepare for interviews with common questions and expert tips.</string>
     <string name="my_applications">My Applications</string>
+    <string name="myresume_pdf">MyResume.pdf</string>
     <string name="name">Name</string>
     <string name="no_email_app_found">No email app found</string>
     <string name="no_jobs_found">No Jobs Found</string>
     <string name="no_jobs_found_message">We couldn\'t find any jobs matching your criteria. Try adjusting your search or filters.</string>
+    <string name="no_resume_uploaded_yet">No resume uploaded yet</string>
     <string name="on_site">On Site</string>
     <string name="or">OR</string>
+    <string name="or_upload_a_file_pdf_doc_docx">UPLOAD RESUME (PDF File Only)</string>
     <string name="part_time">Part-time</string>
     <string name="password">Password</string>
+    <string name="phone">Phone</string>
     <string name="phone_number">Phone Number</string>
     <string name="pin_location">Pin Location</string>
     <string name="please_enter_interview_date">Please enter an interview date</string>
+    <string name="please_log_in">Please Log In</string>
     <string name="please_select_applicant">Please select an applicant first</string>
     <string name="post_job">Post Job</string>
     <string name="post_now">Post Now</string>
     <string name="posted_jobs">Recent Post Jobs</string>
     <string name="profile">Profile</string>
+    <string name="profile_background">Profile Background</string>
     <string name="project_id" translatable="false">worksy-mobile-app-job-portal</string>
     <string name="quality_of_work_adaptability_problem_solving">Quality of Work (Adaptability, Problem Solving)</string>
     <string name="quick_actions">Quick Actions</string>
@@ -202,6 +241,7 @@
     <string name="search_applicants">Search applicants…</string>
     <string name="search_jobs">Search jobs, companies, or keywords</string>
     <string name="seeker_account">Job Seeker Registration</string>
+    <string name="select_resume">Select Resume</string>
     <string name="selected_applicant">Selected Applicant: %1$s</string>
     <string name="senior_level">Senior Level</string>
     <string name="sign_in">Sign In</string>
@@ -211,20 +251,27 @@
     <string name="skills_and_knowledge">Skills and Knowledge</string>
     <string name="sort_by">Sort by</string>
     <string name="status">Status: %1$s</string>
+    <string name="status_available">Available for Work</string>
+    <string name="status_employed">Currently Employed</string>
+    <string name="status_end_of_contract">End of Contract</string>
     <string name="submit_rating">Submit Rating</string>
     <string name="teamwork_and_collaboration">Teamwork and Collaboration</string>
     <string name="try_again">Try Again</string>
     <string name="update_application_status">Update Application Status</string>
-    <string name="update_status">Update Status:</string>
+    <string name="update_status">Update Status</string>
+    <string name="upload_icon">Upload Icon</string>
     <string name="upload_resume">Upload Resume</string>
+    <string name="uploaded_on_jan_1_2023">Uploaded on Jan 1, 2023</string>
     <string name="user_type">User Type</string>
     <string name="verification_failed">Verification failed</string>
     <string name="verify_phone">Verify Phone Number</string>
     <string name="view_app">View Applicant</string>
     <string name="vision">Post Company Vision</string>
+    <string name="website">Website</string>
     <string name="work_arrangement">Work Arrangement</string>
     <string name="work_arrangement_placeholder">Work Arrangement Placeholder</string>
     <string name="work_setup">Work Setup</string>
+    <string name="yes_continue">Continue</string>
     <string name="yyyy_mm_dd">YYYY-MM-DD</string>
     <style name="TextAppearance.Worksy.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">16sp</item>
