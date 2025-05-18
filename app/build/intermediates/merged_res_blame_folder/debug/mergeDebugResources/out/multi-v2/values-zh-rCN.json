@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.worksy.app-mergeDebugResources-42:/values-zh-rCN/values-zh-rCN.xml",
+            "outputFile": "com.worksy.app-mergeDebugResources-43:/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
                     "source": "/Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b8badf6f1dd79cd0019ec487a3d8c049/transformed/core-1.16.0/res/values-zh-rCN/values-zh-rCN.xml",

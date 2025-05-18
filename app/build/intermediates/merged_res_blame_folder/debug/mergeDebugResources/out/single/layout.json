@@ -1,62 +1,98 @@
 [
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_phone_auth.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_phone_auth.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/chat_item.xml",
+        "source": "com.worksy.app-main-47:/layout/chat_item.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/dialog_role_selection.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/dialog_role_selection.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/fragment_registration.xml",
+        "source": "com.worksy.app-main-47:/layout/fragment_registration.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/employee_post_job.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/employee_post_job.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/dialog_role_selection.xml",
+        "source": "com.worksy.app-main-47:/layout/dialog_role_selection.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/item_recent_job.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/item_recent_job.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/job_seeker_my_applications.xml",
+        "source": "com.worksy.app-main-47:/layout/job_seeker_my_applications.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/item_job.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/item_job.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/item_job_applications.xml",
+        "source": "com.worksy.app-main-47:/layout/item_job_applications.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_login.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_login.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/applicant_item_layout.xml",
+        "source": "com.worksy.app-main-47:/layout/applicant_item_layout.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_registration.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_registration.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_job_seeker_search_job.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_job_seeker_search_job.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/employer_company_profile.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/employer_company_profile.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/item_job.xml",
+        "source": "com.worksy.app-main-47:/layout/item_job.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/activity_job_seeker_main.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_job_seeker_main.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/employee_post_job.xml",
+        "source": "com.worksy.app-main-47:/layout/employee_post_job.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/bottom_sheet_job_filter.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/bottom_sheet_job_filter.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_employer_main.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_employer_main.xml"
     },
     {
-        "merged": "com.worksy.app-mergeDebugResources-43:/layout/employer_view_applicant.xml",
-        "source": "com.worksy.app-main-46:/layout/employer_view_applicant.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_job_seeker_main.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_job_seeker_main.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/activity_auth.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_auth.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_job_seeker_profile.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_job_seeker_profile.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_job_seeker_home.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_job_seeker_home.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/fragment_rate_job_seeker.xml",
+        "source": "com.worksy.app-main-47:/layout/fragment_rate_job_seeker.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/activity_employer_main.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/activity_employer_main.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/item_certificate.xml",
+        "source": "com.worksy.app-main-47:/layout/item_certificate.xml"
     },
     {
-        "merged": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-mergeDebugResources-43:/layout/fragment_recruiter_registration.xml",
-        "source": "/Users/judeibardaloza/.gradle/daemon/8.10.2/com.worksy.app-main-46:/layout/fragment_recruiter_registration.xml"
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_job_seeker_achievement.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_job_seeker_achievement.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/fragment_phone_auth.xml",
+        "source": "com.worksy.app-main-47:/layout/fragment_phone_auth.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/fragment_login.xml",
+        "source": "com.worksy.app-main-47:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/item_recent_job.xml",
+        "source": "com.worksy.app-main-47:/layout/item_recent_job.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/fragment_recruiter_registration.xml",
+        "source": "com.worksy.app-main-47:/layout/fragment_recruiter_registration.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/bottom_sheet_job_filter.xml",
+        "source": "com.worksy.app-main-47:/layout/bottom_sheet_job_filter.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_auth.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/activity_chatbot_job_seeker.xml",
+        "source": "com.worksy.app-main-47:/layout/activity_chatbot_job_seeker.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/employer_view_applicant.xml",
+        "source": "com.worksy.app-main-47:/layout/employer_view_applicant.xml"
+    },
+    {
+        "merged": "com.worksy.app-mergeDebugResources-44:/layout/employer_company_profile.xml",
+        "source": "com.worksy.app-main-47:/layout/employer_company_profile.xml"
     }
 ]

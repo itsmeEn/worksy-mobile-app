@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.worksy.app-mergeDebugResources-42:/values-sv/values-sv.xml",
+            "outputFile": "com.worksy.app-mergeDebugResources-43:/values-sv/values-sv.xml",
             "map": [
                 {
                     "source": "/Users/judeibardaloza/.gradle/caches/8.10.2/transforms/a63ff26b327cc6421584aae524266598/transformed/biometric-1.1.0/res/values-sv/values-sv.xml",

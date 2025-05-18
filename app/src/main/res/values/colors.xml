@@ -28,4 +28,19 @@
     <color name="success">#4CAF50</color>
     <color name="warning">#FFC107</color>
     <color name="info">#2196F3</color>
+    
+    <!-- UI Component colors -->
+    <color name="skill_chip_background">#E0F7FA</color>
+
+    <!-- Status Colors -->
+    <color name="status_accepted_bg">#D1FAE5</color>
+    <color name="status_accepted_text">#065F46</color>
+    <color name="status_rejected_bg">#FEE2E2</color>
+    <color name="status_rejected_text">#991B1B</color>
+    <color name="status_shortlisted_bg">#DBEAFE</color>
+    <color name="status_shortlisted_text">#1E40AF</color>
+    <color name="status_reviewing_bg">#FEF3C7</color>
+    <color name="status_reviewing_text">#92400E</color>
+    <color name="status_unknown_bg">#E5E7EB</color>
+    <color name="status_unknown_text">#4B5563</color>
 </resources>

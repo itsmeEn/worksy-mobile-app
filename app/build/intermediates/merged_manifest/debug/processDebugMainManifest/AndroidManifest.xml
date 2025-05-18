@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/apk/res-auto"
     package="com.worksy"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -11,10 +10,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
@@ -33,6 +34,7 @@
         android:extractNativeLibs="false"
         android:icon="@drawable/worksy_logo"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@drawable/worksy_logo"
         android:supportsRtl="true"
         android:testOnly="true"
@@ -48,9 +50,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Job Seeker Activity -->
         <activity
             android:name="com.worksy.ui.jobseeker.JobSeekerMainActivity"
             android:exported="false" />
+        <activity android:name="com.worksy.ui.jobseeker.ChatBotActivity" />
+        <activity android:name="com.worksy.ui.jobseeker.JobSeekerAchievements" />
+        <activity
+            android:name="com.worksy.ui.jobseeker.JobSeekerSearchJobActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.worksy.ui.jobseeker.JobSeekerMyApplicationsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.worksy.ui.jobseeker.JobSeekerProfileActivity"
+            android:exported="true" />
+
+        <!-- employer activity -->
         <activity
             android:name="com.worksy.ui.employer.EmployerMainActivity"
             android:exported="false" />
@@ -60,11 +77,9 @@
         <activity
             android:name="com.worksy.ui.employer.EmployerCompanyProfile"
             android:exported="false" />
-
-        <!--
-            <activity android:name=".ui.employer.ViewApplicant"
-            android:exported="false"/>
-        -->
+        <activity
+            android:name="com.worksy.ui.employer.EmployerViewApplicantActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -191,12 +206,6 @@
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.worksy.androidx-startup"
@@ -211,6 +220,11 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -1,11 +1,16 @@
 package com.worksy.data.model;
 
+import android.util.Log;
 import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.PropertyName;
+
 import java.util.List;
+import java.util.Locale; // Import Locale
 import java.util.Map;
 
 public class Job {
     private String id;
+    @PropertyName("jobTitle")
     private String title;
     private String companyName;
     private String location;
@@ -22,18 +27,19 @@ public class Job {
     private String status;
     private String employerId;
     private String jobCategory;
-    private String workSetup; // Added workSetup
+    private String workSetup;
     private String workArrangement;
+    @PropertyName("salaryRange")
+    private String rawSalaryRange;
 
-    // Required empty constructor for FireStore
     public Job() {}
 
-    // Constructor with workSetup
     public Job(String id, String title, String companyName, String location, String description,
                String employmentType, double salaryMin, double salaryMax, String salaryCurrency,
                String experienceLevel, List<String> requirements, List<String> skills,
                Map<String, Object> companyDetails, Timestamp postedDate, String status,
-               String employerId, String jobCategory, String workSetup, String workArrangement) {
+               String employerId, String jobCategory, String workSetup, String workArrangement,
+               String rawSalaryRange) {
         this.id = id;
         this.title = title;
         this.companyName = companyName;
@@ -51,12 +57,12 @@ public class Job {
         this.status = status;
         this.employerId = employerId;
         this.jobCategory = jobCategory;
-        this.workSetup = workSetup; // Initialize workSetup
+        this.workSetup = workSetup;
         this.workArrangement = workArrangement;
+        this.rawSalaryRange = rawSalaryRange;
+        parseSalaryRange();
     }
 
-
-    // Getters and Setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
@@ -108,7 +114,7 @@ public class Job {
     public String getJobCategory() { return jobCategory; }
     public void setJobCategory(String jobCategory) { this.jobCategory = jobCategory; }
 
-    public String getWorkSetup() { // Corrected getter for workSetup
+    public String getWorkSetup() {
         return workSetup;
     }
 
@@ -116,21 +122,49 @@ public class Job {
         this.workSetup = workSetup;
     }
 
+    public String getWorkArrangement() {
+        return workArrangement;
+    }
+
+    public void setWorkArrangement(String workArrangement) {
+        this.workArrangement = workArrangement;
+    }
+
+    public String getRawSalaryRange() {
+        return rawSalaryRange;
+    }
+
+    public void setRawSalaryRange(String rawSalaryRange) {
+        this.rawSalaryRange = rawSalaryRange;
+        parseSalaryRange();
+    }
+
+    private void parseSalaryRange() {
+        try {
+            double salary = Double.parseDouble(rawSalaryRange);
+            this.salaryMin = salary;
+            this.salaryMax = salary;
+            this.salaryCurrency = "PHP";
+        } catch (NumberFormatException e) {
+            this.salaryMin = 0;
+            this.salaryMax = 0;
+            this.salaryCurrency = "";
+            Log.e("JobModel", "Error parsing salaryRange: " + rawSalaryRange, e);
+        } catch (NullPointerException e) {
+            this.salaryMin = 0;
+            this.salaryMax = 0;
+            this.salaryCurrency = "";
+            Log.w("JobModel", "salaryRange is null.");
+        }
+    }
+
     public String getFormattedSalary() {
         if (salaryMin == 0 && salaryMax == 0) {
             return "Salary negotiable";
         }
         if (salaryMin == salaryMax) {
-            return String.format("%s %.0f", salaryCurrency, salaryMin);
+            return String.format(Locale.getDefault(), "%s %.0f", salaryCurrency, salaryMin);
         }
-        return String.format("%s %.0f - %.0f", salaryCurrency, salaryMin, salaryMax);
-    }
-
-    public void setWorkArrangement (String workArrangement){
-        this.workArrangement = workArrangement;
-    }
-
-    public String getWorkArrangement() { // Add this getter method
-        return workArrangement;
+        return String.format(Locale.getDefault(), "%s %.0f - %.0f", salaryCurrency, salaryMin, salaryMax);
     }
 }

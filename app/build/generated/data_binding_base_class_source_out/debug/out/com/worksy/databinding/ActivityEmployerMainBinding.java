@@ -4,6 +4,8 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,7 +31,13 @@ public final class ActivityEmployerMainBinding implements ViewBinding {
   public final TextView companyIdentity;
 
   @NonNull
+  public final FrameLayout fragmentContainer;
+
+  @NonNull
   public final TextView greetingEmployerView;
+
+  @NonNull
+  public final LinearLayout quickActionRateEmployee;
 
   @NonNull
   public final CardView quickActionsCard;
@@ -45,13 +53,16 @@ public final class ActivityEmployerMainBinding implements ViewBinding {
 
   private ActivityEmployerMainBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavigation, @NonNull TextView companyIdentity,
-      @NonNull TextView greetingEmployerView, @NonNull CardView quickActionsCard,
+      @NonNull FrameLayout fragmentContainer, @NonNull TextView greetingEmployerView,
+      @NonNull LinearLayout quickActionRateEmployee, @NonNull CardView quickActionsCard,
       @NonNull TextView quickActionsTitle, @NonNull RecyclerView recentJobsRecyclerView,
       @NonNull View topBar) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.companyIdentity = companyIdentity;
+    this.fragmentContainer = fragmentContainer;
     this.greetingEmployerView = greetingEmployerView;
+    this.quickActionRateEmployee = quickActionRateEmployee;
     this.quickActionsCard = quickActionsCard;
     this.quickActionsTitle = quickActionsTitle;
     this.recentJobsRecyclerView = recentJobsRecyclerView;
@@ -97,9 +108,21 @@ public final class ActivityEmployerMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fragmentContainer;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
+        break missingId;
+      }
+
       id = R.id.greetingEmployerView;
       TextView greetingEmployerView = ViewBindings.findChildViewById(rootView, id);
       if (greetingEmployerView == null) {
+        break missingId;
+      }
+
+      id = R.id.quick_action_rate_employee;
+      LinearLayout quickActionRateEmployee = ViewBindings.findChildViewById(rootView, id);
+      if (quickActionRateEmployee == null) {
         break missingId;
       }
 
@@ -128,8 +151,8 @@ public final class ActivityEmployerMainBinding implements ViewBinding {
       }
 
       return new ActivityEmployerMainBinding((ConstraintLayout) rootView, bottomNavigation,
-          companyIdentity, greetingEmployerView, quickActionsCard, quickActionsTitle,
-          recentJobsRecyclerView, topBar);
+          companyIdentity, fragmentContainer, greetingEmployerView, quickActionRateEmployee,
+          quickActionsCard, quickActionsTitle, recentJobsRecyclerView, topBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

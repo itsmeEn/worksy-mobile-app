@@ -1,7 +1,8 @@
 package com.worksy.data.model;
 
+// Represents an applicant.
 public class Applicant {
-    private int id;
+    private String id;
     private String name;
     private String applicationDate;
     private String status;
@@ -9,7 +10,7 @@ public class Applicant {
     private String jobTitle;
     private String email;
 
-    public Applicant(int id, String name, String applicationDate, String status, String resumeUrl, String jobTitle, String email) {
+    public Applicant(String id, String name, String applicationDate, String status, String resumeUrl, String jobTitle, String email) {
         this.id = id;
         this.name = name;
         this.applicationDate = applicationDate;
@@ -19,7 +20,7 @@ public class Applicant {
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

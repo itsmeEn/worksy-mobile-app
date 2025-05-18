@@ -44,6 +44,14 @@
     <string name="saved_jobs">Saved Jobs</string>
     <string name="resume">Resume</string>
     <string name="skills">Skills</string>
+    <string name="employment_status">Employment Status</string>
+    <string name="status_available">Available for Work</string>
+    <string name="status_employed">Currently Employed</string>
+    <string name="status_end_of_contract">End of Contract</string>
+    <string name="current_employer">Current Employer</string>
+    <string name="contract_start_date">Start Date: %1$s</string>
+    <string name="contract_end_date">End Date: %1$s</string>
+    <string name="update_status">Update Status</string>
     
     <!-- Employer Specific -->
     <string name="post_job">Post Job</string>
@@ -159,14 +167,14 @@
     <string name="google_app_id">740786760536-6ptp3burv7p8602suk3cnqivaejienfk.apps.googleusercontent.com</string>
     <string name="google_client_token">https://oauth2.googleapis.com/token</string>
 
-    <string name="fetching_location">Fetching Location...</string>
+    <string name="fetching_location">Fetching Location…</string>
     <string name="job_category">Job Category</string>
     <string name="job_title_placeholder">Job Title Placeholder</string>
     <string name="job_category_placeholder">Job Category Placeholder</string>
     <string name="work_arrangement_placeholder">Work Arrangement Placeholder</string>
     <string name="location_placeholder">Location Placeholder</string>
     <string name="company_details">Company Details</string>
-    <string name="culture_amp_benefits"><![CDATA[Culture & Benefits]]></string>
+    <string name="culture_amp_benefits">Culture and Benefits</string>
     <string name="company_logo">company_logo</string>
     <string name="change_logo">change_logo</string>
     <string name="industry_specialization">industry_specialization</string>
@@ -176,22 +184,81 @@
     <string name="save_profile">save_profile</string>
     <string name="applicant_name">Name: %1$s</string>
     <string name="applied_for">Position Applied For</string>
-    <string name="search_applicants">Search applicants...</string>
+    <string name="search_applicants">Search applicants…</string>
     <string name="update_application_status">Update Application Status</string>
     <string name="interview_date">Interview Date:</string>
     <string name="yyyy_mm_dd">YYYY-MM-DD</string>
     <string name="schedule_interview">Schedule Interview</string>
     <string name="selected_applicant">Selected Applicant: %1$s</string>
-    <string name="update_status">Update Status:</string>
     <string name="application_date">Application Date: %1$s</string>
     <string name="status">Status: %1$s</string>
 
-    <!--job status-->
-    <string-array name="job_status">"
+    <!--My Applicant-->
+    <string name="please_select_applicant">Please select an applicant first</string>
+    <string name="please_enter_interview_date">Please enter an interview date</string>
+    <string name="cannot_schedule_interview">Cannot schedule interview. Applicant status is not Accepted.</string>
+    <string name="resume_not_available">Resume not available</string>
+    <string name="regarding_application">Regarding your application</string>
+    <string name="no_email_app_found">No email app found</string>
+    <string name="email_not_available">Email address not available</string>
+    <string name="interview_date_sched">Interview scheduled for %1$s</string>
+    <string name="job_title_applicant">Job Title: %1$s</string>
+
+    <!--applicant status-->
+    <string-array name="application_statuses">
         <item>Pending</item>
         <item>Accepted</item>
         <item>Rejected</item>
         <item>Shortlisted</item>
         <item>Reviewing</item>
     </string-array>
+
+    <!--Employer Rating-->
+    <string name="skills_and_knowledge">Skills and Knowledge</string>
+    <string name="quality_of_work_adaptability_problem_solving">Quality of Work (Adaptability, Problem Solving)</string>
+    <string name="communication_skills">Communication Skills</string>
+    <string name="initiative_and_proactiveness">Initiative and Proactiveness</string>
+    <string name="teamwork_and_collaboration">Teamwork and Collaboration</string>
+    <string name="submit_rating">Submit Rating</string>
+    <string name="upload_icon">Upload Icon</string>
+    <string name="or_upload_a_file_pdf_doc_docx">UPLOAD RESUME (PDF File Only)</string>
+    <string name="choose_file">Choose File</string>
+    
+    <!-- Profile strings -->
+    <string name="profile_background">Profile Background</string>
+    <string name="phone">Phone</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="github">GitHub</string>
+    <string name="website">Website</string>
+    <string name="document">Resume Document</string>
+    <string name="no_resume_uploaded_yet">No resume uploaded yet</string>
+    <string name="uploaded_on_jan_1_2023">Uploaded on Jan 1, 2023</string>
+    <string name="myresume_pdf">MyResume.pdf</string>
+    <string name="johndoe_com">johndoe.com</string>
+    <string name="error_initializing_activity">error_initializing_activity</string>
+    <string name="please_log_in">Please Log In</string>
+    <string name="cannot_apply_to_current_employer">Unable to Apply</string>
+    <string name="yes_continue">Continue</string>
+    <string name="employed_warning">You are Employed!</string>
+    <string name="currently_employed">You are currently Employed!</string>
+    <string name="select_resume">Select Resume</string>
+    <string name="close">Close</string>
+    <string name="error_loading_jobs">Failed to Load Jobs!</string>
+    <string name="failed_to_load_jobs">Cannot Load Jobs</string>
+    <string name="type_your_message">Type your message</string>
+    <string name="upload_certificate">Upload Certificate</string>
+    <string name="no_certificates_uploaded_yet">No certificates uploaded yet.</string>
+    <string name="application_submitted">Successfully Submitted Applications</string>
+    <string name="no_applications_found">No applications found.</string>
+
+    <string-array name="profile_status_options">
+        <item>Available</item>
+        <item>Open to Offers</item>
+        <item>Not Looking</item>
+        <item>Busy</item>
+    </string-array>
+
+    <!-- Added for EmployerViewApplicantActivity -->
+    <string name="view_resume">View Resume</string>
+    <string name="send_email">Send Email</string>
 </resources>

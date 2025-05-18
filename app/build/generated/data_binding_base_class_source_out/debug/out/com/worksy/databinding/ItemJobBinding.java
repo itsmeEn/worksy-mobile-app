@@ -4,15 +4,14 @@ package com.worksy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.chip.Chip;
-import com.google.android.material.imageview.ShapeableImageView;
-import com.google.android.material.textview.MaterialTextView;
 import com.worksy.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,46 +19,64 @@ import java.lang.String;
 
 public final class ItemJobBinding implements ViewBinding {
   @NonNull
-  private final MaterialCardView rootView;
+  private final CardView rootView;
 
   @NonNull
-  public final MaterialButton buttonSave;
+  public final Button buttonApplyNow;
+
+  @NonNull
+  public final Button buttonUploadResume;
 
   @NonNull
   public final Chip chipEmploymentType;
 
   @NonNull
-  public final ShapeableImageView imageViewCompanyLogo;
+  public final TextView textViewCompanyName;
 
   @NonNull
-  public final MaterialTextView textViewCompanyName;
+  public final TextView textViewExperienceLevel;
 
   @NonNull
-  public final MaterialTextView textViewJobTitle;
+  public final TextView textViewJobDescription;
 
   @NonNull
-  public final MaterialTextView textViewLocation;
+  public final TextView textViewJobTitle;
 
   @NonNull
-  public final MaterialTextView textViewSalary;
+  public final TextView textViewLocation;
 
-  private ItemJobBinding(@NonNull MaterialCardView rootView, @NonNull MaterialButton buttonSave,
-      @NonNull Chip chipEmploymentType, @NonNull ShapeableImageView imageViewCompanyLogo,
-      @NonNull MaterialTextView textViewCompanyName, @NonNull MaterialTextView textViewJobTitle,
-      @NonNull MaterialTextView textViewLocation, @NonNull MaterialTextView textViewSalary) {
+  @NonNull
+  public final TextView textViewSalary;
+
+  @NonNull
+  public final TextView textViewWorkArrangement;
+
+  @NonNull
+  public final TextView textViewWorkSetup;
+
+  private ItemJobBinding(@NonNull CardView rootView, @NonNull Button buttonApplyNow,
+      @NonNull Button buttonUploadResume, @NonNull Chip chipEmploymentType,
+      @NonNull TextView textViewCompanyName, @NonNull TextView textViewExperienceLevel,
+      @NonNull TextView textViewJobDescription, @NonNull TextView textViewJobTitle,
+      @NonNull TextView textViewLocation, @NonNull TextView textViewSalary,
+      @NonNull TextView textViewWorkArrangement, @NonNull TextView textViewWorkSetup) {
     this.rootView = rootView;
-    this.buttonSave = buttonSave;
+    this.buttonApplyNow = buttonApplyNow;
+    this.buttonUploadResume = buttonUploadResume;
     this.chipEmploymentType = chipEmploymentType;
-    this.imageViewCompanyLogo = imageViewCompanyLogo;
     this.textViewCompanyName = textViewCompanyName;
+    this.textViewExperienceLevel = textViewExperienceLevel;
+    this.textViewJobDescription = textViewJobDescription;
     this.textViewJobTitle = textViewJobTitle;
     this.textViewLocation = textViewLocation;
     this.textViewSalary = textViewSalary;
+    this.textViewWorkArrangement = textViewWorkArrangement;
+    this.textViewWorkSetup = textViewWorkSetup;
   }
 
   @Override
   @NonNull
-  public MaterialCardView getRoot() {
+  public CardView getRoot() {
     return rootView;
   }
 
@@ -84,9 +101,15 @@ public final class ItemJobBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.buttonSave;
-      MaterialButton buttonSave = ViewBindings.findChildViewById(rootView, id);
-      if (buttonSave == null) {
+      id = R.id.buttonApplyNow;
+      Button buttonApplyNow = ViewBindings.findChildViewById(rootView, id);
+      if (buttonApplyNow == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonUploadResume;
+      Button buttonUploadResume = ViewBindings.findChildViewById(rootView, id);
+      if (buttonUploadResume == null) {
         break missingId;
       }
 
@@ -96,39 +119,58 @@ public final class ItemJobBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageViewCompanyLogo;
-      ShapeableImageView imageViewCompanyLogo = ViewBindings.findChildViewById(rootView, id);
-      if (imageViewCompanyLogo == null) {
-        break missingId;
-      }
-
       id = R.id.textViewCompanyName;
-      MaterialTextView textViewCompanyName = ViewBindings.findChildViewById(rootView, id);
+      TextView textViewCompanyName = ViewBindings.findChildViewById(rootView, id);
       if (textViewCompanyName == null) {
         break missingId;
       }
 
+      id = R.id.textViewExperienceLevel;
+      TextView textViewExperienceLevel = ViewBindings.findChildViewById(rootView, id);
+      if (textViewExperienceLevel == null) {
+        break missingId;
+      }
+
+      id = R.id.textViewJobDescription;
+      TextView textViewJobDescription = ViewBindings.findChildViewById(rootView, id);
+      if (textViewJobDescription == null) {
+        break missingId;
+      }
+
       id = R.id.textViewJobTitle;
-      MaterialTextView textViewJobTitle = ViewBindings.findChildViewById(rootView, id);
+      TextView textViewJobTitle = ViewBindings.findChildViewById(rootView, id);
       if (textViewJobTitle == null) {
         break missingId;
       }
 
       id = R.id.textViewLocation;
-      MaterialTextView textViewLocation = ViewBindings.findChildViewById(rootView, id);
+      TextView textViewLocation = ViewBindings.findChildViewById(rootView, id);
       if (textViewLocation == null) {
         break missingId;
       }
 
       id = R.id.textViewSalary;
-      MaterialTextView textViewSalary = ViewBindings.findChildViewById(rootView, id);
+      TextView textViewSalary = ViewBindings.findChildViewById(rootView, id);
       if (textViewSalary == null) {
         break missingId;
       }
 
-      return new ItemJobBinding((MaterialCardView) rootView, buttonSave, chipEmploymentType,
-          imageViewCompanyLogo, textViewCompanyName, textViewJobTitle, textViewLocation,
-          textViewSalary);
+      id = R.id.textViewWorkArrangement;
+      TextView textViewWorkArrangement = ViewBindings.findChildViewById(rootView, id);
+      if (textViewWorkArrangement == null) {
+        break missingId;
+      }
+
+      id = R.id.textViewWorkSetup;
+      TextView textViewWorkSetup = ViewBindings.findChildViewById(rootView, id);
+      if (textViewWorkSetup == null) {
+        break missingId;
+      }
+
+      return new ItemJobBinding((CardView) rootView, buttonApplyNow, buttonUploadResume,
+          chipEmploymentType, textViewCompanyName, textViewExperienceLevel, textViewJobDescription,
+          textViewJobTitle, textViewLocation, textViewSalary, textViewWorkArrangement,
+          textViewWorkSetup);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

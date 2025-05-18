@@ -3,6 +3,7 @@ package com.worksy.ui.employer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,9 +22,15 @@ import com.worksy.data.model.Job; //Import Job model
 import com.worksy.ui.adapter.RecentJobAdapter; // Import adapter
 import java.util.ArrayList;
 import java.util.List;
+import android.widget.LinearLayout;
+import android.app.AlertDialog;
+import com.worksy.data.model.EmployeeContract;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.Timestamp;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EmployerMainActivity extends AppCompatActivity {
-    private static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private ActivityEmployerMainBinding binding;
     private FirebaseAuth firebaseAuth;
@@ -51,6 +58,11 @@ public class EmployerMainActivity extends AppCompatActivity {
         setupBottomNavigation();
         fetchCompanyName();
         fetchRecentJobs(); // Call method to fetch jobs
+
+        LinearLayout rateEmployeeLayout = findViewById(R.id.quick_action_rate_employee); // Use the correct ID
+        rateEmployeeLayout.setOnClickListener(v -> {
+            fetchCompletedContractsAndShowDialog();
+        });
     }
 
     private void setupBottomNavigation() {
@@ -125,7 +137,7 @@ public class EmployerMainActivity extends AppCompatActivity {
                         recentJobList.clear();
                         recentJobAdapter.notifyDataSetChanged();
                         Toast.makeText(this, "No recent job posts.", Toast.LENGTH_SHORT).show();
-                        Log.d("FirestoreData", "No jobs found for employerId: " + employerId); //debugging
+                        Log.d("FireStoreData", "No jobs found for employerId: " + employerId); //debugging
                         return;
                     }
 
@@ -135,15 +147,71 @@ public class EmployerMainActivity extends AppCompatActivity {
                         if (job != null) {
                             job.setId(document.getId());
                             recentJobList.add(job);
-                            Log.d("FirestoreData", "Job ID: " + job.getId() + ", Title: " + job.getTitle() + ", Employer ID: " + job.getEmployerId() + ", Timestamp: " + document.get("timestamp")); //debugging
+                            Log.d("FireStoreData", "Job ID: " + job.getId() + ", Title: " + job.getTitle() + ", Employer ID: " + job.getEmployerId() + ", Timestamp: " + document.get("timestamp")); //debugging
                         }
                     }
                     recentJobAdapter.notifyDataSetChanged();
                 })
                 .addOnFailureListener(e -> {
                     Toast.makeText(this, "Failed to fetch recent jobs: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                    Log.e("FirestoreError", "Error fetching jobs: " + e.getMessage(), e); // Include the exception
+                    Log.e("FireStoreError", "Error fetching jobs: " + e.getMessage(), e); // Include the exception
                 });
+    }
+
+    private void fetchCompletedContractsAndShowDialog() {
+        String employerId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        firebaseFirestore.collection("employee_contracts")
+            .whereEqualTo("employerId", employerId)
+            .whereEqualTo("status", "COMPLETED")
+            .get()
+            .addOnSuccessListener(queryDocumentSnapshots -> {
+                List<EmployeeContract> completedContracts = new ArrayList<>();
+                for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                    EmployeeContract contract = doc.toObject(EmployeeContract.class);
+                    completedContracts.add(contract);
+                }
+                if (completedContracts.isEmpty()) {
+                    Toast.makeText(this, "No completed contracts to rate.", Toast.LENGTH_SHORT).show();
+                } else {
+                    showEmployeeSelectionDialog(completedContracts);
+                }
+            })
+            .addOnFailureListener(e -> {
+                Toast.makeText(this, "Failed to fetch completed contracts.", Toast.LENGTH_SHORT).show();
+            });
+    }
+
+    private void showEmployeeSelectionDialog(List<EmployeeContract> contracts) {
+        String[] employeeTitles = new String[contracts.size()];
+        for (int i = 0; i < contracts.size(); i++) {
+            EmployeeContract c = contracts.get(i);
+            // You can customize this string as needed
+            employeeTitles[i] = c.getJobTitle() + " (" + c.getWorkArrangement() + ", " + c.getWorkSetup() + ")";
+        }
+        new AlertDialog.Builder(this)
+            .setTitle("Select Employee to Rate")
+            .setItems(employeeTitles, (dialog, which) -> {
+                EmployeeContract selected = contracts.get(which);
+                openRateEmployeeFragment(selected.getEmployeeId(), selected.getJobId());
+            })
+            .setNegativeButton("Cancel", null)
+            .show();
+    }
+
+    private void openRateEmployeeFragment(String employeeId, String jobId) {
+        findViewById(R.id.companyIdentity).setVisibility(View.GONE);
+        findViewById(R.id.recentJobsRecyclerView).setVisibility(View.GONE);
+        // Hide other views as needed
+        RateEmployeeFragment fragment = new RateEmployeeFragment();
+        Bundle args = new Bundle();
+        args.putString("employeeId", employeeId);
+        args.putString("jobId", jobId);
+        fragment.setArguments(args);
+        getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .addToBackStack(null)
+            .commit();
     }
 
     @Override

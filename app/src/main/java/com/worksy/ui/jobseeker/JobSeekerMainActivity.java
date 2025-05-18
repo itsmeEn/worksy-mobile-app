@@ -1,6 +1,8 @@
 package com.worksy.ui.jobseeker;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +30,8 @@ public class JobSeekerMainActivity extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
 
         setupBottomNavigation();
+        //setupQuickActions();
+        setupQuickActionClicks();
         fetchUserGreeting();
     }
 
@@ -35,16 +39,21 @@ public class JobSeekerMainActivity extends AppCompatActivity {
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.navigation_home) {
-                // Show home fragment
+                // Already on home screen
                 return true;
             } else if (itemId == R.id.navigation_search) {
-                // Show search fragment
+                Intent intent = new Intent(this, JobSeekerSearchJobActivity.class);
+                intent.putExtra("source", "main");
+                startActivity(intent);
+                //finish(); // Finish the current activity
                 return true;
             } else if (itemId == R.id.navigation_applications) {
-                // Show applications fragment
+                Intent intent = new Intent(this, JobSeekerMyApplicationsActivity.class);
+                startActivity(intent);
                 return true;
             } else if (itemId == R.id.navigation_profile) {
-                // Show profile fragment
+                Intent intent = new Intent(this, JobSeekerProfileActivity.class);
+                startActivity(intent);
                 return true;
             }
             return false;
@@ -52,6 +61,20 @@ public class JobSeekerMainActivity extends AppCompatActivity {
 
         // Set default selection
         binding.bottomNavigation.setSelectedItemId(R.id.navigation_home);
+    }
+
+    private void setupQuickActionClicks() {
+        binding.quickActionAssistantBot.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ChatBotActivity.class);
+            startActivity(intent);
+        });
+
+        binding.achievementsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, JobSeekerAchievements.class);
+            startActivity(intent);
+        });
+
+        // TODO: Add click listeners for other quick actions if needed
     }
 
     private void fetchUserGreeting() {
@@ -71,6 +94,13 @@ public class JobSeekerMainActivity extends AppCompatActivity {
                 .addOnFailureListener(e -> {
                     Toast.makeText(this, "Failed to fetch user data.", Toast.LENGTH_SHORT).show();
                 });
+    }
+
+    private void loadFragment(androidx.fragment.app.Fragment fragment) {
+        getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit();
     }
 
     @Override
