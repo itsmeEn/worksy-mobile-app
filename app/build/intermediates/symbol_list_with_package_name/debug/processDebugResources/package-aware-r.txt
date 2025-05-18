@@ -314,6 +314,10 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -3086,6 +3090,7 @@ drawable button_with_border
 drawable chat_gpt
 drawable chatbot
 drawable check_list
+drawable circle_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3135,10 +3140,16 @@ drawable ic_call_answer_video
 drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
+drawable ic_camera
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard
+drawable ic_default_profile
 drawable ic_empty_jobs
+drawable ic_file_doc
+drawable ic_file_generic
+drawable ic_file_image
+drawable ic_file_pdf
 drawable ic_filter
 drawable ic_google
 drawable ic_home
@@ -3256,6 +3267,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable upload
 drawable upload_resume
+drawable worksy_bg
 drawable worksy_logo
 font playfair_display_bold
 font playfair_display_medium
@@ -3312,6 +3324,9 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id achievements_button
+id achievements_button_image
+id achievements_button_text
 id actionDown
 id actionDownUp
 id actionUp
@@ -3398,6 +3413,7 @@ id buttonResend
 id buttonReset
 id buttonSendCode
 id buttonSignIn
+id buttonUploadCertificate
 id buttonUploadResume
 id buttonVerify
 id cache_measures
@@ -3564,6 +3580,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageViewCertificateIcon
 id immediateStop
 id included
 id indeterminate
@@ -3726,6 +3743,7 @@ id postLayout
 id pressed
 id profileEmailLabel
 id profileEmailTextView
+id profileImageView
 id profileNameLabel
 id profileNameTextView
 id profileResumeLabel
@@ -3738,7 +3756,6 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id quickActionAssistantBot
-id quickActionUploadResume
 id quickActionsCard
 id quickActionsTitle
 id quick_action_rate_employee
@@ -3769,6 +3786,7 @@ id recentJobsRecyclerView
 id rectangles
 id recyclerView
 id recyclerViewApplications
+id recyclerViewCertificates
 id recyclerViewJobs
 id report_drawn
 id reverseSawtooth
@@ -3886,9 +3904,11 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewCertificateName
 id textViewCompanyName
 id textViewDateApplied
 id textViewEmpty
+id textViewEmptyState
 id textViewExperienceLevel
 id textViewForgotPassword
 id textViewJobCategory
@@ -3940,6 +3960,7 @@ id uniform
 id unlabeled
 id up
 id update_status_button
+id uploadImageIcon
 id useLogo
 id vertical
 id vertical_only
@@ -4082,6 +4103,7 @@ layout abc_tooltip
 layout activity_auth
 layout activity_chatbot_job_seeker
 layout activity_employer_main
+layout activity_job_seeker_achievement
 layout activity_job_seeker_main
 layout activity_job_seeker_profile
 layout activity_job_seeker_search_job
@@ -4118,6 +4140,7 @@ layout fragment_recruiter_registration
 layout fragment_registration
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_certificate
 layout item_job
 layout item_job_applications
 layout item_recent_job
@@ -4496,6 +4519,7 @@ string mtrl_timepicker_confirm
 string my_applications
 string myresume_pdf
 string name
+string no_certificates_uploaded_yet
 string no_email_app_found
 string no_jobs_found
 string no_jobs_found_message
@@ -4568,6 +4592,7 @@ string try_again
 string type_your_message
 string update_application_status
 string update_status
+string upload_certificate
 string upload_icon
 string upload_resume
 string uploaded_on_jan_1_2023
@@ -5746,6 +5771,7 @@ styleable Carousel carousel_alignment carousel_backwardTransition carousel_empty
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize
@@ -5873,3 +5899,4 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml image_share_filepaths
+xml network_security_config

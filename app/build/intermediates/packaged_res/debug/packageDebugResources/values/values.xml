@@ -200,6 +200,7 @@
     <string name="my_applications">My Applications</string>
     <string name="myresume_pdf">MyResume.pdf</string>
     <string name="name">Name</string>
+    <string name="no_certificates_uploaded_yet">No certificates uploaded yet.</string>
     <string name="no_email_app_found">No email app found</string>
     <string name="no_jobs_found">No Jobs Found</string>
     <string name="no_jobs_found_message">We couldn\'t find any jobs matching your criteria. Try adjusting your search or filters.</string>
@@ -260,6 +261,7 @@
     <string name="type_your_message">Type your message</string>
     <string name="update_application_status">Update Application Status</string>
     <string name="update_status">Update Status</string>
+    <string name="upload_certificate">Upload Certificate</string>
     <string name="upload_icon">Upload Icon</string>
     <string name="upload_resume">Upload Resume</string>
     <string name="uploaded_on_jan_1_2023">Uploaded on Jan 1, 2023</string>

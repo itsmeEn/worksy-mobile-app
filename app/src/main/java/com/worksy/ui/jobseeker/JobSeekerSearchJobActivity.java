@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -81,9 +83,9 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                         resumeUriToUpload = result.getData().getData();
                         if (jobToApply != null && resumeUriToUpload != null) {
-                           submitApplication(jobToApply, resumeUriToUpload); // Submit application after resume selection
+                            submitApplication(jobToApply, resumeUriToUpload); // Submit application after resume selection
                         } else {
-                           Toast.makeText(this, "Error: Job or resume data missing after selection.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Error: Job or resume data missing after selection.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -97,8 +99,8 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
                 // Check employment status before allowing application (assuming this logic was intended)
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
                 if (currentUser == null) {
-                     Toast.makeText(JobSeekerSearchJobActivity.this, R.string.please_log_in, Toast.LENGTH_SHORT).show();
-                     return;
+                    Toast.makeText(JobSeekerSearchJobActivity.this, R.string.please_log_in, Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
                 String currentUserId = currentUser.getUid();
@@ -161,9 +163,13 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
     private void setupSearchAndFilter() {
         binding.editTextSearch.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
             @Override
             public void afterTextChanged(Editable s) {
                 performSearch(s.toString());
@@ -272,12 +278,20 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
 
     private void performSearch(String query) {
         List<Job> filteredJobs = new ArrayList<>();
-        for (Job job : allJobs) {
-            // Apply both search query and current filters
-            if (matchesSearchQuery(job, query) && matchesFilter(job, currentFilter)) {
-                filteredJobs.add(job);
+        String currentQuery = query.toLowerCase();
+
+        // If query is empty and no filter is applied, show all jobs
+        if (currentQuery.isEmpty() && currentFilter == null) {
+            filteredJobs.addAll(allJobs);
+        } else {
+            for (Job job : allJobs) {
+                // Apply both search query and current filters
+                if (matchesSearchQuery(job, currentQuery) && (currentFilter == null || matchesFilter(job, currentFilter))) {
+                    filteredJobs.add(job);
+                }
             }
         }
+
         jobAdapter.submitList(filteredJobs);
         updateEmptyState(filteredJobs.isEmpty());
     }
@@ -430,6 +444,7 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
     // Helper interface for resume upload callback
     private interface OnResumeUploadListener {
         void onSuccess(String resumeUrl);
+
         void onFailure(String errorMessage);
     }
 }

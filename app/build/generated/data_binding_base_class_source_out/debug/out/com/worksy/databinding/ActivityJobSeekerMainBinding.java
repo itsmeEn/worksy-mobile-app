@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -23,6 +24,15 @@ import java.lang.String;
 public final class ActivityJobSeekerMainBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final LinearLayout achievementsButton;
+
+  @NonNull
+  public final ImageView achievementsButtonImage;
+
+  @NonNull
+  public final TextView achievementsButtonText;
 
   @NonNull
   public final CardView bottomLeftGridCard;
@@ -49,9 +59,6 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final LinearLayout quickActionAssistantBot;
 
   @NonNull
-  public final LinearLayout quickActionUploadResume;
-
-  @NonNull
   public final CardView quickActionsCard;
 
   @NonNull
@@ -67,14 +74,18 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
   public final CardView topRightGridCard;
 
   private ActivityJobSeekerMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull CardView bottomLeftGridCard, @NonNull BottomNavigationView bottomNavigation,
-      @NonNull CardView bottomRightGridCard, @NonNull Button buttonUploadResume,
-      @NonNull TextView careerResourcesTitle, @NonNull FrameLayout fragmentContainer,
-      @NonNull TextView greetingTextView, @NonNull LinearLayout quickActionAssistantBot,
-      @NonNull LinearLayout quickActionUploadResume, @NonNull CardView quickActionsCard,
+      @NonNull LinearLayout achievementsButton, @NonNull ImageView achievementsButtonImage,
+      @NonNull TextView achievementsButtonText, @NonNull CardView bottomLeftGridCard,
+      @NonNull BottomNavigationView bottomNavigation, @NonNull CardView bottomRightGridCard,
+      @NonNull Button buttonUploadResume, @NonNull TextView careerResourcesTitle,
+      @NonNull FrameLayout fragmentContainer, @NonNull TextView greetingTextView,
+      @NonNull LinearLayout quickActionAssistantBot, @NonNull CardView quickActionsCard,
       @NonNull TextView quickActionsTitle, @NonNull View topBar, @NonNull CardView topLeftGridCard,
       @NonNull CardView topRightGridCard) {
     this.rootView = rootView;
+    this.achievementsButton = achievementsButton;
+    this.achievementsButtonImage = achievementsButtonImage;
+    this.achievementsButtonText = achievementsButtonText;
     this.bottomLeftGridCard = bottomLeftGridCard;
     this.bottomNavigation = bottomNavigation;
     this.bottomRightGridCard = bottomRightGridCard;
@@ -83,7 +94,6 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
     this.fragmentContainer = fragmentContainer;
     this.greetingTextView = greetingTextView;
     this.quickActionAssistantBot = quickActionAssistantBot;
-    this.quickActionUploadResume = quickActionUploadResume;
     this.quickActionsCard = quickActionsCard;
     this.quickActionsTitle = quickActionsTitle;
     this.topBar = topBar;
@@ -118,6 +128,24 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.achievements_button;
+      LinearLayout achievementsButton = ViewBindings.findChildViewById(rootView, id);
+      if (achievementsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.achievements_button_image;
+      ImageView achievementsButtonImage = ViewBindings.findChildViewById(rootView, id);
+      if (achievementsButtonImage == null) {
+        break missingId;
+      }
+
+      id = R.id.achievements_button_text;
+      TextView achievementsButtonText = ViewBindings.findChildViewById(rootView, id);
+      if (achievementsButtonText == null) {
+        break missingId;
+      }
+
       id = R.id.bottomLeftGridCard;
       CardView bottomLeftGridCard = ViewBindings.findChildViewById(rootView, id);
       if (bottomLeftGridCard == null) {
@@ -166,12 +194,6 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.quickActionUploadResume;
-      LinearLayout quickActionUploadResume = ViewBindings.findChildViewById(rootView, id);
-      if (quickActionUploadResume == null) {
-        break missingId;
-      }
-
       id = R.id.quickActionsCard;
       CardView quickActionsCard = ViewBindings.findChildViewById(rootView, id);
       if (quickActionsCard == null) {
@@ -202,10 +224,11 @@ public final class ActivityJobSeekerMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, bottomLeftGridCard,
-          bottomNavigation, bottomRightGridCard, buttonUploadResume, careerResourcesTitle,
-          fragmentContainer, greetingTextView, quickActionAssistantBot, quickActionUploadResume,
-          quickActionsCard, quickActionsTitle, topBar, topLeftGridCard, topRightGridCard);
+      return new ActivityJobSeekerMainBinding((ConstraintLayout) rootView, achievementsButton,
+          achievementsButtonImage, achievementsButtonText, bottomLeftGridCard, bottomNavigation,
+          bottomRightGridCard, buttonUploadResume, careerResourcesTitle, fragmentContainer,
+          greetingTextView, quickActionAssistantBot, quickActionsCard, quickActionsTitle, topBar,
+          topLeftGridCard, topRightGridCard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

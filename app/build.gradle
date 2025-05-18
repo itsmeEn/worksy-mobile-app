@@ -61,8 +61,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage'
     implementation 'com.google.firebase:firebase-auth:23.2.0'
 
-    // Authentication
-    implementation 'com.google.android.gms:play-services-auth:21.3.0'
+    // Authentication - Updated version
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.android.gms:play-services-base:18.3.0'
 
     // Image Loading
     implementation 'com.github.bumptech.glide:glide:4.16.0'
@@ -77,12 +78,15 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
-    //location access
-    implementation'com.google.android.gms:play-services-location:21.3.0'
+    //location access - Updated version
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
 
     // Volley Library
     implementation 'com.android.volley:volley:1.2.1'
 
     // ok http
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
+
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

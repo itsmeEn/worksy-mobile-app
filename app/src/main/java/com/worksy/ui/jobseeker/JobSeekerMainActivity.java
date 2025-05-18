@@ -69,6 +69,11 @@ public class JobSeekerMainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        binding.achievementsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, JobSeekerAchievements.class);
+            startActivity(intent);
+        });
+
         // TODO: Add click listeners for other quick actions if needed
     }
 

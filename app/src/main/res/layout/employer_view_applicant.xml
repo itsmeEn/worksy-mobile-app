@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/worksy_bg"
     tools:context=".ui.employer.EmployerViewApplicantActivity">
 
     <LinearLayout
@@ -90,7 +91,7 @@
                 <Spinner
                     android:id="@+id/status_spinner"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:fontFamily="@font/poppins_medium"
                     android:entries="@array/application_statuses" />
             </LinearLayout>

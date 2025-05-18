@@ -49,6 +49,7 @@ drawable button_with_border
 drawable chat_gpt
 drawable chatbot
 drawable check_list
+drawable circle_background
 drawable company_logo_placeholder
 drawable companyprof
 drawable edit_text_bg
@@ -63,8 +64,14 @@ drawable ic_applications
 drawable ic_back
 drawable ic_bookmark_border
 drawable ic_business
+drawable ic_camera
 drawable ic_dashboard
+drawable ic_default_profile
 drawable ic_empty_jobs
+drawable ic_file_doc
+drawable ic_file_generic
+drawable ic_file_image
+drawable ic_file_pdf
 drawable ic_filter
 drawable ic_google
 drawable ic_home
@@ -94,6 +101,7 @@ drawable seeker_temp
 drawable status_badge_background
 drawable upload
 drawable upload_resume
+drawable worksy_bg
 drawable worksy_logo
 font playfair_display_bold
 font playfair_display_medium
@@ -101,6 +109,9 @@ font playfair_display_semibold
 font poppins_bold
 font poppins_medium
 font poppins_semibold
+id achievements_button
+id achievements_button_image
+id achievements_button_text
 id applicant_name_text_view
 id applicants_recycler_view
 id application_date_text_view
@@ -126,6 +137,7 @@ id buttonResend
 id buttonReset
 id buttonSendCode
 id buttonSignIn
+id buttonUploadCertificate
 id buttonUploadResume
 id buttonVerify
 id careerResourcesTitle
@@ -162,6 +174,7 @@ id foundedYearInput
 id fragmentContainer
 id greetingEmployerView
 id greetingTextView
+id imageViewCertificateIcon
 id industrySpecializationInput
 id interview_date_edit_text
 id jobAddPost
@@ -190,6 +203,7 @@ id navigation_search
 id person
 id profileEmailLabel
 id profileEmailTextView
+id profileImageView
 id profileNameLabel
 id profileNameTextView
 id profileResumeLabel
@@ -200,7 +214,6 @@ id profileTitleTextView
 id profileUpdateStatusButton
 id progressBar
 id quickActionAssistantBot
-id quickActionUploadResume
 id quickActionsCard
 id quickActionsTitle
 id quick_action_rate_employee
@@ -228,6 +241,7 @@ id ratingTeamworkCollaboration
 id recentJobsRecyclerView
 id recyclerView
 id recyclerViewApplications
+id recyclerViewCertificates
 id recyclerViewJobs
 id right_chat_text_view
 id right_chat_view
@@ -254,9 +268,11 @@ id textInputLayoutName
 id textInputLayoutPassword
 id textInputLayoutSalaryRange
 id textInputLayoutSearch
+id textViewCertificateName
 id textViewCompanyName
 id textViewDateApplied
 id textViewEmpty
+id textViewEmptyState
 id textViewExperienceLevel
 id textViewForgotPassword
 id textViewJobCategory
@@ -276,11 +292,13 @@ id topBar
 id topLeftGridCard
 id topRightGridCard
 id update_status_button
+id uploadImageIcon
 id view_resume_button
 id worksyLogo
 layout activity_auth
 layout activity_chatbot_job_seeker
 layout activity_employer_main
+layout activity_job_seeker_achievement
 layout activity_job_seeker_main
 layout activity_job_seeker_profile
 layout activity_job_seeker_search_job
@@ -296,6 +314,7 @@ layout fragment_phone_auth
 layout fragment_rate_job_seeker
 layout fragment_recruiter_registration
 layout fragment_registration
+layout item_certificate
 layout item_job
 layout item_job_applications
 layout item_recent_job
@@ -421,6 +440,7 @@ string mock_description
 string my_applications
 string myresume_pdf
 string name
+string no_certificates_uploaded_yet
 string no_email_app_found
 string no_jobs_found
 string no_jobs_found_message
@@ -481,6 +501,7 @@ string try_again
 string type_your_message
 string update_application_status
 string update_status
+string upload_certificate
 string upload_icon
 string upload_resume
 string uploaded_on_jan_1_2023
@@ -501,3 +522,4 @@ style TextAppearance.Worksy.HeadlineLarge
 style TextAppearance.Worksy.HeadlineMedium
 style Theme.Worksy
 style Widget.Material3.Button.OutlinedButton
+xml network_security_config

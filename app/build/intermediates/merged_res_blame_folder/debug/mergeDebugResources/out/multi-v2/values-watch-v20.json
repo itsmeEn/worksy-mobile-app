@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.worksy.app-mergeDebugResources-42:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.worksy.app-mergeDebugResources-43:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/judeibardaloza/.gradle/caches/8.10.2/transforms/5ee67e70e3ffe42b839aa46913e4ba64/transformed/play-services-auth-21.3.0/res/values-watch-v20/values.xml",
+                    "source": "/Users/judeibardaloza/.gradle/caches/8.10.2/transforms/d72a603608c2e048f99866142bbd9089/transformed/play-services-auth-21.1.1/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

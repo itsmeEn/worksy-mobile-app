@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.worksy.app-mergeDebugResources-42:/values-ro/values-ro.xml",
+            "outputFile": "com.worksy.app-mergeDebugResources-43:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "/Users/judeibardaloza/.gradle/caches/8.10.2/transforms/de312b57557bdcf5a5ace1708d4c1e8d/transformed/play-services-basement-18.4.0/res/values-ro/values.xml",

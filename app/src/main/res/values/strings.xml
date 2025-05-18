@@ -246,6 +246,8 @@
     <string name="error_loading_jobs">Failed to Load Jobs!</string>
     <string name="failed_to_load_jobs">Cannot Load Jobs</string>
     <string name="type_your_message">Type your message</string>
+    <string name="upload_certificate">Upload Certificate</string>
+    <string name="no_certificates_uploaded_yet">No certificates uploaded yet.</string>
 
     <string-array name="profile_status_options">
         <item>Available</item>
