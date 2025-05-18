@@ -8,15 +8,12 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -29,13 +26,12 @@ import com.worksy.databinding.ActivityJobSeekerSearchJobBinding;
 import com.worksy.ui.adapter.JobAdapter;
 import com.worksy.ui.jobseeker.filter.JobFilter;
 import com.worksy.ui.jobseeker.filter.JobFilterBottomSheet;
-
+import com.worksy.R;
+import com.google.firebase.firestore.FieldValue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import com.worksy.R;
-import com.google.firebase.firestore.FieldValue;
+import android.provider.OpenableColumns; // Import necessary for getFileNameFromUri
 
 public class JobSeekerSearchJobActivity extends AppCompatActivity implements JobFilterBottomSheet.OnFilterAppliedListener {
 
@@ -55,7 +51,6 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
         binding = ActivityJobSeekerSearchJobBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Initialize Firebase and check user authentication
         try {
             db = FirebaseFirestore.getInstance();
 
@@ -66,37 +61,41 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
                 return;
             }
 
-            // Initialize RecyclerView and adapters
             setupRecyclerView();
             setupSearchAndFilter();
-
-            // Load jobs with error handling
             loadRecentJobs();
+
+            pickResumeLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                    result -> {
+                        if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                            resumeUriToUpload = result.getData().getData();
+                            if (resumeUriToUpload != null) {
+                                // This callback is now primarily for the Upload Resume button
+                                uploadResumeOnly(resumeUriToUpload);
+                            } else {
+                                Toast.makeText(this, "Error: No resume selected.", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(this, "Resume selection cancelled or failed.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
         } catch (Exception e) {
-            Toast.makeText(this, getString(R.string.error_initializing_activity) + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_initializing_activity) + ": " + e.getMessage(), Toast.LENGTH_SHORT).show();
             Log.e("JobSeekerSearchJobActivity", "Activity initialization error", e);
             finish();
         }
-
-        pickResumeLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        resumeUriToUpload = result.getData().getData();
-                        if (jobToApply != null && resumeUriToUpload != null) {
-                            submitApplication(jobToApply, resumeUriToUpload); // Submit application after resume selection
-                        } else {
-                            Toast.makeText(this, "Error: Job or resume data missing after selection.", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
     }
 
     private void setupRecyclerView() {
         jobAdapter = new JobAdapter(new JobAdapter.OnJobClickListener() {
             @Override
             public void onApplyClick(Job job) {
-                jobToApply = job;
-                // Check employment status before allowing application (assuming this logic was intended)
+                if (job == null) {
+                    Toast.makeText(JobSeekerSearchJobActivity.this, "Error: Cannot apply to a null job.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
                 if (currentUser == null) {
                     Toast.makeText(JobSeekerSearchJobActivity.this, R.string.please_log_in, Toast.LENGTH_SHORT).show();
@@ -104,45 +103,54 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
                 }
 
                 String currentUserId = currentUser.getUid();
+
+                // Fetch user's profile to check for resume
                 db.collection("users").document(currentUserId)
                         .get()
                         .addOnSuccessListener(documentSnapshot -> {
                             if (documentSnapshot.exists()) {
                                 String employmentStatus = documentSnapshot.getString("employmentStatus");
+                                String profileResumeUrl = documentSnapshot.getString("resumeUrl"); // Get profile resume URL
 
+                                if (profileResumeUrl == null || profileResumeUrl.isEmpty()) {
+                                    // No resume uploaded to profile
+                                    Toast.makeText(JobSeekerSearchJobActivity.this, "Please upload your resume to your profile first using the Upload Resume button.", Toast.LENGTH_LONG).show();
+                                    return;
+                                }
+
+                                // If currently employed, show warning
                                 if ("EMPLOYED".equals(employmentStatus)) {
-                                    // Check for employer ID, must not apply to same employer (assuming this logic was intended)
+                                    // Check for employer ID, must not apply to same employer
                                     String currentEmployerId = documentSnapshot.getString("currentEmployerId");
-                                    if (currentEmployerId != null && job != null && job.getEmployerId() != null && currentEmployerId.equals(job.getEmployerId())) {
+                                    if (currentEmployerId != null && job.getEmployerId() != null && currentEmployerId.equals(job.getEmployerId())) {
+                                        // Cannot apply to current employer
                                         Toast.makeText(JobSeekerSearchJobActivity.this,
                                                 R.string.cannot_apply_to_current_employer,
                                                 Toast.LENGTH_LONG).show();
                                         return;
                                     }
 
-                                    // Warn user they are currently employed (assuming this logic was intended)
                                     new AlertDialog.Builder(JobSeekerSearchJobActivity.this)
                                             .setTitle(R.string.currently_employed)
                                             .setMessage(R.string.employed_warning)
                                             .setPositiveButton(R.string.yes_continue, (dialog, which) -> {
-                                                selectResumeForUpload(); // Allow application
+                                                // Proceed with application using profile resume
+                                                submitApplication(job, Uri.parse(profileResumeUrl)); // Use profile resume URL
                                             })
                                             .setNegativeButton(R.string.cancel, null)
                                             .show();
-                                } else if ("END_OF_CONTRACT".equals(employmentStatus)) {
-                                    selectResumeForUpload(); // End of contract, can apply
                                 } else {
-                                    selectResumeForUpload(); // Available or any other status, can apply directly
+                                    // Not employed or end of contract, apply directly using profile resume
+                                    submitApplication(job, Uri.parse(profileResumeUrl)); // Use profile resume URL
                                 }
                             } else {
-                                // No user profile, should not happen, but allow anyway
-                                selectResumeForUpload();
+                                // User profile not found, prompt to complete profile and upload resume
+                                Toast.makeText(JobSeekerSearchJobActivity.this, "Please complete your profile and upload a resume using the Upload Resume button.", Toast.LENGTH_LONG).show();
                             }
                         })
                         .addOnFailureListener(e -> {
-                            // Error checking status, allow anyway but log error
-                            Log.e("JobSeekerSearchJobActivity", "Error checking employment status", e);
-                            selectResumeForUpload();
+                            Log.e("JobSeekerSearchJobActivity", "Error checking employment status or profile", e);
+                            Toast.makeText(JobSeekerSearchJobActivity.this, "Error checking profile status. Please try again.", Toast.LENGTH_SHORT).show();
                         });
             }
 
@@ -155,6 +163,13 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
             public void onSaveJobClick(Job job) {
                 // TODO: Implement save job logic
             }
+
+            @Override
+            public void onUploadResumeClick(Job job) {
+                // This button should allow the user to upload a resume to their profile
+                // It should not initiate a job application
+                selectResumeForUpload(); // Use the existing method for general resume upload
+            }
         });
         binding.recyclerViewJobs.setAdapter(jobAdapter);
         binding.recyclerViewJobs.setLayoutManager(new LinearLayoutManager(this));
@@ -163,13 +178,9 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
     private void setupSearchAndFilter() {
         binding.editTextSearch.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
                 performSearch(s.toString());
@@ -187,108 +198,110 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
 
     private void loadRecentJobs() {
         binding.swipeRefreshLayout.setRefreshing(true);
+        updateEmptyState(false); // Show loading state
 
         try {
             db.collection("jobs")
-                    .orderBy("postedDate", Query.Direction.DESCENDING)
+                    .orderBy("timestamp", Query.Direction.DESCENDING) // Changed from "postedDate" to "timestamp"
                     .get()
                     .addOnSuccessListener(querySnapshot -> {
-                        allJobs.clear(); // Clear previous data
+                        Log.d("JobSeekerSearchJobActivity", "Firestore query successful. Documents found: " + querySnapshot.size());
+                        allJobs.clear();
                         List<Job> loadedJobs = new ArrayList<>();
+
                         for (DocumentSnapshot document : querySnapshot.getDocuments()) {
                             try {
-                                Job job = document.toObject(Job.class);
-                                if (job != null) {
-                                    job.setId(document.getId());
+                                // Manually extract data and create Job object
+                                String id = document.getId();
+                                String title = document.getString("jobTitle"); // Use "jobTitle" as in Firestore
+                                String companyName = document.getString("company");
+                                String location = document.getString("location");
+                                String description = document.getString("description");
+                                String employmentType = document.getString("employmentType");
+                                String rawSalaryRange = document.getString("salaryRange"); // Get the raw string
+                                String experienceLevel = document.getString("experienceLevel");
+                                String employerId = document.getString("employerId");
+                                String jobCategory = document.getString("jobCategory");
+                                String workSetup = document.getString("workSetup");
+                                String workArrangement = document.getString("workArrangement");
+                                com.google.firebase.Timestamp postedDate = document.getTimestamp("timestamp"); // Get timestamp as postedDate
 
-                                    // Validate and set required fields with null checks
-                                    String title = document.getString("title");
-                                    String employerId = document.getString("employerId");
+                                // Basic validation for required fields
+                                if (id != null && title != null && !title.isEmpty() && employerId != null && !employerId.isEmpty()) {
+                                    Job job = new Job();
+                                    job.setId(id);
+                                    job.setTitle(title);
+                                    job.setCompanyName(companyName);
+                                    job.setLocation(location);
+                                    job.setDescription(description);
+                                    job.setEmploymentType(employmentType);
+                                    job.setExperienceLevel(experienceLevel);
+                                    job.setEmployerId(employerId);
+                                    job.setJobCategory(jobCategory);
+                                    job.setWorkSetup(workSetup);
+                                    job.setWorkArrangement(workArrangement);
+                                    job.setPostedDate(postedDate); // Set the timestamp to the Job object
 
-                                    if (title != null && !title.isEmpty() && employerId != null && !employerId.isEmpty()) {
-                                        job.setTitle(title);
-                                        job.setEmployerId(employerId);
-
-                                        // Set other fields with null checks
-                                        String companyName = document.getString("company");
-                                        String location = document.getString("location");
-                                        Object salaryMinObj = document.get("salaryMin");
-                                        Object salaryMaxObj = document.get("salaryMax");
-                                        String workArrangement = document.getString("workArrangement");
-                                        String workSetup = document.getString("workSetup");
-                                        String experienceLevel = document.getString("experienceLevel");
-
-                                        job.setCompanyName(companyName != null ? companyName : "");
-                                        job.setLocation(location != null ? location : "");
-                                        job.setSalaryMin(salaryMinObj != null ? ((Number) salaryMinObj).longValue() : 0L);
-                                        job.setSalaryMax(salaryMaxObj != null ? ((Number) salaryMaxObj).longValue() : 0L);
-                                        job.setWorkArrangement(workArrangement != null ? workArrangement : "");
-                                        job.setWorkSetup(workSetup != null ? workSetup : "");
-                                        job.setExperienceLevel(experienceLevel != null ? experienceLevel : "");
-                                        job.setPostedDate(document.getTimestamp("postedDate"));
-
-                                        loadedJobs.add(job);
-                                        Log.d("JobSeekerSearchJobActivity", "Loaded Job: " + (job.getTitle() != null ? job.getTitle() : "N/A") + ", Salary: " + job.getSalaryMin() + " - " + job.getSalaryMax());
+                                    // Handle salary parsing
+                                    if (rawSalaryRange != null) {
+                                        job.setRawSalaryRange(rawSalaryRange); // This should call parseSalaryRange internally
                                     } else {
-                                        Log.w("JobSeekerSearchJobActivity", "Missing required fields for job: " + document.getId());
+                                        // Log a warning if salaryRange is missing
+                                        Log.w("JobSeekerSearchJobActivity", "Missing salaryRange for job: " + id);
+                                        job.setSalaryMin(0);
+                                        job.setSalaryMax(0);
+                                        job.setSalaryCurrency("");
                                     }
+
+                                    loadedJobs.add(job);
+                                    Log.d("JobSeekerSearchJobActivity", "Loaded Job: " + job.getTitle() + ", Employer ID: " + job.getEmployerId() + ", Salary: " + job.getFormattedSalary());
+                                } else {
+                                    Log.w("JobSeekerSearchJobActivity", "Skipping job document due to missing required fields: " + document.getId());
                                 }
                             } catch (Exception e) {
                                 Log.e("JobSeekerSearchJobActivity", "Error processing job document: " + document.getId(), e);
                             }
                         }
 
-                        // Sort jobs by postedDate if needed
-                        loadedJobs.sort((j1, j2) -> {
-                            if (j1.getPostedDate() == null || j2.getPostedDate() == null) {
-                                return 0;
-                            }
-                            return j2.getPostedDate().compareTo(j1.getPostedDate());
-                        });
-
-                        allJobs.addAll(loadedJobs); // Store all fetched jobs
-                        filterJobs(); // Apply current filter/search after loading
-
+                        allJobs.addAll(loadedJobs);
+                        // Display all jobs initially
+                        jobAdapter.submitList(allJobs);
+                        updateEmptyState(allJobs.isEmpty());
                         binding.swipeRefreshLayout.setRefreshing(false);
                     })
                     .addOnFailureListener(e -> {
-                        Toast.makeText(this, getString(R.string.failed_to_load_jobs) + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.failed_to_load_jobs) + ": " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         Log.e("JobSeekerSearchJobActivity", "Error fetching jobs", e);
                         updateEmptyState(true);
                         binding.swipeRefreshLayout.setRefreshing(false);
                     });
         } catch (Exception e) {
-            Toast.makeText(this, getString(R.string.error_loading_jobs) + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_loading_jobs) + ": " + e.getMessage(), Toast.LENGTH_SHORT).show();
             Log.e("JobSeekerSearchJobActivity", "Error in loadRecentJobs", e);
             binding.swipeRefreshLayout.setRefreshing(false);
+            updateEmptyState(true);
         }
     }
 
-    private boolean matchesSearchQuery(Job job, String query) {
-        if (job == null) return false;
-
-        String queryLower = query.toLowerCase();
-        // Check if query matches title, description, company name, location, or employment type with null checks
-        return (job.getTitle() != null && job.getTitle().toLowerCase().contains(queryLower)) ||
-                (job.getDescription() != null && job.getDescription().toLowerCase().contains(queryLower)) ||
-                (job.getCompanyName() != null && job.getCompanyName().toLowerCase().contains(queryLower)) ||
-                (job.getLocation() != null && job.getLocation().toLowerCase().contains(queryLower)) ||
-                (job.getEmploymentType() != null && job.getEmploymentType().toLowerCase().contains(queryLower));
-    }
-
     private void performSearch(String query) {
-        List<Job> filteredJobs = new ArrayList<>();
-        String currentQuery = query.toLowerCase();
+        if (allJobs == null) {
+            allJobs = new ArrayList<>();
+        }
 
-        // If query is empty and no filter is applied, show all jobs
-        if (currentQuery.isEmpty() && currentFilter == null) {
-            filteredJobs.addAll(allJobs);
-        } else {
-            for (Job job : allJobs) {
-                // Apply both search query and current filters
-                if (matchesSearchQuery(job, currentQuery) && (currentFilter == null || matchesFilter(job, currentFilter))) {
-                    filteredJobs.add(job);
-                }
+        List<Job> filteredJobs = new ArrayList<>();
+        String currentQuery = query != null ? query.toLowerCase().trim() : "";
+
+        // If query is empty, show all jobs
+        if (currentQuery.isEmpty()) {
+            jobAdapter.submitList(allJobs);
+            updateEmptyState(allJobs.isEmpty());
+            return;
+        }
+
+        // Otherwise filter based on search query
+        for (Job job : allJobs) {
+            if (job != null && matchesSearchQuery(job, currentQuery) && matchesFilter(job, currentFilter)) {
+                filteredJobs.add(job);
             }
         }
 
@@ -296,18 +309,27 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
         updateEmptyState(filteredJobs.isEmpty());
     }
 
+    private boolean matchesSearchQuery(Job job, String query) {
+        if (job == null || query == null || query.isEmpty()) return true;
+
+        String queryLower = query.toLowerCase();
+        return (job.getTitle() != null && job.getTitle().toLowerCase().contains(queryLower)) ||
+                (job.getDescription() != null && job.getDescription().toLowerCase().contains(queryLower)) ||
+                (job.getCompanyName() != null && job.getCompanyName().toLowerCase().contains(queryLower)) ||
+                (job.getLocation() != null && job.getLocation().toLowerCase().contains(queryLower)) ||
+                (job.getEmploymentType() != null && job.getEmploymentType().toLowerCase().contains(queryLower));
+    }
+
     @Override
     public void onFiltersApplied(JobFilter filter) {
         this.currentFilter = filter;
-        // Apply search and filter on the in-memory list
-        performSearch(binding.editTextSearch.getText().toString());
+        performSearch(binding.editTextSearch.getText().toString().trim()); // Apply search after filter
     }
 
     private void filterJobs() {
-        String currentQuery = binding.editTextSearch.getText().toString();
+        String currentQuery = binding.editTextSearch.getText().toString().trim();
         List<Job> filteredJobs = new ArrayList<>();
         for (Job job : allJobs) {
-            // Apply both search query and current filters
             if (matchesSearchQuery(job, currentQuery) && matchesFilter(job, currentFilter)) {
                 filteredJobs.add(job);
             }
@@ -318,25 +340,24 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
     }
 
     private boolean matchesFilter(Job job, JobFilter filter) {
-        if (job == null || filter == null) return true; // If no job or filter, consider it a match
+        if (job == null) return false;
+        if (filter == null) return true;
+
         boolean matches = true;
 
-        // Filter by employment types with null checks
         if (filter.getEmploymentTypes() != null && !filter.getEmploymentTypes().isEmpty()) {
             matches &= job.getWorkArrangement() != null && filter.getEmploymentTypes().contains(job.getWorkArrangement());
         }
 
-        // Filter by experience levels with null checks
         if (filter.getExperienceLevels() != null && !filter.getExperienceLevels().isEmpty()) {
             matches &= job.getExperienceLevel() != null && filter.getExperienceLevels().contains(job.getExperienceLevel());
         }
 
-        // Filter by location (case-insensitive partial match) with null checks
         if (filter.getLocation() != null && !filter.getLocation().isEmpty()) {
-            matches &= job.getLocation() != null && job.getLocation().toLowerCase().contains(filter.getLocation().toLowerCase());
+            matches &= job.getLocation() != null && job.getLocation().toLowerCase().contains(filter.getLocation().toLowerCase().trim()); // Trim location
         }
 
-        // TODO: Add more filtering criteria as needed (e.g., salary range, job category)
+        // TODO: Add more filtering criteria as needed
 
         return matches;
     }
@@ -349,20 +370,73 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
     private void showJobDescriptionDialog(Job job) {
         if (job == null) return;
         new AlertDialog.Builder(this)
-                .setTitle(job.getTitle() != null ? job.getTitle() : "Job Details") // Add null check for title
-                .setMessage(job.getDescription() != null ? job.getDescription() : "No description available.") // Add null check for description
+                .setTitle(job.getTitle() != null ? job.getTitle() : "Job Details")
+                .setMessage(job.getDescription() != null ? job.getDescription() : "No description available.")
                 .setPositiveButton(R.string.close, null)
                 .show();
     }
 
+    private void uploadResumeOnly(Uri resumeUri) {
+        if (resumeUri == null) return;
+
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser == null) {
+            Toast.makeText(this, R.string.please_log_in, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String userId = currentUser.getUid();
+        String fileName = "resumes/" + userId + "_profile_resume_" + System.currentTimeMillis() + ".pdf";
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(fileName);
+
+        storageRef.putFile(resumeUri)
+                .addOnSuccessListener(taskSnapshot -> storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                    String resumeUrl = uri.toString();
+                    // Update user's Firestore profile with resume URL
+                    db.collection("users").document(userId)
+                            .update("resumeUrl", resumeUrl)
+                            .addOnSuccessListener(aVoid -> {
+                                Toast.makeText(this, "Resume uploaded successfully!", Toast.LENGTH_SHORT).show();
+                                // Display the uploaded file name
+                                displayUploadedResumeFileName(getFileNameFromUri(resumeUri));
+                            })
+                            .addOnFailureListener(e -> Toast.makeText(this, "Failed to update profile: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+                }))
+                .addOnFailureListener(e -> Toast.makeText(this, "Resume upload failed: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+    }
+
     private void selectResumeForUpload() {
+        // This method is called when the "Upload Resume" button is clicked
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("application/pdf");
-        // Corrected MIME types with proper spelling
         String[] mimeTypes = {"application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"};
         intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
         pickResumeLauncher.launch(Intent.createChooser(intent, getString(R.string.select_resume)));
     }
+
+    // New method to get file name from Uri
+    private String getFileNameFromUri(Uri uri) {
+        String result = null;
+        if (uri.getScheme().equals("content")) {
+            try (android.database.Cursor cursor = getContentResolver().query(uri, null, null, null, null)) {
+                if (cursor != null && cursor.moveToFirst()) {
+                    int nameIndex = cursor.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME);
+                    if (nameIndex != -1) {
+                        result = cursor.getString(nameIndex);
+                    }
+                }
+            }
+        }
+        if (result == null) {
+            result = uri.getPath();
+            int cut = result.lastIndexOf('/');
+            if (cut != -1) {
+                result = result.substring(cut + 1);
+            }
+        }
+        return result;
+    }
+
 
     private void submitApplication(Job job, Uri resumeUri) {
         if (job == null || resumeUri == null) {
@@ -377,63 +451,22 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
         }
 
         String userId = currentUser.getUid();
+        // Use the provided resumeUri directly, as it's already the profile resume URL
 
-        // First, upload the resume
-        uploadResumeToStorage(userId, resumeUri, new OnResumeUploadListener() {
-            @Override
-            public void onSuccess(String resumeUrl) {
-                // Then, save the application details to Firestore
-                saveApplicationToFirestore(job, userId, resumeUrl);
-            }
-
-            @Override
-            public void onFailure(String errorMessage) {
-                Toast.makeText(JobSeekerSearchJobActivity.this, "Resume upload failed: " + errorMessage, Toast.LENGTH_SHORT).show();
-                Log.e("JobSeekerSearchJobActivity", "Resume upload failed", new Exception(errorMessage));
-            }
-        });
-    }
-
-    private void uploadResumeToStorage(String userId, Uri resumeUri, OnResumeUploadListener listener) {
-        // Consider generating a more robust and unique file name
-        String fileName = "resumes/" + userId + "_" + System.currentTimeMillis() + ".pdf";
-        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(fileName);
-
-        storageRef.putFile(resumeUri)
-                .addOnSuccessListener(taskSnapshot -> storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                    if (listener != null) {
-                        listener.onSuccess(uri.toString());
-                    }
-                }))
-                .addOnFailureListener(e -> {
-                    if (listener != null) {
-                        listener.onFailure(e.getMessage());
-                    }
-                });
-    }
-
-    private void saveApplicationToFirestore(Job job, String userId, String resumeUrl) {
-        // Create a new application object/map
         Map<String, Object> application = new java.util.HashMap<>();
         application.put("jobId", job.getId());
         application.put("jobseekerId", userId);
-        application.put("employerId", job.getEmployerId()); // Assuming Job object has employerId
-        application.put("resumeUrl", resumeUrl);
-        application.put("status", "Pending"); // Initial status
+        application.put("employerId", job.getEmployerId());
+        application.put("resumeUrl", resumeUri.toString()); // Use the profile resume URL
+        application.put("status", "Pending");
         application.put("applicationDate", FieldValue.serverTimestamp());
 
         db.collection("applications")
                 .add(application)
                 .addOnSuccessListener(documentReference -> {
-                    Toast.makeText(JobSeekerSearchJobActivity.this, "Successfully applied for the job!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(JobSeekerSearchJobActivity.this, getString(R.string.application_submitted), Toast.LENGTH_SHORT).show();
                     Log.d("JobSeekerSearchJobActivity", "Application submitted with ID: " + documentReference.getId());
-
-                    // TODO: Add recruiter notification logic here
-                    // You would typically use a service like Firebase Cloud Messaging (FCM)
-                    // to send a notification to the recruiter about the new application.
-                    // This requires implementing FCM in your project and sending a message
-                    // to the recruiter's device token or a topic they are subscribed to.
-
+                    sendNotificationToEmployer(job.getEmployerId(), job.getTitle()); // Send notification
                 })
                 .addOnFailureListener(e -> {
                     Toast.makeText(JobSeekerSearchJobActivity.this, "Failed to submit application: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -441,10 +474,40 @@ public class JobSeekerSearchJobActivity extends AppCompatActivity implements Job
                 });
     }
 
+    private void sendNotificationToEmployer(String employerId, String jobTitle) {
+        Map<String, Object> notification = new java.util.HashMap<>();
+        notification.put("recipientId", employerId);
+        notification.put("type", "application");
+        notification.put("title", "New Job Application");
+        notification.put("body", "A job seeker has applied for your job: " + jobTitle);
+        notification.put("timestamp", FieldValue.serverTimestamp());
+        notification.put("isRead", false);
+
+        db.collection("notifications")
+                .add(notification)
+                .addOnSuccessListener(documentReference -> {
+                    Log.d("JobSeekerSearchJobActivity", "Notification sent to employer: " + employerId);
+                })
+                .addOnFailureListener(e -> {
+                    Log.e("JobSeekerSearchJobActivity", "Failed to send notification", e);
+                });
+    }
+
     // Helper interface for resume upload callback
     private interface OnResumeUploadListener {
         void onSuccess(String resumeUrl);
-
         void onFailure(String errorMessage);
     }
+
+    // Placeholder method to display the uploaded resume file name
+    private void displayUploadedResumeFileName(String fileName) {
+        // To display the uploaded resume file name, you need to add a TextView
+        // to your activity_job_seeker_search_job.xml layout file.
+        // Give it an ID, for example, textViewUploadedResumeFileName.
+        // Then, you can uncomment and use the line below:
+        // binding.textViewUploadedResumeFileName.setText("Uploaded Resume: " + fileName);
+        Log.d("JobSeekerSearchJobActivity", "Uploaded resume file name: " + fileName);
+        Toast.makeText(this, "Uploaded Resume: " + fileName, Toast.LENGTH_LONG).show(); // For testing
+    }
 }
+

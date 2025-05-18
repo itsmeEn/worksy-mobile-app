@@ -3824,7 +3824,6 @@ id search_view
 id search_voice_btn
 id select_dialog_listview
 id selected
-id selected_applicant_name
 id selection_type
 id send_btn
 id send_email_button
@@ -4252,6 +4251,7 @@ string appbar_scrolling_view_behavior
 string applicant_name
 string applicants
 string application_date
+string application_submitted
 string applied_for
 string apply_filters
 string apply_now
@@ -4519,6 +4519,7 @@ string mtrl_timepicker_confirm
 string my_applications
 string myresume_pdf
 string name
+string no_applications_found
 string no_certificates_uploaded_yet
 string no_email_app_found
 string no_jobs_found
@@ -4572,6 +4573,7 @@ string searchview_navigation_content_description
 string seeker_account
 string select_resume
 string selected_applicant
+string send_email
 string senior_level
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
@@ -4600,6 +4602,7 @@ string user_type
 string verification_failed
 string verify_phone
 string view_app
+string view_resume
 string vision
 string website
 string work_arrangement

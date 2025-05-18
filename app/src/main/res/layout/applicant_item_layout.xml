@@ -4,13 +4,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp"
+    android:layout_marginBottom="8dp"
     android:background="@drawable/rounded_edit_text">
 
     <TextView
         android:id="@+id/applicant_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Applicant Name"
+        android:text="@string/applicant_name"
         android:textStyle="bold"
         android:textSize="16sp" />
 
@@ -18,7 +19,7 @@
         android:id="@+id/job_title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Job Title"
+        android:text="@string/job_title"
         android:textSize="14sp"
         android:textColor="#666666" />
 
@@ -26,7 +27,7 @@
         android:id="@+id/application_date_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Application Date"
+        android:text="@string/application_date"
         android:textSize="14sp"
         android:textColor="#666666" />
 
@@ -34,7 +35,7 @@
         android:id="@+id/status_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Status"
+        android:text="@string/status"
         android:textSize="14sp"
         android:textColor="#666666" />
 
@@ -48,13 +49,80 @@
             android:id="@+id/view_resume_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View Resume" />
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="@string/view_resume" />
 
         <Button
             android:id="@+id/send_email_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Send Email"
-            android:layout_marginStart="8dp" />
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="@string/send_email" />
     </LinearLayout>
+
+    <!-- Status Update Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_status"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/status_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/application_statuses" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update_status_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_application_status" />
+
+    <!-- Interview Scheduling Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interview_date"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/interview_date_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="date"
+            android:hint="YYYY-MM-DD" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/schedule_interview_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_interview" />
+
 </LinearLayout>

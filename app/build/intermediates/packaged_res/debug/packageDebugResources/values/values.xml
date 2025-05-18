@@ -92,6 +92,7 @@
     <string name="applicant_name">Name: %1$s</string>
     <string name="applicants">Applicants</string>
     <string name="application_date">Application Date: %1$s</string>
+    <string name="application_submitted">Successfully Submitted Applications</string>
     <string name="applied_for">Position Applied For</string>
     <string name="apply_filters">Apply Filters</string>
     <string name="apply_now">Apply Now</string>
@@ -200,6 +201,7 @@
     <string name="my_applications">My Applications</string>
     <string name="myresume_pdf">MyResume.pdf</string>
     <string name="name">Name</string>
+    <string name="no_applications_found">No applications found.</string>
     <string name="no_certificates_uploaded_yet">No certificates uploaded yet.</string>
     <string name="no_email_app_found">No email app found</string>
     <string name="no_jobs_found">No Jobs Found</string>
@@ -244,6 +246,7 @@
     <string name="seeker_account">Job Seeker Registration</string>
     <string name="select_resume">Select Resume</string>
     <string name="selected_applicant">Selected Applicant: %1$s</string>
+    <string name="send_email">Send Email</string>
     <string name="senior_level">Senior Level</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
@@ -269,6 +272,7 @@
     <string name="verification_failed">Verification failed</string>
     <string name="verify_phone">Verify Phone Number</string>
     <string name="view_app">View Applicant</string>
+    <string name="view_resume">View Resume</string>
     <string name="vision">Post Company Vision</string>
     <string name="website">Website</string>
     <string name="work_arrangement">Work Arrangement</string>

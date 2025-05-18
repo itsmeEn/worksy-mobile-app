@@ -250,7 +250,6 @@ id schedule_interview_button
 id scrollViewForm
 id search_button
 id search_view
-id selected_applicant_name
 id send_btn
 id send_email_button
 id sliderSalary
@@ -332,6 +331,7 @@ string app_name
 string applicant_name
 string applicants
 string application_date
+string application_submitted
 string applied_for
 string apply_filters
 string apply_now
@@ -440,6 +440,7 @@ string mock_description
 string my_applications
 string myresume_pdf
 string name
+string no_applications_found
 string no_certificates_uploaded_yet
 string no_email_app_found
 string no_jobs_found
@@ -484,6 +485,7 @@ string search_jobs
 string seeker_account
 string select_resume
 string selected_applicant
+string send_email
 string senior_level
 string sign_in
 string sign_up
@@ -509,6 +511,7 @@ string user_type
 string verification_failed
 string verify_phone
 string view_app
+string view_resume
 string vision
 string website
 string work_arrangement

@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 import com.worksy.data.model.Job;
 import com.worksy.databinding.ItemJobBinding;
@@ -18,6 +19,7 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
         void onJobClick(Job job);
         void onSaveJobClick(Job job);
         void onApplyClick(Job job);
+        void onUploadResumeClick(Job job);
     }
 
     public JobAdapter(OnJobClickListener listener) {
@@ -44,9 +46,44 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
     }
 
     public void submitList(List<Job> newJobs) {
+        if (newJobs == null) {
+            newJobs = new ArrayList<>();
+        }
+        
+        // Create a final copy of the list for use in DiffUtil
+        final List<Job> finalNewJobs = new ArrayList<>(newJobs);
+        
+        DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtil.Callback() {
+            @Override
+            public int getOldListSize() {
+                return jobs.size();
+            }
+
+            @Override
+            public int getNewListSize() {
+                return finalNewJobs.size();
+            }
+
+            @Override
+            public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                Job oldJob = jobs.get(oldItemPosition);
+                Job newJob = finalNewJobs.get(newItemPosition);
+                return oldJob != null && newJob != null && 
+                       oldJob.getId() != null && oldJob.getId().equals(newJob.getId());
+            }
+
+            @Override
+            public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                Job oldJob = jobs.get(oldItemPosition);
+                Job newJob = finalNewJobs.get(newItemPosition);
+                return oldJob != null && newJob != null && 
+                       oldJob.equals(newJob);
+            }
+        });
+
         jobs.clear();
-        jobs.addAll(newJobs);
-        notifyDataSetChanged();
+        jobs.addAll(finalNewJobs);
+        diffResult.dispatchUpdatesTo(this);
     }
 
     public static class JobViewHolder extends RecyclerView.ViewHolder {
@@ -60,14 +97,15 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
         void bind(Job job, OnJobClickListener listener) {
             if (job == null) return;
             
-            binding.textViewJobTitle.setText(job.getTitle());
-            binding.textViewCompanyName.setText(job.getCompanyName());
-            binding.textViewLocation.setText(job.getLocation());
-            binding.textViewSalary.setText(job.getFormattedSalary());
-            binding.textViewWorkSetup.setText(job.getWorkSetup());
-            binding.textViewWorkArrangement.setText(job.getWorkArrangement());
-            binding.chipEmploymentType.setText(job.getEmploymentType());
-            binding.textViewExperienceLevel.setText(job.getExperienceLevel());
+            // Set text with null checks
+            binding.textViewJobTitle.setText(job.getTitle() != null ? job.getTitle() : "");
+            binding.textViewCompanyName.setText(job.getCompanyName() != null ? job.getCompanyName() : "");
+            binding.textViewLocation.setText(job.getLocation() != null ? job.getLocation() : "");
+            binding.textViewSalary.setText(job.getFormattedSalary() != null ? job.getFormattedSalary() : "");
+            binding.textViewWorkSetup.setText(job.getWorkSetup() != null ? job.getWorkSetup() : "");
+            binding.textViewWorkArrangement.setText(job.getWorkArrangement() != null ? job.getWorkArrangement() : "");
+            binding.chipEmploymentType.setText(job.getEmploymentType() != null ? job.getEmploymentType() : "");
+            binding.textViewExperienceLevel.setText(job.getExperienceLevel() != null ? job.getExperienceLevel() : "");
 
             // Set click listeners
             binding.getRoot().setOnClickListener(v -> {
@@ -79,6 +117,13 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> {
             binding.buttonApplyNow.setOnClickListener(v -> {
                 if (listener != null) {
                     listener.onApplyClick(job);
+                }
+            });
+
+            // Set click listener for Upload Resume button
+            binding.buttonUploadResume.setOnClickListener(v -> {
+                if (listener != null) {
+                    listener.onUploadResumeClick(job);
                 }
             });
         }

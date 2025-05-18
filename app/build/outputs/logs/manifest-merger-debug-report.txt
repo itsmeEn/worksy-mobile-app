@@ -16,8 +16,10 @@ MERGED from [androidx.biometric:biometric:1.1.0] /Users/judeibardaloza/.gradle/c
 MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b5bb49aa0dd675c59e947417b148babc/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/4ff5178587ac7d03692c8c735db105fd/transformed/glide-4.16.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/fb8f48bb5796a5c9f08dd140b265a5b6/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-location:21.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/95ee1bdd8505a440018dc08d11c8cdcf/transformed/play-services-location-21.1.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/6a28dd881de91f33ebe95577f023bcb2/transformed/play-services-safetynet-18.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/90b1f51dff4306631970a6a8f5cab1a1/transformed/play-services-phenotype-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.gms:play-services-auth:21.1.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/d72a603608c2e048f99866142bbd9089/transformed/play-services-auth-21.1.1/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/b57b142c436307899e1b9c74d976329f/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:2:1-7:12
@@ -123,6 +125,10 @@ MERGED from [io.grpc:grpc-android:1.62.2] /Users/judeibardaloza/.gradle/caches/8
 MERGED from [io.grpc:grpc-android:1.62.2] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/3d2fbe4b69c20cd0077d5117d30232d2/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
 	android:name
 		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:7:22-77
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/judeibardaloza/StudioProjects/worksy-mobile-app/app/src/main/AndroidManifest.xml:8:5-78
 	android:name
@@ -150,10 +156,14 @@ MERGED from [com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gr
 MERGED from [com.google.firebase:firebase-auth:23.2.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/188ef1ff5a79f566d417f4b07d3c45f8/transformed/firebase-auth-23.2.0/AndroidManifest.xml:28:5-73:19
 MERGED from [androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:23:5-50:19
 MERGED from [androidx.credentials:credentials-play-services-auth:1.5.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/f0cd01ee99eeb3daf229c57a497dc51f/transformed/credentials-play-services-auth-1.5.0/AndroidManifest.xml:23:5-50:19
-MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:25:5-36:19
-MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.android.gms:play-services-location:21.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/95ee1bdd8505a440018dc08d11c8cdcf/transformed/play-services-location-21.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:21.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/95ee1bdd8505a440018dc08d11c8cdcf/transformed/play-services-location-21.1.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/6a28dd881de91f33ebe95577f023bcb2/transformed/play-services-safetynet-18.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/6a28dd881de91f33ebe95577f023bcb2/transformed/play-services-safetynet-18.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/90b1f51dff4306631970a6a8f5cab1a1/transformed/play-services-phenotype-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/90b1f51dff4306631970a6a8f5cab1a1/transformed/play-services-phenotype-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.android.gms:play-services-auth:21.1.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/d72a603608c2e048f99866142bbd9089/transformed/play-services-auth-21.1.1/AndroidManifest.xml:22:5-38:19
@@ -328,10 +338,14 @@ MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/judeibardaloza/.grad
 MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/4ff5178587ac7d03692c8c735db105fd/transformed/glide-4.16.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/fb8f48bb5796a5c9f08dd140b265a5b6/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/fb8f48bb5796a5c9f08dd140b265a5b6/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:18:5-44
 MERGED from [com.google.android.gms:play-services-location:21.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/95ee1bdd8505a440018dc08d11c8cdcf/transformed/play-services-location-21.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.1.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/95ee1bdd8505a440018dc08d11c8cdcf/transformed/play-services-location-21.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/6a28dd881de91f33ebe95577f023bcb2/transformed/play-services-safetynet-18.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/6a28dd881de91f33ebe95577f023bcb2/transformed/play-services-safetynet-18.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/90b1f51dff4306631970a6a8f5cab1a1/transformed/play-services-phenotype-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/90b1f51dff4306631970a6a8f5cab1a1/transformed/play-services-phenotype-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:21.0.0] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/ebf6cedc9a9ff4eb4a8d1478de98e662/transformed/firebase-database-21.0.0/AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/cdf04f1a29c90befbb90b7fb19bc358d/transformed/firebase-firestore-25.1.4/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-auth:21.1.1] /Users/judeibardaloza/.gradle/caches/8.10.2/transforms/d72a603608c2e048f99866142bbd9089/transformed/play-services-auth-21.1.1/AndroidManifest.xml:20:5-44

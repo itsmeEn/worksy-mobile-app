@@ -46,6 +46,7 @@ public class JobApplicationAdapter extends RecyclerView.Adapter<JobApplicationAd
         private final TextView companyName;
         private final TextView status;
         private final TextView dateApplied;
+        private final TextView location;
 
         public JobApplicationViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,6 +54,7 @@ public class JobApplicationAdapter extends RecyclerView.Adapter<JobApplicationAd
             companyName = itemView.findViewById(R.id.textViewCompanyName);
             status = itemView.findViewById(R.id.textViewStatus);
             dateApplied = itemView.findViewById(R.id.textViewDateApplied);
+            location = itemView.findViewById(R.id.textViewLocation);
         }
 
         public void bind(JobApplication application, OnApplicationClickListener listener) {
@@ -60,6 +62,7 @@ public class JobApplicationAdapter extends RecyclerView.Adapter<JobApplicationAd
             companyName.setText(application.getCompanyName());
             status.setText(application.getStatus().name());
             dateApplied.setText(application.getDateApplied());
+            location.setText(application.getLocation());
 
             itemView.setOnClickListener(v -> listener.onApplicationClick(application));
         }

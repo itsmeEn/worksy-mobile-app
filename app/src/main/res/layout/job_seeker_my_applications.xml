@@ -33,12 +33,12 @@
         android:id="@+id/textViewEmpty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No applications found."
+        android:text="@string/no_applications_found"
         android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="gone" /> // Initially hidden
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
